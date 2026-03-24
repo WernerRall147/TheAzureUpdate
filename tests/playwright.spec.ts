@@ -33,3 +33,10 @@ test('disclaimer is present', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.disclaimer-section')).toBeVisible();
 });
+
+test('sections are ordered correctly (newer first)', async ({ page }) => {
+  await page.goto('/');
+  const sectionIds = await page.locator('section[id]').evaluateAll(els => els.map(el => el.id));
+  const expected = ['about', 'carousel_ai_header', 'carousel_ai_content', 'carousel_quantum_header', 'carousel_quantum_content', 'carousel_blog_header', 'carousel_blog_content', 'carousel_learn_header', 'carousel_learn_content', 'carousel_7b63', 'carousel_4585', 'carousel_x_header', 'carousel_x_content'];
+  expect(sectionIds).toEqual(expected);
+});

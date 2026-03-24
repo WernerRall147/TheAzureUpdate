@@ -237,19 +237,30 @@
         text-align: center;
       }
       html.dark-mode .disclaimer-section { background: #1a1a2e; color: #888; }
+      /* Spacing overrides — tighten nicepage defaults */
+      .u-section-4 { padding: 0 !important; }
+      .u-section-4 .u-sheet-1 { min-height: auto !important; padding: 24px 0 8px !important; }
+      .u-section-4 .u-group-1 { min-height: auto !important; margin: 0 auto !important; }
+      .u-section-3 { padding: 0 !important; }
+      .u-section-3 .u-sheet-1 { min-height: auto !important; padding: 0 16px 16px !important; }
+      .u-header { display: none !important; }
+      #about { padding: 0 !important; }
+      /* Tighten layout cells */
+      .u-layout-cell .u-container-layout { padding: 4px !important; }
+      .u-layout-cell { min-height: auto !important; }
       /* Smooth scrolling */
-      html { scroll-behavior: smooth; }
+      html { scroll-behavior: smooth; scroll-padding-top: 56px; }
     </style>
   </head>
   <body data-home-page="Home.html" data-home-page-title="TheAzureUpdate" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-5970"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
     <nav class="site-nav" id="site-nav">
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#carousel_7b63">Azure</a>
         <a href="#carousel_ai_header">AI &amp; Copilot</a>
         <a href="#carousel_quantum_header">Quantum</a>
-        <a href="#carousel_learn_header">Learning</a>
         <a href="#carousel_blog_header">Blog</a>
+        <a href="#carousel_learn_header">Learning</a>
+        <a href="#carousel_7b63">Azure</a>
         <a href="#carousel_x_header">Community</a>
       </div>
       <div class="nav-socials">
@@ -278,103 +289,7 @@
             <a href="https://learn.microsoft.com/en-us/users/wernerrall147/">MS Learn Profile</a>
           </div>
         </div>
-        <img src="images/profile.jpg" alt="Werner Rall" class="about-photo">
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_7b63">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
-          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
-            <h2 class="u-text u-text-1">Some Azure Updates</h2>
-            <p class="u-text u-text-2">A Collection of the Latest Azure Updates from different Websites</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_4585">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/updates/" class="nav-link"><img src="images/AzUpdates.jpg" name="AzUpdates.jpg" style="width: 100%; height: 100%;   "></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://github.com/azure-deprecation/dashboard/issues" class="nav-link"><img src="images/AzDepDa.jpg" name="AzDepDa.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://status.azure.com/en-us/status" class="nav-link"><img src="images/AzSta.jpg" name="images/AzSta.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azurecharts.com/overview" class="nav-link"><img src="images/AzCha.jpg" name="images/AzCha.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/lifecycle/products/" class="nav-link"><img src="images/MSProd.jpg" name="MSProd.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azure.github.io/AppService/" class="nav-link"><img src="images/AzApp.jpg" name="AzApp.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://msrc-blog.microsoft.com/" class="nav-link"><img src="images/MSSec.jpg" name="MSSec.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/architecture/" class="nav-link"><img src="images/AzArch.jpg" name="AzArch.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/blog/" class="nav-link"><img src="images/AzBl.jpg" name="AzBl.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://www.youtube.com/@azuredailyminute/videos" class="nav-link"><img src="images/AzDaMin.jpg" name="AzDaMin.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://github.com/readme" class="nav-link"><img src="images/AzGiRM.jpg" name="AzGiRM.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://events.microsoft.com/" class="nav-link"><img src="images/MSEvents.jpg" name="MSEvents.jpg" style="width: 100%; height: auto; "></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img src="images/profile.jpg" alt="Werner Rall" class="about-photo" loading="lazy">
       </div>
     </section>
     <!-- AI & Copilot Section -->
@@ -476,6 +391,46 @@
         </div>
       </div>
     </section>
+    <!-- Blog & Articles Section -->
+    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_blog_header">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
+            <h2 class="u-text u-text-1">Blog &amp; Articles</h2>
+            <p class="u-text u-text-2">Technical writing, tutorials, and community posts</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_blog_content">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://aka.ms/wernerrall" class="nav-link tile-card tile-blog"><span><span class="tile-icon">&#128221;</span>Werner&rsquo;s Blog<br>aka.ms/wernerrall</span></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://techcommunity.microsoft.com/tag/wernerrall" class="nav-link tile-card tile-blog"><span><span class="tile-icon">&#128172;</span>Tech Community<br>Posts</span></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/blog/" class="nav-link tile-card tile-blog"><span><span class="tile-icon">&#128240;</span>Azure Blog<br>Official</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Learning & Certifications Section -->
     <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_learn_header">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -535,18 +490,18 @@
         </div>
       </div>
     </section>
-    <!-- Blog & Articles Section -->
-    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_blog_header">
+    <!-- Azure Updates Section -->
+    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_7b63">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
           <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
-            <h2 class="u-text u-text-1">Blog &amp; Articles</h2>
-            <p class="u-text u-text-2">Technical writing, tutorials, and community posts</p>
+            <h2 class="u-text u-text-1">Some Azure Updates</h2>
+            <p class="u-text u-text-2">A Collection of the Latest Azure Updates from different Websites</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_blog_content">
+    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_4585">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -555,17 +510,74 @@
                 <div class="u-layout-row">
                   <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
                     <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://aka.ms/wernerrall" class="nav-link tile-card tile-blog"><span><span class="tile-icon">&#128221;</span>Werner&rsquo;s Blog<br>aka.ms/wernerrall</span></a></div>
+                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/updates/" class="nav-link"><img src="images/AzUpdates.jpg" alt="Azure Updates" loading="lazy" style="width: 100%; height: auto;"></a></div>
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
                     <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://techcommunity.microsoft.com/tag/wernerrall" class="nav-link tile-card tile-blog"><span><span class="tile-icon">&#128172;</span>Tech Community<br>Posts</span></a></div>
+                      <div class="nav-item"><a href="https://github.com/azure-deprecation/dashboard/issues" class="nav-link"><img src="images/AzDepDa.jpg" alt="Azure Deprecation Dashboard" loading="lazy" style="width: 100%; height: auto;"></a></div>
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
                     <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/blog/" class="nav-link tile-card tile-blog"><span><span class="tile-icon">&#128240;</span>Azure Blog<br>Official</span></a></div>
+                      <div class="nav-item"><a href="https://status.azure.com/en-us/status" class="nav-link"><img src="images/AzSta.jpg" alt="Azure Status" loading="lazy" style="width: 100%; height: auto;"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://azurecharts.com/overview" class="nav-link"><img src="images/AzCha.jpg" alt="Azure Charts" loading="lazy" style="width: 100%; height: auto;"></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/lifecycle/products/" class="nav-link"><img src="images/MSProd.jpg" alt="Microsoft Product Lifecycle" loading="lazy" style="width: 100%; height: auto;"></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://azure.github.io/AppService/" class="nav-link"><img src="images/AzApp.jpg" alt="Azure App Service" loading="lazy" style="width: 100%; height: auto;"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://msrc-blog.microsoft.com/" class="nav-link"><img src="images/MSSec.jpg" alt="Microsoft Security Blog" loading="lazy" style="width: 100%; height: auto;"></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/architecture/" class="nav-link"><img src="images/AzArch.jpg" alt="Azure Architecture" loading="lazy" style="width: 100%; height: auto;"></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/blog/" class="nav-link"><img src="images/AzBl.jpg" alt="Azure Blog" loading="lazy" style="width: 100%; height: auto;"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://www.youtube.com/@azuredailyminute/videos" class="nav-link"><img src="images/AzDaMin.jpg" alt="Azure Daily Minute" loading="lazy" style="width: 100%; height: auto;"></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://github.com/readme" class="nav-link"><img src="images/AzGiRM.jpg" alt="GitHub ReadME" loading="lazy" style="width: 100%; height: auto;"></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://events.microsoft.com/" class="nav-link"><img src="images/MSEvents.jpg" alt="Microsoft Events" loading="lazy" style="width: 100%; height: auto;"></a></div>
                     </div>
                   </div>
                 </div>
