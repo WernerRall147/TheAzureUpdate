@@ -27,24 +27,46 @@
         position: sticky;
         top: 0;
         z-index: 1000;
-        background: #0078d4;
-        padding: 0;
+        background: #1a1a2e;
+        padding: 0 16px;
         display: flex;
-        justify-content: center;
-        gap: 0;
+        justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       }
-      .site-nav a {
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+      }
+      .site-nav .nav-links a {
         color: #fff;
         text-decoration: none;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
         font-size: 0.95rem;
-        padding: 12px 20px;
+        padding: 12px 16px;
         transition: background 0.2s;
       }
-      .site-nav a:hover { background: rgba(255,255,255,0.15); }
+      .site-nav .nav-links a:hover { background: rgba(255,255,255,0.15); }
+      .nav-socials {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .nav-socials a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 1.15rem;
+        transition: color 0.2s;
+      }
+      .nav-socials a:hover { color: #50e6ff; }
+      html.dark-mode .site-nav { background: #0d0d1a; }
+      @media (max-width: 767px) {
+        .site-nav { flex-direction: column; padding: 8px; }
+        .nav-socials { margin-top: 4px; }
+      }
       /* Tile cards */
       .tile-card {
         display: flex;
@@ -100,7 +122,7 @@
       html.dark-mode .u-white { background: #2a2a3a !important; }
       html.dark-mode .u-text { color: #e0e0e0 !important; }
       html.dark-mode h2.u-text { color: #50e6ff !important; }
-      html.dark-mode .site-nav { background: #1a1a2e; }
+      html.dark-mode .site-nav { background: #0d0d1a; }
       html.dark-mode .theme-toggle { background: #50e6ff; color: #1a1a2e; }
       html.dark-mode .theme-toggle:hover { background: #3dd4f0; }
       html.dark-mode .tile-card { box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
@@ -217,13 +239,23 @@
   </head>
   <body data-home-page="Home.html" data-home-page-title="TheAzureUpdate" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-5970"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
     <nav class="site-nav" id="site-nav">
-      <a href="#about">About</a>
-      <a href="#carousel_7b63">Azure</a>
-      <a href="#carousel_ai_header">AI &amp; Copilot</a>
-      <a href="#carousel_quantum_header">Quantum</a>
-      <a href="#carousel_learn_header">Learning</a>
-      <a href="#carousel_blog_header">Blog</a>
-      <a href="#carousel_x_header">Community</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#carousel_7b63">Azure</a>
+        <a href="#carousel_ai_header">AI &amp; Copilot</a>
+        <a href="#carousel_quantum_header">Quantum</a>
+        <a href="#carousel_learn_header">Learning</a>
+        <a href="#carousel_blog_header">Blog</a>
+        <a href="#carousel_x_header">Community</a>
+      </div>
+      <div class="nav-socials">
+        <a href="https://github.com/WernerRall147" title="GitHub" aria-label="GitHub">&#9783;</a>
+        <a href="https://x.com/werneragent47" title="X" aria-label="X">&#120143;</a>
+        <a href="https://www.linkedin.com/in/werner-rall/" title="LinkedIn" aria-label="LinkedIn">in</a>
+        <a href="https://www.youtube.com/@ralltheory411" title="YouTube" aria-label="YouTube">&#9654;</a>
+        <a href="https://aka.ms/wernerrall" title="Blog" aria-label="Blog">&#128221;</a>
+        <a href="https://www.credly.com/users/werner-rall/badges" title="Credly" aria-label="Credly">&#127942;</a>
+      </div>
     </nav>
     <section class="u-clearfix u-image u-section-1" src="" id="carousel_24fb">
       <div class="u-clearfix u-sheet u-sheet-1">
