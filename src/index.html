@@ -2,7 +2,7 @@
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta name="description" content="A curated collection of the latest Microsoft Azure, AI, and Quantum Computing updates, resources, and community links.">
     <title>TheAzureUpdate</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Home.css" media="screen">
@@ -17,6 +17,43 @@
 }</script>
     <meta property="og:title" content="Home">
     <meta property="og:type" content="website">
+    <style>
+      .tile-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 180px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1.15rem;
+        text-align: center;
+        padding: 24px 18px;
+        box-sizing: border-box;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      }
+      .tile-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+      }
+      .tile-ai { background: linear-gradient(135deg, #0078d4, #50e6ff); }
+      .tile-quantum { background: linear-gradient(135deg, #5c2d91, #b4a0ff); }
+      .tile-card .tile-icon { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+      .site-footer {
+        background: #1a1a2e;
+        color: #ccc;
+        text-align: center;
+        padding: 24px 16px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+      }
+      .site-footer a { color: #50e6ff; text-decoration: none; }
+      .site-footer a:hover { text-decoration: underline; }
+    </style>
   </head>
   <body data-home-page="Home.html" data-home-page-title="TheAzureUpdate" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-5970"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
     <section class="u-clearfix u-image u-section-1" src="" id="carousel_24fb">
@@ -67,7 +104,7 @@
                   </div>
                   <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
                     <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://docs.microsoft.com/en-us/divfecycle/products/" class="nav-link"><img src="images/MSProd.jpg" name="MSProd.jpg" style="width: 100%; height: auto; "></a></div>
+                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/lifecycle/products/" class="nav-link"><img src="images/MSProd.jpg" name="MSProd.jpg" style="width: 100%; height: auto; "></a></div>
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
@@ -86,7 +123,7 @@
                   </div>
                   <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
                     <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://docs.microsoft.com/en-us/azure/architecture/" class="nav-link"><img src="images/AzArch.jpg" name="AzArch.jpg" style="width: 100%; height: auto; "></a></div>
+                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/architecture/" class="nav-link"><img src="images/AzArch.jpg" name="AzArch.jpg" style="width: 100%; height: auto; "></a></div>
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
@@ -120,17 +157,117 @@
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_7b63">
+    <!-- AI & Copilot Section -->
+    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_ai_header">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
           <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
-            <h2 class="u-text u-text-1">Whats New on X</h2>
+            <h2 class="u-text u-text-1">AI &amp; Copilot Updates</h2>
+            <p class="u-text u-text-2">The Latest on Azure AI Foundry, Microsoft Copilot, and Generative AI</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_ai_content">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://ai.azure.com/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#129302;</span>Azure AI Foundry</span></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#10024;</span>Azure OpenAI<br>What's New</span></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://copilot.microsoft.com/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#128640;</span>Microsoft Copilot</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://github.blog/ai-and-ml/github-copilot/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#128187;</span>GitHub Copilot Blog</span></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://blogs.microsoft.com/ai/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#129504;</span>Microsoft AI Blog</span></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/ai-services/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#128218;</span>Azure AI<br>Services Docs</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Quantum Section -->
+    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_quantum_header">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
+            <h2 class="u-text u-text-1">Quantum Computing</h2>
+            <p class="u-text u-text-2">Azure Quantum and the Future of Computing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_quantum_content">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://quantum.microsoft.com/" class="nav-link tile-card tile-quantum"><span><span class="tile-icon">&#9883;</span>Azure Quantum</span></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/blog/tag/azure-quantum/" class="nav-link tile-card tile-quantum"><span><span class="tile-icon">&#128240;</span>Azure Quantum Blog</span></a></div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
+                    <div class="u-container-layout">
+                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/quantum/" class="nav-link tile-card tile-quantum"><span><span class="tile-icon">&#128218;</span>Azure Quantum Docs</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- X / Twitter Section -->
+    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_x_header">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
+            <h2 class="u-text u-text-1">What's New on X</h2>
             <p class="u-text u-text-2">Following some of the best X Accounts for Updates on Azure</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_4585">
+    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_x_content">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -189,7 +326,7 @@
                 <div class="u-layout-row">
                   <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-7">
                     <div class="u-container-layout">
-                      <div class="col-md-4 columnBlockLayout" style="height: auto; max-height: 500px; overflow-y: scroll;"><a href="https://x.com/satyanadella?ref_src=twsrc%5Etfw" class="twitter-timeline">Tweets by markrussinovich</a>
+                      <div class="col-md-4 columnBlockLayout" style="height: auto; max-height: 500px; overflow-y: scroll;"><a href="https://x.com/satyanadella?ref_src=twsrc%5Etfw" class="twitter-timeline">Tweets by SatyaNadella</a>
                         <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                       </div>
                     </div>
@@ -215,4 +352,7 @@
         </div>
       </div>
     </section>  
+    <footer class="site-footer">
+      <p>&copy; 2026 The Azure Update | Built on <a href="https://azure.microsoft.com/en-us/products/app-service/static/">Azure Static Web Apps</a></p>
+    </footer>
 </body></html>
