@@ -1,703 +1,207 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="description" content="A curated collection of the latest Microsoft Azure, AI, and Quantum Computing updates, resources, and community links.">
-    <title>TheAzureUpdate</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%230078d4'/><text x='50' y='68' font-size='50' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>TAU</text></svg>">
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Home.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "The Azure Update",
-		"url": "https://www.theazureupdate.com",
-		"description": "A curated collection of the latest Microsoft Azure, AI, and Quantum Computing updates."
-}</script>
-    <meta property="og:title" content="The Azure Update">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="A curated collection of the latest Microsoft Azure, AI, and Quantum Computing updates, resources, and community links.">
-    <style>
-      /* Sticky nav */
-      .site-nav {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: #1a1a2e;
-        padding: 0 16px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      }
-      .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-      }
-      .site-nav .nav-links a {
-        color: #fff;
-        text-decoration: none;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        font-size: 0.95rem;
-        padding: 12px 16px;
-        transition: background 0.2s;
-      }
-      .site-nav .nav-links a:hover { background: rgba(255,255,255,0.15); }
-      .nav-socials {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .nav-socials a {
-        color: #ccc;
-        text-decoration: none;
-        font-size: 1.15rem;
-        transition: color 0.2s;
-      }
-      .nav-socials a:hover { color: #50e6ff; }
-      html.dark-mode .site-nav { background: #0d0d1a; }
-      @media (max-width: 767px) {
-        .site-nav { flex-direction: column; padding: 8px; }
-        .nav-socials { margin-top: 4px; }
-      }
-      /* Tile cards */
-      .tile-card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 180px;
-        border-radius: 12px;
-        text-decoration: none;
-        color: #fff;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 1.15rem;
-        text-align: center;
-        padding: 24px 18px;
-        box-sizing: border-box;
-        transition: transform 0.2s, box-shadow 0.2s;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-      }
-      .tile-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-      }
-      .tile-ai { background: linear-gradient(135deg, #0078d4, #50e6ff); }
-      .tile-quantum { background: linear-gradient(135deg, #5c2d91, #b4a0ff); }
-      .tile-x { background: linear-gradient(135deg, #1a1a2e, #4a4a6a); }
-      .tile-learn { background: linear-gradient(135deg, #008272, #50e6c2); }
-      .tile-card .tile-icon { font-size: 2.5rem; display: block; margin-bottom: 10px; }
-      /* Dark mode toggle */
-      .theme-toggle {
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        z-index: 9999;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        border: none;
-        background: #0078d4;
-        color: #fff;
-        font-size: 1.5rem;
-        cursor: pointer;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        transition: background 0.3s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .theme-toggle:hover { background: #005a9e; }
-      /* Dark mode styles */
-      html.dark-mode body { background: #121212 !important; color: #e0e0e0 !important; }
-      html.dark-mode .u-palette-1-light-3 { background: #1e1e2e !important; }
-      html.dark-mode .u-white { background: #2a2a3a !important; }
-      html.dark-mode .u-text { color: #e0e0e0 !important; }
-      html.dark-mode h2.u-text { color: #50e6ff !important; }
-      html.dark-mode .site-nav { background: #0d0d1a; }
-      html.dark-mode .theme-toggle { background: #50e6ff; color: #1a1a2e; }
-      html.dark-mode .theme-toggle:hover { background: #3dd4f0; }
-      html.dark-mode .tile-card { box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
-      /* Footer */
-      .site-footer {
-        background: #1a1a2e;
-        color: #ccc;
-        text-align: center;
-        padding: 32px 16px 24px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 0.9rem;
-      }
-      .site-footer a { color: #50e6ff; text-decoration: none; }
-      .site-footer a:hover { text-decoration: underline; }
-      .footer-socials { margin-bottom: 12px; }
-      .footer-socials a {
-        display: inline-block;
-        margin: 0 10px;
-        font-size: 1.6rem;
-        color: #50e6ff;
-        text-decoration: none;
-        transition: transform 0.2s, color 0.2s;
-      }
-      .footer-socials a:hover { transform: scale(1.2); color: #fff; }
-      .footer-updated { font-size: 0.8rem; color: #888; margin-top: 8px; }
-      /* About / Bio section */
-      .about-section {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: flex-start;
-        gap: 40px;
-        max-width: 1100px;
-        margin: 40px auto;
-        padding: 40px;
-        font-family: 'Roboto', sans-serif;
-      }
-      .about-content {
-        flex: 1;
-      }
-      .about-photo {
-        flex-shrink: 0;
-        order: 2;
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #0078d4;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-      }
-      .about-content h2 {
-        font-size: 1.8rem;
-        margin: 0 0 8px;
-        color: #0078d4;
-      }
-      .about-content .about-tagline {
-        font-size: 1rem;
-        color: #666;
-        margin: 0 0 16px;
-        font-style: italic;
-      }
-      .about-content p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: #444;
-        margin: 0 0 16px;
-      }
-      .about-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      .about-links a {
-        display: inline-block;
-        padding: 8px 16px;
-        border-radius: 6px;
-        background: #0078d4;
-        color: #fff;
-        text-decoration: none;
-        font-size: 0.85rem;
-        font-weight: 500;
-        transition: background 0.2s, transform 0.2s;
-      }
-      .about-links a:hover {
-        background: #005a9e;
-        transform: translateY(-2px);
-      }
-      html.dark-mode .about-content h2 { color: #50e6ff; }
-      html.dark-mode .about-content .about-tagline { color: #aaa; }
-      html.dark-mode .about-content p { color: #ccc; }
-      html.dark-mode .about-photo { border-color: #50e6ff; }
-      @media (max-width: 767px) {
-        .about-section {
-          flex-direction: column;
-          text-align: center;
-          padding: 24px 16px;
-          gap: 20px;
-        }
-        .about-links { justify-content: center; }
-      }
-      /* Blog section */
-      .tile-blog { background: linear-gradient(135deg, #d83b01, #ff8c00); }
-      /* Disclaimer */
-      .disclaimer-section {
-        background: #f5f5f5;
-        padding: 24px 16px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 0.8rem;
-        color: #666;
-        line-height: 1.6;
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: center;
-      }
-      html.dark-mode .disclaimer-section { background: #1a1a2e; color: #888; }
-      /* Spacing overrides — tighten nicepage defaults */
-      .u-section-4 { padding: 0 !important; }
-      .u-section-4 .u-sheet-1 { min-height: auto !important; padding: 24px 0 8px !important; }
-      .u-section-4 .u-group-1 { min-height: auto !important; margin: 0 auto !important; }
-      .u-section-3 { padding: 0 !important; }
-      .u-section-3 .u-sheet-1 { min-height: auto !important; padding: 0 16px 16px !important; }
-      .u-header { display: none !important; }
-      #about { padding: 0 !important; }
-      /* Tighten layout cells */
-      .u-layout-cell .u-container-layout { padding: 4px !important; }
-      .u-layout-cell { min-height: auto !important; }
-      /* Smooth scrolling */
-      html { scroll-behavior: smooth; scroll-padding-top: 56px; }
-    </style>
-  </head>
-  <body data-home-page="Home.html" data-home-page-title="TheAzureUpdate" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-5970"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
-    <nav class="site-nav" id="site-nav">
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#carousel_ai_header">AI &amp; Copilot</a>
-        <a href="#carousel_quantum_header">Quantum</a>
-        <a href="#carousel_blog_header">Blog</a>
-        <a href="#carousel_learn_header">Learning</a>
-        <a href="#carousel_7b63">Azure</a>
-        <a href="#carousel_x_header">Community</a>
-      </div>
-      <div class="nav-socials">
-        <a href="https://github.com/WernerRall147" title="GitHub" aria-label="GitHub">&#9783;</a>
-        <a href="https://x.com/werneragent47" title="X" aria-label="X">&#120143;</a>
-        <a href="https://www.linkedin.com/in/werner-rall/" title="LinkedIn" aria-label="LinkedIn">in</a>
-        <a href="https://www.youtube.com/@ralltheory411" title="YouTube" aria-label="YouTube">&#9654;</a>
-        <a href="https://aka.ms/wernerrall" title="Blog" aria-label="Blog">&#128221;</a>
-        <a href="https://www.credly.com/users/werner-rall/badges" title="Credly" aria-label="Credly">&#127942;</a>
-      </div>
-    </nav>
-    <!-- About / Bio Section -->
-    <section id="about">
-      <div class="about-section">
-        <div class="about-content">
-          <h2>Werner Rall</h2>
-          <p class="about-tagline">Azure, AI, PowerShell, DevOps, C# &mdash; from a farm in South Africa to the cloud.</p>
-          <p>I&rsquo;m Werner &mdash; a cloud enthusiast who learned how to use computers without the internet, growing up on a farm in South Africa. Today I focus on Azure, AI, Quantum Computing, and DevOps. I blog about what I learn, share what I build, and curate the best Azure updates so you don&rsquo;t have to hunt for them.</p>
-          <div class="about-links">
-            <a href="https://github.com/WernerRall147">GitHub</a>
-            <a href="https://www.linkedin.com/in/werner-rall/">LinkedIn</a>
-            <a href="https://x.com/werneragent47">X / Twitter</a>
-            <a href="https://www.youtube.com/@ralltheory411">YouTube</a>
-            <a href="https://aka.ms/wernerrall">Blog</a>
-            <a href="https://www.credly.com/users/werner-rall/badges">Credly Badges</a>
-            <a href="https://learn.microsoft.com/en-us/users/wernerrall147/">MS Learn Profile</a>
-          </div>
-        </div>
-        <img src="images/profile.jpg" alt="Werner Rall" class="about-photo" loading="lazy">
-      </div>
-    </section>
-    <!-- AI & Copilot Section -->
-    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_ai_header">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
-          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
-            <h2 class="u-text u-text-1">AI &amp; Copilot Updates</h2>
-            <p class="u-text u-text-2">The Latest on Azure AI Foundry, Microsoft Copilot, and Generative AI</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_ai_content">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://ai.azure.com/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#129302;</span>Azure AI Foundry</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#10024;</span>Azure OpenAI<br>What's New</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://copilot.microsoft.com/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#128640;</span>Microsoft Copilot</span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://github.blog/ai-and-ml/github-copilot/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#128187;</span>GitHub Copilot Blog</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://blogs.microsoft.com/ai/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#129504;</span>Microsoft AI Blog</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/ai-services/" class="nav-link tile-card tile-ai"><span><span class="tile-icon">&#128218;</span>Azure AI<br>Services Docs</span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Quantum Section -->
-    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_quantum_header">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
-          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
-            <h2 class="u-text u-text-1">Quantum Computing</h2>
-            <p class="u-text u-text-2">Azure Quantum and the Future of Computing</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_quantum_content">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://quantum.microsoft.com/" class="nav-link tile-card tile-quantum"><span><span class="tile-icon">&#9883;</span>Azure Quantum</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/blog/tag/azure-quantum/" class="nav-link tile-card tile-quantum"><span><span class="tile-icon">&#128240;</span>Azure Quantum Blog</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/quantum/" class="nav-link tile-card tile-quantum"><span><span class="tile-icon">&#128218;</span>Azure Quantum Docs</span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Blog & Articles Section -->
-    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_blog_header">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
-          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
-            <h2 class="u-text u-text-1">Blog &amp; Articles</h2>
-            <p class="u-text u-text-2">Technical writing, tutorials, and community posts</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_blog_content">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://aka.ms/wernerrall" class="nav-link tile-card tile-blog"><span><span class="tile-icon">&#128221;</span>Werner&rsquo;s Blog<br>aka.ms/wernerrall</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://techcommunity.microsoft.com/tag/wernerrall" class="nav-link tile-card tile-blog"><span><span class="tile-icon">&#128172;</span>Tech Community<br>Posts</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/blog/" class="nav-link tile-card tile-blog"><span><span class="tile-icon">&#128240;</span>Azure Blog<br>Official</span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Learning & Certifications Section -->
-    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_learn_header">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
-          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
-            <h2 class="u-text u-text-1">Learning &amp; Certifications</h2>
-            <p class="u-text u-text-2">Microsoft Learn, Certifications, and Training Resources</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_learn_content">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/training/" class="nav-link tile-card tile-learn"><span><span class="tile-icon">&#127891;</span>Microsoft Learn<br>Training</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/credentials/" class="nav-link tile-card tile-learn"><span><span class="tile-icon">&#127942;</span>Microsoft<br>Certifications</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills" class="nav-link tile-card tile-learn"><span><span class="tile-icon">&#128736;</span>Applied Skills</span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/training/azure/" class="nav-link tile-card tile-learn"><span><span class="tile-icon">&#9729;&#65039;</span>Azure Training<br>Paths</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://developer.microsoft.com/en-us/" class="nav-link tile-card tile-learn"><span><span class="tile-icon">&#128104;&#8205;&#128187;</span>Microsoft<br>Developer</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/samples/browse/" class="nav-link tile-card tile-learn"><span><span class="tile-icon">&#128221;</span>Code Samples<br>Browser</span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Azure Updates Section -->
-    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_7b63">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
-          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
-            <h2 class="u-text u-text-1">Some Azure Updates</h2>
-            <p class="u-text u-text-2">A Collection of the Latest Azure Updates from different Websites</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_4585">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/updates/" class="nav-link"><img src="images/AzUpdates.jpg" alt="Azure Updates" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://github.com/azure-deprecation/dashboard/issues" class="nav-link"><img src="images/AzDepDa.jpg" alt="Azure Deprecation Dashboard" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://status.azure.com/en-us/status" class="nav-link"><img src="images/AzSta.jpg" alt="Azure Status" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azurecharts.com/overview" class="nav-link"><img src="images/AzCha.jpg" alt="Azure Charts" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/lifecycle/products/" class="nav-link"><img src="images/MSProd.jpg" alt="Microsoft Product Lifecycle" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azure.github.io/AppService/" class="nav-link"><img src="images/AzApp.jpg" alt="Azure App Service" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://msrc-blog.microsoft.com/" class="nav-link"><img src="images/MSSec.jpg" alt="Microsoft Security Blog" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://learn.microsoft.com/en-us/azure/architecture/" class="nav-link"><img src="images/AzArch.jpg" alt="Azure Architecture" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://azure.microsoft.com/en-us/blog/" class="nav-link"><img src="images/AzBl.jpg" alt="Azure Blog" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://www.youtube.com/@azuredailyminute/videos" class="nav-link"><img src="images/AzDaMin.jpg" alt="Azure Daily Minute" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://github.com/readme" class="nav-link"><img src="images/AzGiRM.jpg" alt="GitHub ReadME" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://events.microsoft.com/" class="nav-link"><img src="images/MSEvents.jpg" alt="Microsoft Events" loading="lazy" style="width: 100%; height: auto;"></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Community on X Section (Tile Cards) -->
-    <section class="u-clearfix u-palette-1-light-3 u-section-4" id="carousel_x_header">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-expanded-width-md u-expanded-width-sm u-group u-group-1">
-          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-1">
-            <h2 class="u-text u-text-1">Community on X</h2>
-            <p class="u-text u-text-2">Azure &amp; Cloud voices worth following</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-1-light-3 u-section-3" id="carousel_x_content">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://x.com/Azure" class="nav-link tile-card tile-x"><span><span class="tile-icon">&#9729;&#65039;</span>@Azure</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://x.com/AzureSupport" class="nav-link tile-card tile-x"><span><span class="tile-icon">&#128736;</span>@AzureSupport</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://x.com/msdev" class="nav-link tile-card tile-x"><span><span class="tile-icon">&#128187;</span>@msdev</span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://x.com/satyanadella" class="nav-link tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@satyanadella</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://x.com/scottgu" class="nav-link tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@scottgu</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://x.com/shanselman" class="nav-link tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@shanselman</span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30 u-size-60-md">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://x.com/werneragent47" class="nav-link tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@werneragent47</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://x.com/CoreySandersWA" class="nav-link tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@CoreySandersWA</span></a></div>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-white u-layout-cell-9">
-                    <div class="u-container-layout">
-                      <div class="nav-item"><a href="https://x.com/donasarkar" class="nav-link tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@DonaSarkar</span></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>  
-    <footer class="site-footer">
-      <div class="footer-socials">
-        <a href="https://github.com/WernerRall147" title="GitHub" aria-label="GitHub">&#128736;</a>
-        <a href="https://x.com/werneragent47" title="X / Twitter" aria-label="X">&#120143;</a>
-        <a href="https://www.linkedin.com/in/werner-rall/" title="LinkedIn" aria-label="LinkedIn">in</a>
-        <a href="https://www.youtube.com/@ralltheory411" title="YouTube" aria-label="YouTube">&#9654;</a>
-        <a href="https://aka.ms/wernerrall" title="Blog" aria-label="Blog">&#128221;</a>
-        <a href="https://www.credly.com/users/werner-rall/badges" title="Credly Badges" aria-label="Credly">&#127942;</a>
-      </div>
-      <p>&copy; 2026 The Azure Update by <a href="https://www.linkedin.com/in/werner-rall/">Werner Rall</a> | Built on <a href="https://azure.microsoft.com/en-us/products/app-service/static/">Azure Static Web Apps</a></p>
-      <p class="footer-updated">Last updated: March 2026</p>
-    </footer>
-    <!-- Disclaimer -->
-    <div class="disclaimer-section">
-      <p><strong>Disclaimer:</strong> The content on this website is provided for informational purposes only. The views and opinions expressed are those of the author, Werner Rall, and do not necessarily reflect the official policy or position of Microsoft Corporation or any other organization. This site is not officially affiliated with, endorsed by, or sponsored by Microsoft.</p>
-      <p>All trademarks, service marks, trade names, product names, and logos appearing on this site are the property of their respective owners. Microsoft, Azure, and all related logos are trademarks or registered trademarks of Microsoft Corporation in the United States and/or other countries.</p>
-      <p>THE CONTENT IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE CONTENT OR THE USE OF THIS WEBSITE.</p>
-      <p>External links are provided as a convenience and do not constitute an endorsement. The author is not responsible for the content of linked third-party sites.</p>
-      <p>&copy; 2026 Werner Rall. All rights reserved.</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A curated collection of the latest Microsoft Azure, AI, and Quantum Computing updates, resources, and community links.">
+  <title>The Azure Update</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%230078d4'/><text x='50' y='68' font-size='50' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>TAU</text></svg>">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="site.css">
+  <meta property="og:title" content="The Azure Update">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="A curated collection of the latest Microsoft Azure, AI, and Quantum Computing updates, resources, and community links.">
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Azure Update",
+    "url": "https://www.theazureupdate.com",
+    "description": "A curated collection of the latest Microsoft Azure, AI, and Quantum Computing updates.",
+    "author": { "@type": "Person", "name": "Werner Rall" }
+  }</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#ai">AI &amp; Copilot</a>
+      <a href="#quantum">Quantum</a>
+      <a href="#blog">Blog</a>
+      <a href="#learning">Learning</a>
+      <a href="#azure">Azure</a>
+      <a href="#community">Community</a>
     </div>
-    <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">&#9790;</button>
-    <script>
-      (function() {
-        var toggle = document.getElementById('themeToggle');
-        var html = document.documentElement;
-        var stored = localStorage.getItem('theme');
-        if (stored === 'dark') { html.classList.add('dark-mode'); toggle.textContent = '\u2600'; }
-        toggle.addEventListener('click', function() {
-          html.classList.toggle('dark-mode');
-          var isDark = html.classList.contains('dark-mode');
-          localStorage.setItem('theme', isDark ? 'dark' : 'light');
-          toggle.textContent = isDark ? '\u2600' : '\u263E';
-        });
-      })();
-    </script>
-</body></html>
+    <div class="nav-socials">
+      <a href="https://github.com/WernerRall147" title="GitHub" aria-label="GitHub">&#9783;</a>
+      <a href="https://x.com/werneragent47" title="X" aria-label="X">&#120143;</a>
+      <a href="https://www.linkedin.com/in/werner-rall/" title="LinkedIn" aria-label="LinkedIn">in</a>
+      <a href="https://www.youtube.com/@ralltheory411" title="YouTube" aria-label="YouTube">&#9654;</a>
+      <a href="https://aka.ms/wernerrall" title="Blog" aria-label="Blog">&#128221;</a>
+      <a href="https://www.credly.com/users/werner-rall/badges" title="Credly" aria-label="Credly">&#127942;</a>
+    </div>
+  </nav>
+
+  <!-- About / Bio -->
+  <section id="about">
+    <div class="about-section">
+      <div class="about-content">
+        <h2>Werner Rall</h2>
+        <p class="about-tagline">Azure, AI, PowerShell, DevOps, C# &mdash; from a farm in South Africa to the cloud.</p>
+        <p>I&rsquo;m Werner &mdash; a cloud enthusiast who learned how to use computers without the internet, growing up on a farm in South Africa. Today I focus on Azure, AI, Quantum Computing, and DevOps. I blog about what I learn, share what I build, and curate the best Azure updates so you don&rsquo;t have to hunt for them.</p>
+        <div class="about-links">
+          <a href="https://github.com/WernerRall147">GitHub</a>
+          <a href="https://www.linkedin.com/in/werner-rall/">LinkedIn</a>
+          <a href="https://x.com/werneragent47">X / Twitter</a>
+          <a href="https://www.youtube.com/@ralltheory411">YouTube</a>
+          <a href="https://aka.ms/wernerrall">Blog</a>
+          <a href="https://www.credly.com/users/werner-rall/badges">Credly Badges</a>
+          <a href="https://learn.microsoft.com/en-us/users/wernerrall147/">MS Learn Profile</a>
+        </div>
+      </div>
+      <img src="images/profile.jpg" alt="Werner Rall" class="about-photo" loading="lazy">
+    </div>
+  </section>
+
+  <!-- AI & Copilot -->
+  <section class="section" id="ai">
+    <div class="section-header">
+      <h2>AI &amp; Copilot Updates</h2>
+      <p>The Latest on Azure AI Foundry, Microsoft Copilot, and Generative AI</p>
+    </div>
+    <div class="tile-grid">
+      <a href="https://ai.azure.com/" class="tile-card tile-ai"><span><span class="tile-icon">&#129302;</span>Azure AI Foundry</span></a>
+      <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new" class="tile-card tile-ai"><span><span class="tile-icon">&#10024;</span>Azure OpenAI<br>What's New</span></a>
+      <a href="https://copilot.microsoft.com/" class="tile-card tile-ai"><span><span class="tile-icon">&#128640;</span>Microsoft Copilot</span></a>
+      <a href="https://github.blog/ai-and-ml/github-copilot/" class="tile-card tile-ai"><span><span class="tile-icon">&#128187;</span>GitHub Copilot Blog</span></a>
+      <a href="https://blogs.microsoft.com/ai/" class="tile-card tile-ai"><span><span class="tile-icon">&#129504;</span>Microsoft AI Blog</span></a>
+      <a href="https://learn.microsoft.com/en-us/azure/ai-services/" class="tile-card tile-ai"><span><span class="tile-icon">&#128218;</span>Azure AI<br>Services Docs</span></a>
+    </div>
+  </section>
+
+  <!-- Quantum Computing -->
+  <section class="section" id="quantum">
+    <div class="section-header">
+      <h2>Quantum Computing</h2>
+      <p>Azure Quantum and the Future of Computing</p>
+    </div>
+    <div class="tile-grid">
+      <a href="https://quantum.microsoft.com/" class="tile-card tile-quantum"><span><span class="tile-icon">&#9883;</span>Azure Quantum</span></a>
+      <a href="https://azure.microsoft.com/en-us/blog/tag/azure-quantum/" class="tile-card tile-quantum"><span><span class="tile-icon">&#128240;</span>Azure Quantum Blog</span></a>
+      <a href="https://learn.microsoft.com/en-us/azure/quantum/" class="tile-card tile-quantum"><span><span class="tile-icon">&#128218;</span>Azure Quantum Docs</span></a>
+    </div>
+  </section>
+
+  <!-- Blog & Articles -->
+  <section class="section" id="blog">
+    <div class="section-header">
+      <h2>Blog &amp; Articles</h2>
+      <p>Technical writing, tutorials, and community posts</p>
+    </div>
+    <div class="tile-grid">
+      <a href="https://aka.ms/wernerrall" class="tile-card tile-blog"><span><span class="tile-icon">&#128221;</span>Werner&rsquo;s Blog<br>aka.ms/wernerrall</span></a>
+      <a href="https://techcommunity.microsoft.com/tag/wernerrall" class="tile-card tile-blog"><span><span class="tile-icon">&#128172;</span>Tech Community<br>Posts</span></a>
+      <a href="https://azure.microsoft.com/en-us/blog/" class="tile-card tile-blog"><span><span class="tile-icon">&#128240;</span>Azure Blog<br>Official</span></a>
+    </div>
+  </section>
+
+  <!-- Learning & Certifications -->
+  <section class="section" id="learning">
+    <div class="section-header">
+      <h2>Learning &amp; Certifications</h2>
+      <p>Microsoft Learn, Certifications, and Training Resources</p>
+    </div>
+    <div class="tile-grid">
+      <a href="https://learn.microsoft.com/en-us/training/" class="tile-card tile-learn"><span><span class="tile-icon">&#127891;</span>Microsoft Learn<br>Training</span></a>
+      <a href="https://learn.microsoft.com/en-us/credentials/" class="tile-card tile-learn"><span><span class="tile-icon">&#127942;</span>Microsoft<br>Certifications</span></a>
+      <a href="https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills" class="tile-card tile-learn"><span><span class="tile-icon">&#128736;</span>Applied Skills</span></a>
+      <a href="https://learn.microsoft.com/en-us/training/azure/" class="tile-card tile-learn"><span><span class="tile-icon">&#9729;&#65039;</span>Azure Training<br>Paths</span></a>
+      <a href="https://developer.microsoft.com/en-us/" class="tile-card tile-learn"><span><span class="tile-icon">&#128104;&#8205;&#128187;</span>Microsoft<br>Developer</span></a>
+      <a href="https://learn.microsoft.com/en-us/samples/browse/" class="tile-card tile-learn"><span><span class="tile-icon">&#128221;</span>Code Samples<br>Browser</span></a>
+    </div>
+  </section>
+
+  <!-- Azure Updates -->
+  <section class="section" id="azure">
+    <div class="section-header">
+      <h2>Some Azure Updates</h2>
+      <p>A Collection of the Latest Azure Updates from different Websites</p>
+    </div>
+    <div class="tile-grid">
+      <a href="https://azure.microsoft.com/en-us/updates/" class="tile-image"><img src="images/AzUpdates.jpg" alt="Azure Updates" loading="lazy"></a>
+      <a href="https://github.com/azure-deprecation/dashboard/issues" class="tile-image"><img src="images/AzDepDa.jpg" alt="Azure Deprecation Dashboard" loading="lazy"></a>
+      <a href="https://status.azure.com/en-us/status" class="tile-image"><img src="images/AzSta.jpg" alt="Azure Status" loading="lazy"></a>
+      <a href="https://azurecharts.com/overview" class="tile-image"><img src="images/AzCha.jpg" alt="Azure Charts" loading="lazy"></a>
+      <a href="https://learn.microsoft.com/en-us/lifecycle/products/" class="tile-image"><img src="images/MSProd.jpg" alt="Microsoft Product Lifecycle" loading="lazy"></a>
+      <a href="https://azure.github.io/AppService/" class="tile-image"><img src="images/AzApp.jpg" alt="Azure App Service" loading="lazy"></a>
+      <a href="https://msrc-blog.microsoft.com/" class="tile-image"><img src="images/MSSec.jpg" alt="Microsoft Security Blog" loading="lazy"></a>
+      <a href="https://learn.microsoft.com/en-us/azure/architecture/" class="tile-image"><img src="images/AzArch.jpg" alt="Azure Architecture" loading="lazy"></a>
+      <a href="https://azure.microsoft.com/en-us/blog/" class="tile-image"><img src="images/AzBl.jpg" alt="Azure Blog" loading="lazy"></a>
+      <a href="https://www.youtube.com/@azuredailyminute/videos" class="tile-image"><img src="images/AzDaMin.jpg" alt="Azure Daily Minute" loading="lazy"></a>
+      <a href="https://github.com/readme" class="tile-image"><img src="images/AzGiRM.jpg" alt="GitHub ReadME" loading="lazy"></a>
+      <a href="https://events.microsoft.com/" class="tile-image"><img src="images/MSEvents.jpg" alt="Microsoft Events" loading="lazy"></a>
+    </div>
+  </section>
+
+  <!-- Community on X -->
+  <section class="section" id="community">
+    <div class="section-header">
+      <h2>Community on X</h2>
+      <p>Azure &amp; Cloud voices worth following</p>
+    </div>
+    <div class="tile-grid">
+      <a href="https://x.com/Azure" class="tile-card tile-x"><span><span class="tile-icon">&#9729;&#65039;</span>@Azure</span></a>
+      <a href="https://x.com/AzureSupport" class="tile-card tile-x"><span><span class="tile-icon">&#128736;</span>@AzureSupport</span></a>
+      <a href="https://x.com/msdev" class="tile-card tile-x"><span><span class="tile-icon">&#128187;</span>@msdev</span></a>
+      <a href="https://x.com/satyanadella" class="tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@satyanadella</span></a>
+      <a href="https://x.com/scottgu" class="tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@scottgu</span></a>
+      <a href="https://x.com/shanselman" class="tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@shanselman</span></a>
+      <a href="https://x.com/werneragent47" class="tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@werneragent47</span></a>
+      <a href="https://x.com/CoreySandersWA" class="tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@CoreySandersWA</span></a>
+      <a href="https://x.com/donasarkar" class="tile-card tile-x"><span><span class="tile-icon">&#128100;</span>@DonaSarkar</span></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-socials">
+      <a href="https://github.com/WernerRall147" title="GitHub" aria-label="GitHub">&#128736;</a>
+      <a href="https://x.com/werneragent47" title="X / Twitter" aria-label="X">&#120143;</a>
+      <a href="https://www.linkedin.com/in/werner-rall/" title="LinkedIn" aria-label="LinkedIn">in</a>
+      <a href="https://www.youtube.com/@ralltheory411" title="YouTube" aria-label="YouTube">&#9654;</a>
+      <a href="https://aka.ms/wernerrall" title="Blog" aria-label="Blog">&#128221;</a>
+      <a href="https://www.credly.com/users/werner-rall/badges" title="Credly Badges" aria-label="Credly">&#127942;</a>
+    </div>
+    <p>&copy; 2026 The Azure Update by <a href="https://www.linkedin.com/in/werner-rall/">Werner Rall</a> | Built on <a href="https://azure.microsoft.com/en-us/products/app-service/static/">Azure Static Web Apps</a></p>
+    <p class="footer-updated">Last updated: March 2026</p>
+  </footer>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer-section">
+    <p><strong>Disclaimer:</strong> The content on this website is provided for informational purposes only. The views and opinions expressed are those of the author, Werner Rall, and do not necessarily reflect the official policy or position of Microsoft Corporation or any other organization. This site is not officially affiliated with, endorsed by, or sponsored by Microsoft.</p>
+    <p>All trademarks, service marks, trade names, product names, and logos appearing on this site are the property of their respective owners. Microsoft, Azure, and all related logos are trademarks or registered trademarks of Microsoft Corporation in the United States and/or other countries.</p>
+    <p>THE CONTENT IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE CONTENT OR THE USE OF THIS WEBSITE.</p>
+    <p>External links are provided as a convenience and do not constitute an endorsement. The author is not responsible for the content of linked third-party sites.</p>
+    <p>&copy; 2026 Werner Rall. All rights reserved.</p>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">&#9790;</button>
+  <script>
+    (function() {
+      var toggle = document.getElementById('themeToggle');
+      var html = document.documentElement;
+      var stored = localStorage.getItem('theme');
+      if (stored === 'dark') { html.classList.add('dark-mode'); toggle.textContent = '\u2600'; }
+      toggle.addEventListener('click', function() {
+        html.classList.toggle('dark-mode');
+        var isDark = html.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        toggle.textContent = isDark ? '\u2600' : '\u263E';
+      });
+    })();
+  </script>
+
+</body>
+</html>

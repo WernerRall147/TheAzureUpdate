@@ -21,12 +21,12 @@ test('dark mode toggle exists', async ({ page }) => {
 test('all sections are present', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('#about')).toBeVisible();
-  await expect(page.locator('#carousel_7b63')).toBeVisible();
-  await expect(page.locator('#carousel_ai_header')).toBeVisible();
-  await expect(page.locator('#carousel_quantum_header')).toBeVisible();
-  await expect(page.locator('#carousel_learn_header')).toBeVisible();
-  await expect(page.locator('#carousel_blog_header')).toBeVisible();
-  await expect(page.locator('#carousel_x_header')).toBeVisible();
+  await expect(page.locator('#ai')).toBeVisible();
+  await expect(page.locator('#quantum')).toBeVisible();
+  await expect(page.locator('#blog')).toBeVisible();
+  await expect(page.locator('#learning')).toBeVisible();
+  await expect(page.locator('#azure')).toBeVisible();
+  await expect(page.locator('#community')).toBeVisible();
 });
 
 test('disclaimer is present', async ({ page }) => {
@@ -37,6 +37,20 @@ test('disclaimer is present', async ({ page }) => {
 test('sections are ordered correctly (newer first)', async ({ page }) => {
   await page.goto('/');
   const sectionIds = await page.locator('section[id]').evaluateAll(els => els.map(el => el.id));
-  const expected = ['about', 'carousel_ai_header', 'carousel_ai_content', 'carousel_quantum_header', 'carousel_quantum_content', 'carousel_blog_header', 'carousel_blog_content', 'carousel_learn_header', 'carousel_learn_content', 'carousel_7b63', 'carousel_4585', 'carousel_x_header', 'carousel_x_content'];
+  const expected = ['about', 'ai', 'quantum', 'blog', 'learning', 'azure', 'community'];
   expect(sectionIds).toEqual(expected);
+});
+
+test('no legacy framework references', async ({ page }) => {
+  await page.goto('/');
+  const html = await page.content();
+  expect(html).not.toContain('nicepage');
+  expect(html).not.toContain('jquery');
+  expect(html).toContain('site.css');
+});
+
+test('tile grid uses CSS grid layout', async ({ page }) => {
+  await page.goto('/');
+  const display = await page.locator('.tile-grid').first().evaluate(el => getComputedStyle(el).display);
+  expect(display).toBe('grid');
 });
