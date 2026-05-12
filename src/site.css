@@ -112,9 +112,24 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* --- Header Banner --- */
 .site-header {
-  background: #1a1a2e;
+  background: linear-gradient(135deg, #0078d4 0%, #1a1a2e 60%, #5c2d91 100%);
   text-align: center;
-  padding: 20px 20px 16px;
+  padding: 56px 20px 48px;
+  color: #fff;
+}
+.site-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+}
+.site-subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 300;
+  margin-top: 8px;
+  color: #cfe9ff;
+  letter-spacing: 1px;
 }
 .header-logo {
   max-height: 200px;
@@ -265,9 +280,194 @@ html.dark-mode .disclaimer-section { background: #1a1a2e; color: #888; }
     border-bottom: 1px solid #ddd;
     padding: 24px 20px;
   }
+  .blog-layout { grid-template-columns: 1fr; padding: 24px 16px; }
+  .blog-sidebar { position: static; }
 }
 @media (max-width: 600px) {
   .site-nav { flex-direction: column; padding: 8px; }
   .nav-socials { margin-top: 6px; }
   .tile-grid { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   Blog Page
+   ========================================================= */
+.blog-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+.blog-main { min-width: 0; }
+.nav-links a.active { background: rgba(80, 230, 255, .15); color: #50e6ff; }
+
+.post-list { display: flex; flex-direction: column; gap: 20px; }
+.post-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  transition: transform .2s, box-shadow .2s;
+  border-left: 4px solid #0078d4;
+}
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+.post-card-title {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.post-card-title a { color: #0078d4; }
+.post-card-title a:hover { text-decoration: underline; }
+.post-meta {
+  font-size: .82rem;
+  color: #777;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.post-tags { margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+.post-tag {
+  font-size: .72rem;
+  background: #e6f2fb;
+  color: #0078d4;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+.post-excerpt { color: #444; margin-bottom: 12px; }
+.post-read-more {
+  display: inline-block;
+  color: #0078d4;
+  font-weight: 500;
+  font-size: .9rem;
+}
+.post-read-more:hover { text-decoration: underline; }
+.post-empty {
+  background: #fff;
+  border: 1px dashed #ccc;
+  padding: 24px;
+  text-align: center;
+  color: #777;
+  border-radius: 12px;
+}
+.post-empty code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+
+/* --- Single post --- */
+.post-full {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.post-back {
+  display: inline-block;
+  color: #0078d4;
+  font-size: .9rem;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.post-back:hover { text-decoration: underline; }
+.post-full-title {
+  font-size: 2rem;
+  color: #0078d4;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+.post-body { margin-top: 18px; color: #333; line-height: 1.7; }
+.post-body p { margin-bottom: 14px; }
+.post-body h3 { margin: 22px 0 10px; color: #0078d4; font-size: 1.2rem; }
+.post-body ul, .post-body ol { margin: 0 0 14px 22px; }
+.post-body li { margin-bottom: 6px; }
+.post-body code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: .92em;
+}
+.post-body pre {
+  background: #1a1a2e;
+  color: #e6e6e6;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 14px;
+}
+.post-body pre code { background: transparent; color: inherit; padding: 0; }
+.post-body a { color: #0078d4; text-decoration: underline; }
+
+/* --- Featured sidebar --- */
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 70px;
+  align-self: start;
+}
+.featured-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.featured-heading {
+  font-size: 1rem;
+  color: #0078d4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6f2fb;
+}
+.featured-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.featured-item a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background .2s;
+}
+.featured-item a:hover { background: #f5f9fd; }
+.featured-title {
+  display: block;
+  font-weight: 500;
+  font-size: .92rem;
+  color: #222;
+  line-height: 1.35;
+}
+.featured-date {
+  display: block;
+  font-size: .75rem;
+  color: #888;
+  margin-top: 3px;
+}
+.featured-empty { color: #888; font-size: .85rem; font-style: italic; }
+
+/* --- Dark mode for blog --- */
+html.dark-mode .post-card,
+html.dark-mode .post-full,
+html.dark-mode .featured-card { background: #1e1e2e; box-shadow: 0 2px 8px rgba(0,0,0,.4); }
+html.dark-mode .post-card-title a,
+html.dark-mode .post-full-title,
+html.dark-mode .post-body h3,
+html.dark-mode .featured-heading,
+html.dark-mode .post-back,
+html.dark-mode .post-read-more { color: #50e6ff; }
+html.dark-mode .post-excerpt,
+html.dark-mode .post-body { color: #d0d0d0; }
+html.dark-mode .post-meta { color: #999; }
+html.dark-mode .post-tag { background: #2a3a4a; color: #50e6ff; }
+html.dark-mode .featured-title { color: #e0e0e0; }
+html.dark-mode .featured-date { color: #888; }
+html.dark-mode .featured-heading { border-bottom-color: #2a3a4a; }
+html.dark-mode .featured-item a:hover { background: #2a2a3e; }
+html.dark-mode .post-empty { background: #1e1e2e; border-color: #444; color: #aaa; }
+html.dark-mode .post-empty code,
+html.dark-mode .post-body code { background: #2a2a3e; color: #e0e0e0; }
+html.dark-mode .post-body a { color: #50e6ff; }
