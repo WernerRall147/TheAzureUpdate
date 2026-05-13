@@ -56,9 +56,10 @@ test('tile grid uses CSS grid layout', async ({ page }) => {
   expect(display).toBe('grid');
 });
 
-test('header logo and sidebar layout are present', async ({ page }) => {
+test('header banner and sidebar layout are present', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('.header-logo')).toBeVisible();
+  await expect(page.locator('.site-title')).toHaveText('The Azure Update');
+  await expect(page.locator('.site-subtitle')).toContainText('Werner Rall');
   await expect(page.locator('.sidebar')).toBeVisible();
   await expect(page.locator('.sidebar-photo')).toBeVisible();
   await expect(page.locator('.page-layout')).toBeVisible();
