@@ -2,6 +2,8 @@
   "name": "vanilla-basic",
   "version": "1.0.0",
   "scripts": {
+    "posts": "node scripts/generate-manifest.mjs",
+    "prestart": "node scripts/generate-manifest.mjs",
     "start": "sirv ./src public --cors --single --no-clear --port 8000",
     "playwright_test": "playwright test"
   },

@@ -7,7 +7,7 @@ featured: true
 excerpt: A short tour of why a vanilla HTML + CSS site on Azure Static Web Apps is hard to beat for personal sites.
 ---
 
-Static Web Apps gives me a global CDN, free SSL, a custom domain, GitHub Actions deploys, and a generous free tier — without standing up a single VM.
+Static Web Apps gives me a global CDN, free SSL, a custom domain, GitHub Actions deploys, and a generous free tier - without standing up a single VM.
 
 ### The setup in one paragraph
 

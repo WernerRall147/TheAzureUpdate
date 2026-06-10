@@ -82,20 +82,32 @@
     return "<pre>" + escapeHtml(md) + "</pre>";
   }
 
+  // A manifest entry is normally a post folder slug ("my-post" ->
+  // posts/my-post/index.md). Legacy flat files ("my-post.md") are
+  // still supported for backwards compatibility.
+  function resolveEntry(entry) {
+    var slug = String(entry).replace(/\/+$/, "");
+    if (/\.md$/i.test(slug)) {
+      return { slug: slug.replace(/\.md$/i, ""), url: POSTS_DIR + slug };
+    }
+    return { slug: slug, url: POSTS_DIR + slug + "/index.md" };
+  }
+
   function loadPosts() {
     var files = (window.BLOG_MANIFEST || []).slice();
-    return Promise.all(files.map(function (file) {
-      return fetch(POSTS_DIR + file, { cache: "no-cache" })
+    return Promise.all(files.map(function (entry) {
+      var ref = resolveEntry(entry);
+      return fetch(ref.url, { cache: "no-cache" })
         .then(function (r) {
-          if (!r.ok) throw new Error("Failed to load " + file + " (" + r.status + ")");
+          if (!r.ok) throw new Error("Failed to load " + ref.url + " (" + r.status + ")");
           return r.text();
         })
         .then(function (raw) {
           var parsed = parseFrontmatter(raw);
-          var id = (parsed.meta.id || file.replace(/\.md$/i, "")).toString().trim();
+          var id = (parsed.meta.id || ref.slug).toString().trim();
           return {
             id: id,
-            file: file,
+            file: ref.url,
             title: parsed.meta.title || id,
             date: parsed.meta.date || "",
             author: parsed.meta.author || "Werner Rall",
@@ -119,6 +131,7 @@
   function renderList(posts) {
     var listEl = document.getElementById("postList");
     var emptyEl = document.getElementById("emptyState");
+    if (!listEl) return; // Home page has a Featured rail but no full post list.
     if (!posts.length) {
       if (emptyEl) emptyEl.hidden = false;
       if (listEl) listEl.innerHTML = "";
@@ -144,6 +157,7 @@
   function renderSinglePost(post) {
     var listEl = document.getElementById("postList");
     var emptyEl = document.getElementById("emptyState");
+    if (!listEl) return;
     if (emptyEl) emptyEl.hidden = true;
 
     listEl.innerHTML =
@@ -159,7 +173,7 @@
         '<div class="post-body">' + renderMarkdown(post.content) + "</div>" +
       "</article>";
 
-    document.title = post.title + " — The Azure Update";
+    document.title = post.title + " - The Azure Update";
   }
 
   function renderFeatured(posts) {
@@ -176,7 +190,7 @@
     featuredEl.innerHTML = pool.slice(0, 5).map(function (p) {
       return (
         '<li class="featured-item">' +
-          '<a href="?post=' + encodeURIComponent(p.id) + '">' +
+          '<a href="blog.html?post=' + encodeURIComponent(p.id) + '">' +
             '<span class="featured-title">' + escapeHtml(p.title) + "</span>" +
             '<span class="featured-date">' + escapeHtml(formatDate(p.date)) + "</span>" +
           "</a>" +

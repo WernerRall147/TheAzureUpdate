@@ -1,5 +1,5 @@
 /* =========================================================
-   TheAzureUpdate — site.css
+   TheAzureUpdate - site.css
    Pure CSS3 with Grid/Flexbox. Zero frameworks.
    ========================================================= */
 
@@ -137,17 +137,31 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0 auto;
 }
 
-/* --- Page Layout: Sidebar + Main --- */
+/* --- Page Layout: Sidebar + Main + Right Rail --- */
 .page-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  max-width: 1400px;
+  grid-template-columns: 280px minmax(0, 1fr) 300px;
+  max-width: 1600px;
   margin: 0 auto;
   gap: 0;
 }
 .main-content {
   min-width: 0; /* prevent grid blowout */
 }
+
+/* --- Home right rail (recent posts) --- */
+.home-rail {
+  padding: 32px 20px;
+}
+.home-rail-all {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: .85rem;
+  font-weight: 500;
+  color: #0078d4;
+}
+.home-rail-all:hover { text-decoration: underline; }
+html.dark-mode .home-rail-all { color: #50e6ff; }
 
 /* --- Sidebar --- */
 .sidebar {
@@ -272,6 +286,18 @@ html.dark-mode .sidebar-photo  { border-color: #50e6ff; }
 html.dark-mode .disclaimer-section { background: #1a1a2e; color: #888; }
 
 /* --- Responsive --- */
+@media (max-width: 1200px) {
+  /* Drop the right rail under the main content, full width */
+  .page-layout { grid-template-columns: 280px minmax(0, 1fr); }
+  .home-rail {
+    grid-column: 1 / -1;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+  }
+  .home-rail .featured-card { flex: 1 1 260px; }
+}
 @media (max-width: 900px) {
   .tile-grid { grid-template-columns: repeat(2, 1fr); }
   .page-layout { grid-template-columns: 1fr; }

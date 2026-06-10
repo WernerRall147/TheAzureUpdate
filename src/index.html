@@ -172,6 +172,26 @@
   </section>
 
     </main><!-- end .main-content -->
+
+    <!-- Right Rail: Recent blog posts + external links -->
+    <aside class="blog-sidebar home-rail" aria-label="Recent blog posts">
+      <div class="featured-card">
+        <h3 class="featured-heading">Featured</h3>
+        <ul id="featuredList" class="featured-list">
+          <li class="featured-item"><span class="featured-empty">Loading posts&hellip;</span></li>
+        </ul>
+        <a class="home-rail-all" href="blog.html">All posts &rarr;</a>
+      </div>
+
+      <div class="featured-card">
+        <h3 class="featured-heading">Elsewhere</h3>
+        <ul class="featured-list">
+          <li class="featured-item"><a href="https://aka.ms/wernerrall"><span class="featured-title">aka.ms/wernerrall</span><span class="featured-date">Main blog</span></a></li>
+          <li class="featured-item"><a href="https://techcommunity.microsoft.com/tag/wernerrall"><span class="featured-title">Tech Community</span><span class="featured-date">Microsoft posts</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
   </div><!-- end .page-layout -->
 
   <!-- Footer -->
@@ -213,6 +233,10 @@
       });
     })();
   </script>
+
+  <!-- Recent blog posts for the right rail (shares the blog engine) -->
+  <script src="posts/manifest.js"></script>
+  <script src="blog.js"></script>
 
 </body>
 </html>

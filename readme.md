@@ -10,12 +10,12 @@ Live site: <https://www.theazureupdate.com>
 
 The site has **two pages**, both sharing the same navigation, header banner, and dark-mode toggle.
 
-### 1. Home — `src/index.html`
+### 1. Home - `src/index.html`
 
 A two-column landing page:
 
 - **Top nav** with anchor links (About, AI & Copilot, Quantum, Blog, Learning, Azure, Community) and social icons (GitHub, X, LinkedIn, YouTube, Blog, Credly).
-- **Header banner** — site title "The Azure Update" with the subtitle "with Werner Rall".
+- **Header banner** - site title "The Azure Update" with the subtitle "with Werner Rall".
 - **Sidebar profile** (`.sidebar`) with photo, bio, and outbound links.
 - **Main content** organised into themed sections, each rendered as a CSS-grid of clickable tile cards:
   - AI & Copilot
@@ -27,19 +27,19 @@ A two-column landing page:
 - **Disclaimer section** at the bottom.
 - **Floating dark-mode toggle** (sun/moon button, bottom-right), persisted via `localStorage`.
 
-### 2. Blog — `src/blog.html`
+### 2. Blog - `src/blog.html`
 
 Reuses the same nav/header, then switches to a blog-specific layout:
 
-- **Main column** (`.blog-main`) — list of post cards (title, author, date, tags, excerpt, "Read more").
-- **Featured sidebar** (`.blog-sidebar`) — top featured posts + external links (aka.ms/wernerrall, Tech Community).
-- **Single-post view** — when the URL has `?post=<id>`, the same page renders the full Markdown content with a "← All posts" back link. The page `<title>` updates to match the post.
+- **Main column** (`.blog-main`) - list of post cards (title, author, date, tags, excerpt, "Read more").
+- **Featured sidebar** (`.blog-sidebar`) - top featured posts + external links (aka.ms/wernerrall, Tech Community).
+- **Single-post view** - when the URL has `?post=<id>`, the same page renders the full Markdown content with a "← All posts" back link. The page `<title>` updates to match the post.
 
 ---
 
 ## Architecture
 
-Intentionally framework-free — plain HTML, CSS, and a small amount of vanilla JS. No build step.
+Intentionally framework-free - plain HTML, CSS, and a small amount of vanilla JS. No build step.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -69,17 +69,18 @@ index.html            blog.html               site.css
 | [src/index.html](src/index.html) | Home page (sidebar profile + tile grids) |
 | [src/blog.html](src/blog.html) | Blog page shell (list + featured sidebar) |
 | [src/blog.js](src/blog.js) | Client-side blog engine: loads manifest, fetches Markdown, parses YAML-ish frontmatter, renders list or single post |
-| [src/posts/manifest.js](src/posts/manifest.js) | `window.BLOG_MANIFEST` — array of post filenames to load |
-| [src/posts/*.md](src/posts/) | Individual posts; frontmatter keys: `id`, `title`, `date`, `author`, `tags`, `featured`, `excerpt` |
+| [src/posts/manifest.js](src/posts/manifest.js) | `window.BLOG_MANIFEST` - **auto-generated** list of post folder slugs (do not edit by hand) |
+| [scripts/generate-manifest.mjs](scripts/generate-manifest.mjs) | Scans `src/posts/*/index.md` and (re)writes `manifest.js`; runs on `npm run posts` and automatically via `prestart` on `npm start` |
+| [src/posts/&lt;slug&gt;/index.md](src/posts/) | Individual posts, one folder each; frontmatter keys: `id`, `title`, `date`, `author`, `tags`, `featured`, `excerpt` |
 | [src/site.css](src/site.css) | All styling, including dark-mode rules |
-| [staticwebapp.config.json](staticwebapp.config.json) | SWA config — security headers, cache rules for `/images/*` and `*.css`, SPA-style fallback to `index.html` |
+| [staticwebapp.config.json](staticwebapp.config.json) | SWA config - security headers, cache rules for `/images/*` and `*.css`, SPA-style fallback to `index.html` |
 | [package.json](package.json) | Dev-only deps: `sirv-cli` (local static server) and `@playwright/test` |
 | [playwright.config.ts](playwright.config.ts) | Playwright config (chromium/firefox/webkit, baseURL `http://localhost:8000`) |
 
 ### How the blog renders (client-side flow)
 
-1. `blog.html` loads `posts/manifest.js`, which sets `window.BLOG_MANIFEST`.
-2. `blog.js` iterates the manifest, `fetch`es each `.md` file under `posts/`.
+1. `blog.html` loads `posts/manifest.js`, which sets `window.BLOG_MANIFEST` (a list of post folder slugs).
+2. `blog.js` iterates the manifest, `fetch`es each post's Markdown at `posts/<slug>/index.md`.
 3. Each file is split into **frontmatter** (between `---` fences) and **body**.
 4. Posts are sorted by `date` descending.
 5. If `?post=<id>` is in the URL, the matching post is rendered full-width via `marked`. Otherwise the post-card list and Featured sidebar are rendered.
@@ -87,7 +88,13 @@ index.html            blog.html               site.css
 
 ### Adding a post
 
-1. Create `src/posts/my-post.md` with frontmatter:
+Each post is a **self-contained folder**. The manifest is generated for you - you never edit it by hand.
+
+1. Create a folder and an `index.md` inside it:
+   ```
+   src/posts/my-post/index.md
+   ```
+   with frontmatter:
    ```md
    ---
    id: my-post
@@ -98,12 +105,13 @@ index.html            blog.html               site.css
    ---
    Body in Markdown...
    ```
-2. Add the filename to the array in [src/posts/manifest.js](src/posts/manifest.js).
-3. Refresh `blog.html`.
+2. Run `npm start` (or `npm run posts`). The manifest regenerates automatically and the post is live.
+
+> The folder name is the post's default `id` and its URL slug (`blog.html?post=my-post`). Images can later live alongside `index.md` in the same folder.
 
 ### Hosting / deployment notes
 
-- **Azure Static Web Apps** serves everything in `src/` as-is — no bundler, no SSR.
+- **Azure Static Web Apps** serves everything in `src/` as-is - no bundler, no SSR.
 - [staticwebapp.config.json](staticwebapp.config.json) adds:
   - Security headers: `X-Content-Type-Options`, `X-Frame-Options: DENY`, `Referrer-Policy`, `Permissions-Policy`.
   - Long cache (`30 days, immutable`) for `/images/*`, 7-day cache for `*.css`.
@@ -132,7 +140,7 @@ npm run playwright_test
 
 Reports are written to `pw-report/` (HTML + `report.json`); per-test traces and screenshots land in `test-results/`.
 
-### Home page suite — [tests/playwright.spec.ts](tests/playwright.spec.ts)
+### Home page suite - [tests/playwright.spec.ts](tests/playwright.spec.ts)
 
 | Test | What it checks |
 |---|---|
@@ -146,7 +154,7 @@ Reports are written to `pw-report/` (HTML + `report.json`); per-test traces and 
 | `tile grid uses CSS grid layout` | `.tile-grid` computed `display` is `grid`. |
 | `header banner and sidebar layout are present` | Title, subtitle, sidebar, photo, and `.page-layout` all render. |
 
-### Blog suite — [tests/blog.spec.ts](tests/blog.spec.ts)
+### Blog suite - [tests/blog.spec.ts](tests/blog.spec.ts)
 
 | Test | What it checks |
 |---|---|
@@ -172,4 +180,4 @@ Reports are written to `pw-report/` (HTML + `report.json`); per-test traces and 
 - **Local dev server:** [`sirv-cli`](https://github.com/lukeed/sirv).
 - **Tests:** [Playwright](https://playwright.dev/) across Chromium / Firefox / WebKit.
 
-> Heads up: I can't fetch your Outlook or Teams items from here — only the README rewrite above is in scope for this tool. If you want, share the list and I can help prioritise it.
+> Heads up: I can't fetch your Outlook or Teams items from here - only the README rewrite above is in scope for this tool. If you want, share the list and I can help prioritise it.
