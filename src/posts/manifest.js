@@ -10,6 +10,7 @@
      3. Run npm start (or npm run posts) - done.
 */
 window.BLOG_MANIFEST = [
+  "Building-Mimur-a-private-NPU-accelerated-digital-twin-that-answers-in-my-own-voice",
   "welcome-to-the-azure-update",
   "why-azure-static-web-apps"
 ];
