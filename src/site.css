@@ -427,6 +427,16 @@ html.dark-mode .disclaimer-section { background: #1a1a2e; color: #888; }
 }
 .post-body pre code { background: transparent; color: inherit; padding: 0; }
 .post-body a { color: #0078d4; text-decoration: underline; }
+.post-body .mermaid {
+  margin: 24px 0;
+  text-align: center;
+  line-height: normal;
+}
+.post-body .mermaid svg {
+  width: 100%;
+  max-width: 900px !important;
+  height: auto;
+}
 
 /* --- Featured sidebar --- */
 .blog-sidebar {

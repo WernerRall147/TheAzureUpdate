@@ -82,6 +82,36 @@
     return "<pre>" + escapeHtml(md) + "</pre>";
   }
 
+  // marked turns ```mermaid fences into <pre><code class="language-mermaid">.
+  // Swap each for a <div class="mermaid"> holding the decoded source, then let
+  // Mermaid draw the SVG. textContent gives us the un-escaped diagram text.
+  function renderMermaid(root) {
+    if (!root || !window.mermaid) return;
+    var blocks = root.querySelectorAll("code.language-mermaid");
+    if (!blocks.length) return;
+    var nodes = [];
+    Array.prototype.forEach.call(blocks, function (code) {
+      var pre = code.parentNode;
+      if (!pre || !pre.parentNode) return;
+      var holder = document.createElement("div");
+      holder.className = "mermaid";
+      holder.textContent = code.textContent;
+      pre.parentNode.replaceChild(holder, pre);
+      nodes.push(holder);
+    });
+    if (!nodes.length) return;
+    try {
+      window.mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: "strict",
+        theme: document.documentElement.classList.contains("dark-mode") ? "dark" : "default"
+      });
+      window.mermaid.run({ nodes: nodes });
+    } catch (err) {
+      console.error("Mermaid render failed:", err);
+    }
+  }
+
   // A manifest entry is normally a post folder slug ("my-post" ->
   // posts/my-post/index.md). Legacy flat files ("my-post.md") are
   // still supported for backwards compatibility.
@@ -172,6 +202,8 @@
         tagsHtml(post.tags) +
         '<div class="post-body">' + renderMarkdown(post.content) + "</div>" +
       "</article>";
+
+    renderMermaid(listEl);
 
     document.title = post.title + " - The Azure Update";
   }

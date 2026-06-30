@@ -69,7 +69,7 @@ questions because it has no time model, no relationship model, no identity, and 
 Mimur adds exactly those missing structures on top of search.
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph Sources["Sources (you own the exports)"]
         G[Gmail / Outlook]
         S[X / LinkedIn / Instagram]
@@ -91,9 +91,9 @@ flowchart LR
     AGENT -. "cites evidence" .-> RAW
 ```
 
-![A real view of the memory graph: clusters of people, topics and threads condensing out of a life of data](images/mimur/02-memory-graph.png)
-*The diagram, made real. Each dot is a memory or an entity; the bright hubs are the people and topics
-I keep returning to.*
+![A real view of the memory graph in Obsidian: clusters of people, topics and threads condensing out of a life of data](images/mimur/02-memory-graph.png)
+*The diagram, made real — this is my actual **Obsidian** graph view. Each dot is a memory or an entity;
+the bright hubs are the people and topics I keep returning to.*
 
 The stack: **PostgreSQL + pgvector** for canonical records and hybrid search, local **Gemma 4** via
 Ollama for reasoning, and a local embedding model behind an HNSW index. Cloud (GPT/Claude + Azure AI
