@@ -357,6 +357,13 @@ html.dark-mode .disclaimer-section { background: #1a1a2e; color: #888; }
   align-items: center;
   margin-bottom: 10px;
 }
+.post-views {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.post-views-icon { font-size: .7rem; color: #0078d4; }
 .post-tags { margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
 .post-tag {
   font-size: .72rem;
@@ -498,6 +505,7 @@ html.dark-mode .post-read-more { color: #50e6ff; }
 html.dark-mode .post-excerpt,
 html.dark-mode .post-body { color: #d0d0d0; }
 html.dark-mode .post-meta { color: #999; }
+html.dark-mode .post-views-icon { color: #50e6ff; }
 html.dark-mode .post-tag { background: #2a3a4a; color: #50e6ff; }
 html.dark-mode .featured-title { color: #e0e0e0; }
 html.dark-mode .featured-date { color: #888; }

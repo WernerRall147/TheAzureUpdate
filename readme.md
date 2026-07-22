@@ -119,6 +119,40 @@ Each post is a **self-contained folder**. The manifest is generated for you - yo
 
 ---
 
+## Blog view counts
+
+Each blog post shows a live view count (in the post meta line, on both the
+card list and the single-post view). It is powered by the Static Web Apps
+**managed Functions API** in [api/](api/), backed by **Azure Table Storage**.
+
+```
+browser (blog.js) ──HTTP──▶ /api/views (Azure Function) ──▶ Azure Table Storage
+   GET  /api/views            → { counts: { <id>: <n> } }   (fills every badge)
+   POST /api/views { post }   → { id, count }               (increments on read)
+```
+
+- A view is counted at most **once per browser session** per post
+  (`sessionStorage` guard), so refreshes do not inflate numbers.
+- If the API or storage is unavailable (e.g. plain `npm start` with no
+  Functions host), the badges stay hidden and the blog works as before.
+
+### One-time setup
+
+The API needs a storage connection string. In the Azure Portal, open the
+Static Web App → **Configuration** → **Application settings** and add:
+
+| Name | Value |
+|---|---|
+| `VIEWS_TABLES_CONNECTION` | connection string of an Azure Storage account |
+
+Optional overrides: `VIEWS_TABLE_NAME` (default `postViews`). The table and
+rows are created automatically on first use. To run the API locally, copy
+[api/local.settings.json.example](api/local.settings.json.example) to
+`api/local.settings.json`, then run the API with
+`cd api; npm install; func start` alongside `npm start`.
+
+---
+
 ## Running locally
 
 ```powershell

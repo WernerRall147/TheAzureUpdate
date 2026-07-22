@@ -2,6 +2,69 @@
   "use strict";
 
   var POSTS_DIR = "posts/";
+  var VIEWS_API = "/api/views";
+
+  // Format a raw view count as a short, human label (1200 -> "1.2k").
+  function formatViews(n) {
+    n = Number(n) || 0;
+    var num = n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "k" : String(n);
+    return num + (n === 1 ? " view" : " views");
+  }
+
+  function viewsBadgeHtml(id, count) {
+    var label = count == null ? "" : formatViews(count);
+    return '<span class="post-views" data-post-views="' + escapeHtml(id) + '"' +
+      (count == null ? ' hidden' : '') + '>' +
+      '<span class="post-views-icon" aria-hidden="true">\u25C9</span>' +
+      '<span class="post-views-count">' + escapeHtml(label) + '</span>' +
+      '</span>';
+  }
+
+  // Fetch every post's view count in one call. Resolves to a map keyed by
+  // post id, or an empty object if the API is unavailable (e.g. local dev).
+  function fetchViewCounts() {
+    return fetch(VIEWS_API, { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) { return (data && data.counts) || {}; })
+      .catch(function () { return {}; });
+  }
+
+  // Register a view for a post, at most once per browser session so a page
+  // refresh does not inflate the count. Resolves to the new count or null.
+  function registerView(id) {
+    var key = "viewed:" + id;
+    var already = false;
+    try { already = sessionStorage.getItem(key) === "1"; } catch (e) {}
+    var method = already ? "GET" : "POST";
+    var opts = already
+      ? { cache: "no-store" }
+      : {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ post: id })
+        };
+    var url = already ? VIEWS_API + "?post=" + encodeURIComponent(id) : VIEWS_API;
+    return fetch(url, opts)
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!already) { try { sessionStorage.setItem(key, "1"); } catch (e) {} }
+        return data ? data.count : null;
+      })
+      .catch(function () { return null; });
+  }
+
+  // Fill any rendered view badges from a { id: count } map.
+  function applyViewCounts(counts) {
+    if (!counts) return;
+    var badges = document.querySelectorAll("[data-post-views]");
+    Array.prototype.forEach.call(badges, function (el) {
+      var id = el.getAttribute("data-post-views");
+      if (!(id in counts)) return;
+      var countEl = el.querySelector(".post-views-count");
+      if (countEl) countEl.textContent = formatViews(counts[id]);
+      el.hidden = false;
+    });
+  }
 
   function escapeHtml(str) {
     return String(str == null ? "" : str)
@@ -175,6 +238,8 @@
             '<span>' + escapeHtml(p.author) + "</span>" +
             '<span aria-hidden="true">•</span>' +
             '<time datetime="' + escapeHtml(p.date) + '">' + escapeHtml(formatDate(p.date)) + "</time>" +
+          '<span aria-hidden="true">\u2022</span>' +
+          viewsBadgeHtml(p.id, null) +
           "</div>" +
           tagsHtml(p.tags) +
           '<p class="post-excerpt">' + escapeHtml(p.excerpt) + "</p>" +
@@ -198,6 +263,8 @@
           '<span>' + escapeHtml(post.author) + "</span>" +
           '<span aria-hidden="true">•</span>' +
           '<time datetime="' + escapeHtml(post.date) + '">' + escapeHtml(formatDate(post.date)) + "</time>" +
+          '<span aria-hidden="true">\u2022</span>' +
+          viewsBadgeHtml(post.id, null) +
         "</div>" +
         tagsHtml(post.tags) +
         '<div class="post-body">' + renderMarkdown(post.content) + "</div>" +
@@ -242,14 +309,25 @@
         }
         if (match) {
           renderSinglePost(match);
+          registerView(match.id).then(function (count) {
+            if (count != null) applyViewCounts(defineOne(match.id, count));
+          });
         } else {
           renderList(posts);
+          fetchViewCounts().then(applyViewCounts);
         }
       } else {
         renderList(posts);
+        fetchViewCounts().then(applyViewCounts);
       }
       renderFeatured(posts);
     });
+  }
+
+  function defineOne(id, count) {
+    var o = {};
+    o[id] = count;
+    return o;
   }
 
   if (document.readyState === "loading") {
