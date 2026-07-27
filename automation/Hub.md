@@ -13,14 +13,14 @@ This repository combines source-grounded evidence with reviewable daily website 
 
 | Technology | Collected items |
 | --- | ---: |
-| [Microsoft Foundry](../knowledge/AI%20Foundry/README.md) | 17 |
-| [GitHub and GitHub Copilot](../knowledge/GitHub/README.md) | 25 |
+| [Microsoft Foundry](../knowledge/AI%20Foundry/README.md) | 23 |
+| [GitHub and GitHub Copilot](../knowledge/GitHub/README.md) | 43 |
 | [Quantum Computing and Azure Quantum](../knowledge/Quantum/README.md) | 2 |
 | [Azure API Management](../knowledge/APIM/README.md) | 1 |
-| [Azure Kubernetes Service](../knowledge/AKS/README.md) | 2 |
+| [Azure Kubernetes Service](../knowledge/AKS/README.md) | 3 |
 | [Azure App Service](../knowledge/App%20Service/README.md) | 2 |
-| [Azure Cosmos DB](../knowledge/Azure%20Cosmos%20DB/README.md) | 7 |
+| [Azure Cosmos DB](../knowledge/Azure%20Cosmos%20DB/README.md) | 8 |
 | [Azure Database for PostgreSQL](../knowledge/Azure%20Database%20for%20PostgreSQL/README.md) | 3 |
-| [Azure SQL Database](../knowledge/Azure%20SQL%20Databases/README.md) | 9 |
+| [Azure SQL Database](../knowledge/Azure%20SQL%20Databases/README.md) | 10 |
 
 Generated content is marked and should be changed through the source registry or automation code. Unmarked files remain human-owned.

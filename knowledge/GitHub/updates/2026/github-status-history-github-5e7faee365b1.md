@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/8vfyvq16hzh9
 source_tier: 1
 published_at: '2026-07-20T04:44:03Z'
-observed_at: '2026-07-21T10:30:00Z'
+observed_at: '2026-07-27T11:22:54Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/8vfyvq16hzh9
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:830d7bb80544ddfe1e3313184673c47b6468f7bd58f2027b5a4d266a9e18bfaa
+content_hash: sha256:c01034f0e4c90440eee94f58cb9aee70c89e13018c43ad661e0b254d95eb4500
 ---
 
 # Incident with GitHub Actions
 
 ## What Changed
 
-Jul 20, 04:44 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 20, 04:43 UTC Update - Actions has fully recovered, and we will continue to monitor the platform to ensure stability. Jul 20, 03:34 UTC Monitoring - The degradation affecting Actions has been mitigated. We are monitoring to ensure stability. Jul 20, 03:27 UTC Update - We’re seeing recovery across all impacted Actions runners. The team is continuing to monitor for global recovery. Jul 20, 03:03 UTC Update - API Requests is operating normally. Jul 20, 02:43 UTC Update - Issues, API Requests, and Pages have recovered. We are continuing to work on restoring GitHub Actions jobs using self-hosted or larger-hosted runners. Jul 20, 02:23 UTC Update - API Requests is experiencing degraded performance. We are continuing to investigate. Jul 20, 02:20 UTC Update - Issues is operating normally. Jul 20, 01:37 UTC Update - Pages is operating normally. Jul 20, 01:11 UTC Update - We continue to work on mitigative efforts to restore Actions workflow runners, and have observed that the e...
+Jul 20, 04:44 UTC Resolved - Between July 19, 2026, at 23:05 UTC and July 20, 2026, at 03:55 UTC, Actions self-hosted and larger runners were unable to connect to GitHub. During this period, Actions jobs were delayed or failed when trying to acquire a runner. Jobs using standard and Mac hosted runners were not affected. Reconnection traffic from affected runners also increased load on GitHub APIs, resulting in 3-4 seconds of additional average request latency and elevated 5xx error rates. The incident was caused by a certificate lifecycle management failure in a subset of internal services, resulting in an SSL certificate expiration that disrupted runner connectivity. We restored service by rotating the affected certificate. Recovery began at 02:45 UTC. By 03:55 UTC, queued workflow backlog had been processed and workflow delay rates returned to normal. To prevent recurrence, we are strengthening certificate renewal automation, adding fallback expiry monitoring and alerting, and improving circuit-breaker protections during runner API disruptions to reduce the risk of cascading impact to other APIs. Jul 20, 04:43 UTC Update - Actions has fully recovered, and we will continue to m...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-21T10:30:00Z`.
+State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.

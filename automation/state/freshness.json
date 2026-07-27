@@ -2,9 +2,9 @@
   "sources": {
     "agent-framework-releases": {
       "error": null,
-      "etag": "W/\"14efd420cc653081e2614cee1ac127990ae7e03ddc10843d2ebac29ae93eec9e\"",
-      "item_count": 4,
-      "last_content_change": "2026-07-21T10:30:00Z",
+      "etag": "W/\"62cf07c80e6dfb4081209538c74de4e0b6d08d9015bfb568c56f8885aff06cbe\"",
+      "item_count": 7,
+      "last_content_change": "2026-07-27T11:22:54Z",
       "last_modified": null,
       "name": "Microsoft Agent Framework releases",
       "status": "healthy"
@@ -19,9 +19,9 @@
     },
     "aks-releases": {
       "error": null,
-      "etag": "W/\"23adf910a7cdf448c9d3fa37abf41f3d8f82426673bdfcdcb5fd0cda4c7fafb7\"",
-      "item_count": 0,
-      "last_content_change": "none",
+      "etag": "W/\"ede77e02b20d8ea69fdfaa63050814c0e7fd2a6f372b90511a06a1fea7677c4d\"",
+      "item_count": 1,
+      "last_content_change": "2026-07-27T11:22:54Z",
       "last_modified": null,
       "name": "Azure Kubernetes Service releases",
       "status": "healthy"
@@ -54,10 +54,10 @@
     },
     "app-service-blog": {
       "error": null,
-      "etag": "W/\"6a5ebd7b-181e0\"",
+      "etag": "W/\"6a66a78d-181e0\"",
       "item_count": 1,
       "last_content_change": "2026-07-21T10:30:00Z",
-      "last_modified": "Tue, 21 Jul 2026 00:29:47 GMT",
+      "last_modified": "Mon, 27 Jul 2026 00:34:21 GMT",
       "name": "Azure App Service product team blog",
       "status": "healthy"
     },
@@ -80,10 +80,10 @@
     },
     "azure-sql-blog": {
       "error": null,
-      "etag": "W/\"f95896a16060f4b3b6c066828923d755\"",
-      "item_count": 7,
-      "last_content_change": "2026-07-21T10:30:00Z",
-      "last_modified": "Tue, 21 Jul 2026 07:16:23 GMT",
+      "etag": "W/\"9c1ce9e4c35f1d52f19759a4c2e3bd80\"",
+      "item_count": 4,
+      "last_content_change": "2026-07-27T11:22:54Z",
+      "last_modified": "Mon, 27 Jul 2026 09:46:59 GMT",
       "name": "Azure SQL engineering blog",
       "status": "healthy"
     },
@@ -98,7 +98,7 @@
     "azure-updates": {
       "error": null,
       "etag": null,
-      "item_count": 16,
+      "item_count": 12,
       "last_content_change": "2026-07-21T10:00:00Z",
       "last_modified": null,
       "name": "Microsoft Azure Updates",
@@ -106,10 +106,10 @@
     },
     "cosmos-db-blog": {
       "error": null,
-      "etag": "W/\"8a6258437eb0c10a2dcf8166f939b5f9\"",
-      "item_count": 4,
-      "last_content_change": "2026-07-21T10:30:00Z",
-      "last_modified": "Tue, 21 Jul 2026 10:20:27 GMT",
+      "etag": "W/\"371115eb9003dc90291bec1769f16e5e\"",
+      "item_count": 5,
+      "last_content_change": "2026-07-27T11:22:54Z",
+      "last_modified": "Mon, 27 Jul 2026 06:38:30 GMT",
       "name": "Azure Cosmos DB engineering blog",
       "status": "healthy"
     },
@@ -140,16 +140,16 @@
     },
     "github-changelog": {
       "error": null,
-      "etag": "W/\"6eae1e7fc38152de958468cb9de27a31\"",
+      "etag": "W/\"dd092253d3cf5fa5da4b549dd4d38a3e\"",
       "item_count": 10,
-      "last_content_change": "2026-07-21T10:30:00Z",
-      "last_modified": "Tue, 21 Jul 2026 00:21:29 GMT",
+      "last_content_change": "2026-07-27T11:22:54Z",
+      "last_modified": "Fri, 24 Jul 2026 17:11:48 GMT",
       "name": "GitHub Changelog",
       "status": "healthy"
     },
     "github-status-current": {
       "error": null,
-      "etag": "W/\"a08cdbb577033558eeb51f20c43263ec\"",
+      "etag": "W/\"d40ae324a63a320d8dd98cebd8cf5db3\"",
       "item_count": 0,
       "last_content_change": "none",
       "last_modified": null,
@@ -158,9 +158,9 @@
     },
     "github-status-history": {
       "error": null,
-      "etag": "W/\"384fac8adf4ddabc12873eedc27925ba\"",
-      "item_count": 15,
-      "last_content_change": "2026-07-21T10:30:00Z",
+      "etag": "W/\"e30f5300503dd13a4582885ec317269b\"",
+      "item_count": 21,
+      "last_content_change": "2026-07-27T11:22:54Z",
       "last_modified": null,
       "name": "GitHub incident history",
       "status": "healthy"
@@ -168,14 +168,14 @@
     "postgresql-release-notes": {
       "error": null,
       "item_count": 1,
-      "last_content_change": "2026-07-21T11:30:00Z",
+      "last_content_change": "2026-07-27T11:22:54Z",
       "last_error_at": "2026-07-21T10:45:00Z",
       "name": "Azure Database for PostgreSQL release notes",
       "status": "healthy"
     },
     "qdk-releases": {
       "error": null,
-      "etag": "W/\"718605ae85c62b75f6415946d531d49ba9bb20a73c5c0a471ea0c126c31df75e\"",
+      "etag": "W/\"53270afb2ded458377bb29bbe6d6171ab299868a78cd9b46b5fa30f091f4c43e\"",
       "item_count": 1,
       "last_content_change": "2026-07-21T10:30:00Z",
       "last_modified": null,

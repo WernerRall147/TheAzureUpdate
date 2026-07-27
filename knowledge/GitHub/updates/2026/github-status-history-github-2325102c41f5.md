@@ -4,46 +4,48 @@ id: github-status-history-github-2325102c41f5
 title: Some SSH connections using deploy keys are failing
 technology: github
 content_type: status
-change_type: updated
+change_type: incident
 lifecycle: unknown
 source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/g40zcbvchny4
 source_tier: 1
-published_at: '2026-07-21T11:04:43Z'
-observed_at: '2026-07-21T10:30:00Z'
+published_at: '2026-07-21T11:57:01Z'
+observed_at: '2026-07-27T11:22:54Z'
 effective_at: null
 publisher: GitHub
-customer_impact: low
+customer_impact: medium
 csa_outcomes:
+- blocker-mitigation
 - skilling
 waf_pillars:
 - operational-excellence
+- reliability
 regions: []
 sensitivity: public
 review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/g40zcbvchny4
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:2f38070e4c0826216e5af1bf5a6b6cde6b28f6ca94bc89a9b601795bbf677618
+content_hash: sha256:ece2245ff3b37324ea1db256f9fa41a91f55e580ed8a4e49d2fe9bfa8ae61a4a
 ---
 
 # Some SSH connections using deploy keys are failing
 
 ## What Changed
 
-Jul 21, 11:04 UTC Update - We are investigating reports of intermittent SSH authentication failures affecting connections that use deploy keys. Customers may experience failed SSH connections when interacting with repositories via deploy keys. Our engineering team is actively investigating the root cause and working toward resolution. Jul 21, 10:31 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
+Jul 21, 11:57 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 21, 11:46 UTC Update - We have identified a recent code change as a potential cause of the SSH authentication failures affecting deploy key connections. Our engineering team is rolling back this change. Customers using deploy keys for SSH access to repositories may continue to experience intermittent connection failures until the fix is deployed. Jul 21, 11:04 UTC Update - We are investigating reports of intermittent SSH authentication failures affecting connections that use deploy keys. Customers may experience failed SSH connections when interacting with repositories via deploy keys. Our engineering team is actively investigating the root cause and working toward resolution. Jul 21, 10:31 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
 
 ## Why It Matters to a CSA
 
-The change may affect current guidance, readiness material, or customer conversations.
+Service degradation can affect delivery confidence and operational readiness.
 
 ## Customer Impact
 
-**Low**. Lifecycle: `unknown`. Change type: `updated`.
+**Medium**. Lifecycle: `unknown`. Change type: `incident`.
 
 ## Recommended Action
 
-Review the canonical source and update reusable guidance when the change is relevant.
+Check live status and personalized Service Health before advising a customer.
 
 ## Evidence
 
@@ -51,4 +53,4 @@ Review the canonical source and update reusable guidance when the change is rele
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-21T10:30:00Z`.
+State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.

@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/ydpk76bj34z8
 source_tier: 1
 published_at: '2026-07-14T18:01:57Z'
-observed_at: '2026-07-21T10:30:00Z'
+observed_at: '2026-07-27T11:22:54Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/ydpk76bj34z8
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:d5af7218b711b0deef3172b482ec724572a12eac33917e7b32b614f1b4e5f6d2
+content_hash: sha256:093657362fec3d889e5890a9514d5681a24ec1b8437a0ae727718b53e64a9a12
 ---
 
 # Incident with Webhooks
 
 ## What Changed
 
-Jul 14, 18:01 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 14, 17:55 UTC Monitoring - The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability. Jul 14, 17:55 UTC Update - Between 15:17 and 15:27 UTC, an ongoing deployment had an unintended side effect where webhook delivery states were not persisted in all cases, even when deliveries were accepted and processed. Customers may notice missing webhook deliveries in the UI, and these deliveries will not be retryable. Impact resolved automatically once the deployment completed. Jul 14, 17:38 UTC Investigating - We are investigating reports of degraded performance for Webhooks
+Jul 14, 18:01 UTC Resolved - On July 14, 2026, between 15:17 and 15:37 UTC, a rollout to GitHub's internal webhook delivery pipeline caused a subset of webhook delivery records to not be written to our webhook deliveries store after being processed and delivered successfully. Affected deliveries would be missing from the webhook delivery UI and API and won’t be available for redelivery. The root cause was an uncoordinated rollout: a change to how delivery records are handed off between pipeline components was deployed before the upstream components producing those records were updated to match. While the rollout was in progress, affected records were silently skipped rather than persisted, with no automatic retry. The impact ended as soon as the rollout was completed. About 2.4M delivery records were skipped (approximately 4% of the 20-minute impact window, 0.04% of a typical 24-hour period). Importantly, 95% of these deliveries reached customer endpoints successfully, only the record of the delivery is missing. Of the ~5% that failed to reach customer endpoints, only ~1.4% (5,463) map to webhooks that retried their deliveries in the past 28 days. To prevent recurrence, we are m...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-21T10:30:00Z`.
+State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.
