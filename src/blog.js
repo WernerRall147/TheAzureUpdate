@@ -3,6 +3,7 @@
 
   var POSTS_DIR = "posts/";
   var VIEWS_API = "/api/views";
+  var PAGE_SIZE = 10;
 
   // Format a raw view count as a short, human label (1200 -> "1.2k").
   function formatViews(n) {
@@ -186,6 +187,45 @@
     return { slug: slug, url: POSTS_DIR + slug + "/index.md" };
   }
 
+  // Post metadata is baked into posts/manifest.js at build time, so the list
+  // and the home page rail render with zero network requests. Only the
+  // single-post view fetches Markdown, and only for the post being read.
+  function indexPosts() {
+    var index = window.BLOG_INDEX;
+    if (!index || !index.length) return null;
+    return index.slice().map(function (p) {
+      return {
+        id: p.id,
+        file: p.url,
+        title: p.title,
+        date: p.date || "",
+        author: p.author || "Werner Rall",
+        tags: p.tags || [],
+        featured: p.featured === true,
+        excerpt: p.excerpt || ""
+      };
+    }).sort(function (a, b) {
+      return (b.date || "").localeCompare(a.date || "");
+    });
+  }
+
+  // Fetch and parse a single post's Markdown body on demand.
+  function fetchPostContent(entry) {
+    return fetch(entry.file, { cache: "no-cache" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("Failed to load " + entry.file + " (" + r.status + ")");
+        return r.text();
+      })
+      .then(function (raw) {
+        var parsed = parseFrontmatter(raw);
+        var post = {};
+        for (var k in entry) { if (Object.prototype.hasOwnProperty.call(entry, k)) post[k] = entry[k]; }
+        post.content = parsed.body;
+        if (parsed.meta.title) post.title = parsed.meta.title;
+        return post;
+      });
+  }
+
   function loadPosts() {
     var files = (window.BLOG_MANIFEST || []).slice();
     return Promise.all(files.map(function (entry) {
@@ -221,7 +261,26 @@
     });
   }
 
-  function renderList(posts) {
+  function currentPage() {
+    var n = parseInt(new URLSearchParams(window.location.search).get("page"), 10);
+    return isNaN(n) || n < 1 ? 1 : n;
+  }
+
+  function pagerHtml(page, totalPages) {
+    if (totalPages <= 1) return "";
+    var parts = ['<nav class="post-pager" aria-label="Post pages">'];
+    parts.push(page > 1
+      ? '<a class="post-pager-link" href="?page=' + (page - 1) + '" rel="prev">&larr; Newer</a>'
+      : '<span class="post-pager-link is-disabled" aria-disabled="true">&larr; Newer</span>');
+    parts.push('<span class="post-pager-status">Page ' + page + ' of ' + totalPages + '</span>');
+    parts.push(page < totalPages
+      ? '<a class="post-pager-link" href="?page=' + (page + 1) + '" rel="next">Older &rarr;</a>'
+      : '<span class="post-pager-link is-disabled" aria-disabled="true">Older &rarr;</span>');
+    parts.push("</nav>");
+    return parts.join("");
+  }
+
+  function renderList(posts, page) {
     var listEl = document.getElementById("postList");
     var emptyEl = document.getElementById("emptyState");
     if (!listEl) return; // Home page has a Featured rail but no full post list.
@@ -230,7 +289,12 @@
       if (listEl) listEl.innerHTML = "";
       return;
     }
-    listEl.innerHTML = posts.map(function (p) {
+    var totalPages = Math.ceil(posts.length / PAGE_SIZE);
+    var current = Math.min(page || 1, totalPages);
+    var start = (current - 1) * PAGE_SIZE;
+    var pageItems = posts.slice(start, start + PAGE_SIZE);
+
+    listEl.innerHTML = pageItems.map(function (p) {
       return (
         '<article class="post-card">' +
           '<h2 class="post-card-title"><a href="?post=' + encodeURIComponent(p.id) + '">' + escapeHtml(p.title) + "</a></h2>" +
@@ -246,7 +310,7 @@
           '<a class="post-read-more" href="?post=' + encodeURIComponent(p.id) + '">Read more &rarr;</a>' +
         "</article>"
       );
-    }).join("");
+    }).join("") + pagerHtml(current, totalPages);
   }
 
   function renderSinglePost(post) {
@@ -299,28 +363,55 @@
   }
 
   function init() {
-    loadPosts().then(function (posts) {
-      var params = new URLSearchParams(window.location.search);
-      var postId = params.get("post");
-      if (postId) {
-        var match = null;
-        for (var i = 0; i < posts.length; i++) {
-          if (posts[i].id === postId) { match = posts[i]; break; }
-        }
+    var postId = new URLSearchParams(window.location.search).get("post");
+    var meta = indexPosts();
+
+    // Fallback for a stale manifest without BLOG_INDEX: fetch every post.
+    if (!meta) {
+      loadPosts().then(function (posts) {
+        var match = findPost(posts, postId);
         if (match) {
           renderSinglePost(match);
-          registerView(match.id).then(function (count) {
-            if (count != null) applyViewCounts(defineOne(match.id, count));
-          });
+          trackSingleView(match);
         } else {
-          renderList(posts);
+          renderList(posts, currentPage());
           fetchViewCounts().then(applyViewCounts);
         }
-      } else {
-        renderList(posts);
+        renderFeatured(posts);
+      });
+      return;
+    }
+
+    renderFeatured(meta);
+
+    var entry = findPost(meta, postId);
+    if (entry) {
+      fetchPostContent(entry).then(function (post) {
+        renderSinglePost(post);
+        trackSingleView(post);
+      }).catch(function (err) {
+        console.error(err);
+        renderList(meta, currentPage());
         fetchViewCounts().then(applyViewCounts);
-      }
-      renderFeatured(posts);
+      });
+      return;
+    }
+
+    renderList(meta, currentPage());
+    fetchViewCounts().then(applyViewCounts);
+  }
+
+  function findPost(posts, postId) {
+    if (!postId) return null;
+    for (var i = 0; i < posts.length; i++) {
+      if (posts[i].id === postId) return posts[i];
+    }
+    return null;
+  }
+
+  function trackSingleView(post) {
+    registerView(post.id).then(function (count) {
+      if (count != null) applyViewCounts(defineOne(post.id, count));
     });
   }
 
