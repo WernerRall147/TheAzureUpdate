@@ -460,6 +460,44 @@ html.dark-mode .disclaimer-section { background: #1a1a2e; color: #888; }
   height: auto;
 }
 
+/* --- Post tables (used by the daily "At a glance" summary) --- */
+.post-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 18px;
+  font-size: .92rem;
+}
+.post-body th,
+.post-body td {
+  border: 1px solid #e2e6ea;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.post-body th {
+  background: #f0f6fc;
+  color: #0a4b7d;
+  font-weight: 600;
+}
+.post-body tbody tr:nth-child(even) { background: #fafbfc; }
+
+/* --- Collapsible "Everything else" list --- */
+.post-body details {
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: #fafbfc;
+}
+.post-body details[open] { padding-bottom: 4px; }
+.post-body summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #0078d4;
+}
+.post-body summary:hover { text-decoration: underline; }
+.post-body details ul { margin-top: 12px; }
+
 /* --- Featured sidebar --- */
 .blog-sidebar {
   display: flex;
@@ -533,6 +571,12 @@ html.dark-mode .post-pager-link.is-disabled { color: #555; }
 html.dark-mode .post-empty code,
 html.dark-mode .post-body code { background: #2a2a3e; color: #e0e0e0; }
 html.dark-mode .post-body a { color: #50e6ff; }
+html.dark-mode .post-body th,
+html.dark-mode .post-body td { border-color: #2a3a4a; }
+html.dark-mode .post-body th { background: #22303f; color: #9fe4ff; }
+html.dark-mode .post-body tbody tr:nth-child(even) { background: #23233a; }
+html.dark-mode .post-body details { background: #23233a; border-color: #2a3a4a; }
+html.dark-mode .post-body summary { color: #50e6ff; }
 
 /* =========================================================
    Blog responsive overrides
@@ -559,10 +603,13 @@ html.dark-mode .post-body a { color: #50e6ff; }
   .post-full { padding: 22px 16px; }
   .post-full-title { font-size: 1.5rem; }
   .post-meta { flex-wrap: wrap; row-gap: 4px; }
+  /* Narrow screens cannot fit a 3-column table, so let it scroll on its
+     own instead of widening the page. */
+  .post-body table { display: block; overflow-x: auto; font-size: .85rem; }
+  .post-body th, .post-body td { padding: 6px 10px; }
 }
 /* Keep wide post content (code blocks, tables, diagrams) from
    forcing the page to scroll horizontally on small screens. */
 .post-body pre,
 .post-body table { max-width: 100%; }
-.post-body table { display: block; overflow-x: auto; }
 .post-body .mermaid { overflow-x: auto; }
