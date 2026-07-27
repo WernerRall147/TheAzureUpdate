@@ -427,8 +427,10 @@ html.dark-mode .disclaimer-section { background: #1a1a2e; color: #888; }
   margin-bottom: 8px;
   line-height: 1.25;
 }
-.post-body { margin-top: 18px; color: #333; line-height: 1.7; }
+.post-body { margin-top: 18px; color: #333; line-height: 1.7; overflow-wrap: break-word; }
 .post-body p { margin-bottom: 14px; }
+/* Long unbroken URLs in generated summaries must not widen the page. */
+.post-body a { overflow-wrap: anywhere; }
 .post-body h3 { margin: 22px 0 10px; color: #0078d4; font-size: 1.2rem; }
 .post-body ul, .post-body ol { margin: 0 0 14px 22px; }
 .post-body li { margin-bottom: 6px; }
