@@ -105,4 +105,46 @@ test.describe('Blog page', () => {
     await expect(blogLink).toHaveText('Blog');
   });
 
+  test('the list renders without fetching every post', async ({ page }) => {
+    const markdownRequests: string[] = [];
+    page.on('request', req => {
+      if (req.url().endsWith('.md')) markdownRequests.push(req.url());
+    });
+    await page.goto('/blog.html');
+    await expect(page.locator('.post-card').first()).toBeVisible();
+    // Post metadata comes from BLOG_INDEX in the generated manifest, so a
+    // daily cadence does not add a request per post to every page view.
+    expect(markdownRequests).toHaveLength(0);
+  });
+
+  test('the list paginates once there are more posts than fit a page', async ({ page }) => {
+    // Serve a synthetic manifest so pagination is exercised regardless of how
+    // many posts currently exist in the repository.
+    await page.route('**/posts/manifest.js', async route => {
+      const items = Array.from({ length: 25 }, (_, i) => {
+        const iso = new Date(Date.UTC(2026, 6, 25 - i)).toISOString().slice(0, 10);
+        return {
+          id: `azure-update-${iso}`, url: 'posts/x/index.md', title: `Update ${iso}`,
+          date: iso, author: 'Werner Rall', tags: ['Azure'], featured: false, excerpt: `Excerpt ${i}`
+        };
+      });
+      await route.fulfill({
+        contentType: 'application/javascript',
+        body: `window.BLOG_MANIFEST=[];window.BLOG_INDEX=${JSON.stringify(items)};`
+      });
+    });
+
+    await page.goto('/blog.html');
+    await expect(page.locator('.post-card')).toHaveCount(10);
+    await expect(page.locator('.post-pager-status')).toHaveText('Page 1 of 3');
+
+    await page.goto('/blog.html?page=3');
+    await expect(page.locator('.post-card')).toHaveCount(5);
+    await expect(page.locator('.post-pager-status')).toHaveText('Page 3 of 3');
+
+    // An out-of-range page clamps to the last page instead of rendering empty.
+    await page.goto('/blog.html?page=99');
+    await expect(page.locator('.post-pager-status')).toHaveText('Page 3 of 3');
+  });
+
 });

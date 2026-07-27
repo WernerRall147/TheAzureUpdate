@@ -55,8 +55,8 @@ index.html            blog.html               site.css
 (landing page)        (blog list +            (shared styles,
                        single post)            light/dark theme)
                           │
-                          ├── blog.js          ← fetches + renders posts
-                          ├── posts/manifest.js ← list of post filenames
+                          ├── blog.js          ← renders posts from the index
+                          ├── posts/manifest.js ← post index + filenames
                           └── posts/*.md       ← Markdown posts w/ frontmatter
                                   │
                               marked.min.js (CDN) ← MD → HTML
@@ -68,9 +68,9 @@ index.html            blog.html               site.css
 |---|---|
 | [src/index.html](src/index.html) | Home page (sidebar profile + tile grids) |
 | [src/blog.html](src/blog.html) | Blog page shell (list + featured sidebar) |
-| [src/blog.js](src/blog.js) | Client-side blog engine: loads manifest, fetches Markdown, parses YAML-ish frontmatter, renders list or single post |
-| [src/posts/manifest.js](src/posts/manifest.js) | `window.BLOG_MANIFEST` - **auto-generated** list of post folder slugs (do not edit by hand) |
-| [scripts/generate-manifest.mjs](scripts/generate-manifest.mjs) | Scans `src/posts/*/index.md` and (re)writes `manifest.js`; runs on `npm run posts` and automatically via `prestart` on `npm start` |
+| [src/blog.js](src/blog.js) | Client-side blog engine: renders the list from the generated index, fetches Markdown only for the post being read, paginates the archive |
+| [src/posts/manifest.js](src/posts/manifest.js) | `window.BLOG_INDEX` (post frontmatter) and `window.BLOG_MANIFEST` (folder slugs) - **auto-generated** (do not edit by hand) |
+| [scripts/generate-manifest.mjs](scripts/generate-manifest.mjs) | Scans `src/posts/*/index.md`, parses frontmatter, and (re)writes `manifest.js`; runs on `npm run posts` and automatically via `prestart` on `npm start` |
 | [src/posts/&lt;slug&gt;/index.md](src/posts/) | Individual posts, one folder each; frontmatter keys: `id`, `title`, `date`, `author`, `tags`, `featured`, `excerpt` |
 | [src/site.css](src/site.css) | All styling, including dark-mode rules |
 | [staticwebapp.config.json](staticwebapp.config.json) | SWA config - security headers, cache rules for `/images/*` and `*.css`, SPA-style fallback to `index.html` |
@@ -79,12 +79,12 @@ index.html            blog.html               site.css
 
 ### How the blog renders (client-side flow)
 
-1. `blog.html` loads `posts/manifest.js`, which sets `window.BLOG_MANIFEST` (a list of post folder slugs).
-2. `blog.js` iterates the manifest, `fetch`es each post's Markdown at `posts/<slug>/index.md`.
-3. Each file is split into **frontmatter** (between `---` fences) and **body**.
-4. Posts are sorted by `date` descending.
-5. If `?post=<id>` is in the URL, the matching post is rendered full-width via `marked`. Otherwise the post-card list and Featured sidebar are rendered.
-6. Unknown `?post=<id>` falls back to the list.
+1. `blog.html` loads `posts/manifest.js`, which sets `window.BLOG_INDEX` (frontmatter for every post) and `window.BLOG_MANIFEST` (post folder slugs).
+2. `blog.js` renders the post-card list and Featured sidebar **straight from `BLOG_INDEX`** - no per-post network requests. This keeps a daily posting cadence from adding a request per post to every page view.
+3. The list shows 10 posts per page; `?page=<n>` moves through the archive and clamps to the last page if out of range.
+4. If `?post=<id>` is in the URL, only that post's Markdown is fetched, split into **frontmatter** and **body**, and rendered via `marked`.
+5. Posts are sorted by `date` descending.
+6. Unknown `?post=<id>` falls back to the list, as does a failed fetch.
 
 ### Adding a post
 
