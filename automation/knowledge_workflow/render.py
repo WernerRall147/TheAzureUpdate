@@ -30,6 +30,113 @@ WEBSITE_TAGS = {
     "azure-sql": "Azure SQL",
 }
 
+# Relevance weights used to pick the lead story and order the daily post.
+# Higher is more newsworthy. These are deterministic so the same evidence
+# always produces the same post.
+CHANGE_WEIGHT = {
+    "retired": 100,
+    "breaking-change": 95,
+    "deprecated": 85,
+    "security": 80,
+    "incident": 70,
+    "known-issue": 60,
+    "pricing": 40,
+    "region-availability": 35,
+    "maintenance": 30,
+    "new": 25,
+    "updated": 10,
+    "no-change": 0,
+}
+LIFECYCLE_WEIGHT = {
+    "retired": 15,
+    "deprecated": 12,
+    "ga": 20,
+    "public-preview": 12,
+    "private-preview": 6,
+    "in-development": 3,
+    "unknown": 0,
+}
+IMPACT_WEIGHT = {"critical": 40, "high": 30, "medium": 15, "low": 5, "none": 0, "unknown": 0}
+ACTION_CHANGE_TYPES = {"deprecated", "retired", "breaking-change", "security", "incident"}
+LAUNCH_LIFECYCLES = {"ga", "public-preview", "private-preview"}
+
+
+def _is_resolved_incident(item: KnowledgeItem) -> bool:
+    """A closed status-page incident is history, not something to act on."""
+    return item.change_type == "incident" and "resolved" in item.summary.casefold()
+
+
+def _relevance_score(item: KnowledgeItem) -> int:
+    """Rank an item by how much a reader needs to know about it today."""
+    score = CHANGE_WEIGHT.get(item.change_type, 10)
+    score += LIFECYCLE_WEIGHT.get(item.lifecycle, 0)
+    score += IMPACT_WEIGHT.get(item.customer_impact, 0)
+    if item.source_tier == 1:
+        score += 10
+    if _is_resolved_incident(item):
+        score -= 75
+    return score
+
+
+def _score_sort_key(item: KnowledgeItem) -> tuple[int, float, str]:
+    date = item.published_at or item.observed_at
+    return (-_relevance_score(item), -date.timestamp(), item.title.casefold())
+
+
+def _technology_label(technology: str) -> str:
+    return WEBSITE_TAGS.get(technology, technology)
+
+
+def _display_title(item: KnowledgeItem) -> str:
+    """Drop feed prefixes that repeat the lifecycle shown beside the title."""
+    title = " ".join(item.title.split())
+    for tag in ("[Launched]", "[In development]", "[In preview]", "[Retirement]"):
+        if title.startswith(tag):
+            title = title[len(tag):].lstrip()
+    for prefix in (
+        "Generally Available:",
+        "General Availability:",
+        "Public Preview:",
+        "Private Preview:",
+        "Preview:",
+    ):
+        if title.casefold().startswith(prefix.casefold()):
+            title = title[len(prefix):].lstrip()
+            break
+    return title or item.title
+
+
+def _clean_summary(summary: str, limit: int = 320) -> str:
+    """Trim feed summaries that were cut mid-sentence or run very long."""
+    text = " ".join(summary.split()).strip()
+    if not text:
+        return ""
+    text = text.rstrip("\u2026").rstrip()
+    if len(text) > limit:
+        window = text[:limit]
+        cut = max(window.rfind(". "), window.rfind("! "), window.rfind("? "))
+        text = window[: cut + 1] if cut > 80 else window.rstrip() + "..."
+        return text
+    if text and text[-1] not in ".!?)":
+        cut = max(text.rfind(". "), text.rfind("! "), text.rfind("? "))
+        if cut > 80:
+            text = text[: cut + 1]
+        elif not text.endswith("."):
+            text = text + "..."
+    return text
+
+
+def _yaml_quote(text: str) -> str:
+    return text.replace("\\", "\\\\").replace('"', "'")
+
+
+def _table_cell(text: str) -> str:
+    return " ".join(text.split()).replace("|", "\\|")
+
+
+def _status_line(item: KnowledgeItem) -> str:
+    return f"`{item.lifecycle}` / `{item.change_type}` - {item.customer_impact.title()} impact"
+
 
 def _write_text(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -177,19 +284,64 @@ As of `{isoformat(as_of)}`. A failed source retains its last known good content.
 """
 
 
-def _website_item(item: KnowledgeItem) -> str:
-    return "\n".join(
-        [
-            f"### [{item.title}]({item.source_url})",
+def _website_item(item: KnowledgeItem, *, with_action: bool = False) -> str:
+    """Render one item for the website post.
+
+    Only action-required items carry the "why it matters" and "next action"
+    guidance; repeating it for every launch made the post read as boilerplate.
+    """
+    lines = [
+        f"### [{_display_title(item)}]({item.source_url})",
+        "",
+        f"{_technology_label(item.technology)} - {_status_line(item)}",
+        "",
+        _clean_summary(item.summary),
+    ]
+    if with_action:
+        lines += [
             "",
-            item.summary,
+            f"**Why it matters:** {item.why_it_matters}",
             "",
-            f"- **Status:** `{item.lifecycle}` / `{item.change_type}`",
-            f"- **Customer impact:** {item.customer_impact.title()}",
-            f"- **Why it matters:** {item.why_it_matters}",
-            f"- **Next action:** {item.recommended_action}",
+            f"**Next action:** {item.recommended_action}",
         ]
+    return "\n".join(lines)
+
+
+def _one_liner(item: KnowledgeItem) -> str:
+    return (
+        f"- **{_technology_label(item.technology)}** - "
+        f"[{_display_title(item)}]({item.source_url}) (`{item.lifecycle}`)"
     )
+
+
+def _at_a_glance(items: list[KnowledgeItem], limit: int = 8) -> str:
+    rows = [
+        "| Technology | Update | Status |",
+        "| --- | --- | --- |",
+    ]
+    for item in items[:limit]:
+        rows.append(
+            f"| {_table_cell(_technology_label(item.technology))} "
+            f"| [{_table_cell(_display_title(item))}]({item.source_url}) "
+            f"| `{item.lifecycle}` |"
+        )
+    table = "\n".join(rows)
+    remaining = len(items) - limit
+    if remaining > 0:
+        table += f"\n\n_...and {remaining} more below._"
+    return table
+
+
+def _post_title(as_of: datetime, lead: KnowledgeItem | None, total: int) -> str:
+    date_label = as_of.strftime("%d %B %Y")
+    if lead is None:
+        return f"Azure Update - {date_label}"
+    headline = _display_title(lead)
+    if len(headline) > 70:
+        headline = headline[:67].rstrip() + "..."
+    others = total - 1
+    suffix = f", and {others} more" if others > 0 else ""
+    return f"{date_label}: {headline}{suffix}"
 
 
 def _render_website_post(
@@ -197,45 +349,71 @@ def _render_website_post(
     changed_items: list[KnowledgeItem],
     source_health: dict[str, Any],
 ) -> str:
-    ordered = sorted(changed_items, key=_item_sort_key)
+    ordered = sorted(changed_items, key=_score_sort_key)
+
     action_required = [
         item
         for item in ordered
-        if item.customer_impact in {"critical", "high"}
-        or item.change_type in {"deprecated", "retired", "breaking-change", "security"}
+        if not _is_resolved_incident(item)
+        and (
+            item.customer_impact in {"critical", "high"}
+            or item.change_type in ACTION_CHANGE_TYPES
+        )
     ]
     assigned = {item.id for item in action_required}
-    opportunities = [
+    notable = [
         item
         for item in ordered
         if item.id not in assigned
         and (
-            item.lifecycle in {"ga", "public-preview", "private-preview"}
+            item.lifecycle in LAUNCH_LIFECYCLES
             or item.change_type in {"region-availability", "pricing"}
         )
     ]
-    assigned.update(item.id for item in opportunities)
-    architecture = [
-        item
-        for item in ordered
-        if item.id not in assigned and "architecture" in item.csa_outcomes
-    ]
-    assigned.update(item.id for item in architecture)
+    assigned.update(item.id for item in notable)
+    remainder = [item for item in ordered if item.id not in assigned]
 
-    remaining_by_technology: dict[str, list[KnowledgeItem]] = defaultdict(list)
-    for item in ordered:
-        if item.id not in assigned:
-            remaining_by_technology[item.technology].append(item)
+    lead = ordered[0] if ordered else None
+    body_parts: list[str] = []
 
-    def section(title: str, values: list[KnowledgeItem], empty: str) -> str:
-        rendered = "\n\n".join(_website_item(item) for item in values)
-        return f"## {title}\n\n{rendered or empty}"
+    if ordered:
+        body_parts.append("## At a glance\n\n" + _at_a_glance(ordered))
 
-    technology_sections = []
-    for technology, values in sorted(remaining_by_technology.items()):
-        label = WEBSITE_TAGS.get(technology, technology)
-        technology_sections.append(
-            f"## {label}\n\n" + "\n\n".join(_website_item(item) for item in values)
+    if lead is not None:
+        body_parts.append(
+            "## The one to read first\n\n"
+            + _website_item(lead, with_action=lead in action_required)
+        )
+
+    follow_up = [item for item in action_required if item is not lead]
+    if follow_up:
+        body_parts.append(
+            "## Action required\n\n"
+            + "\n\n".join(_website_item(item, with_action=True) for item in follow_up)
+        )
+
+    launches = [item for item in notable if item is not lead]
+    if launches:
+        by_technology: dict[str, list[KnowledgeItem]] = defaultdict(list)
+        for item in launches:
+            by_technology[item.technology].append(item)
+        sections = []
+        for technology in sorted(by_technology, key=_technology_label):
+            rendered = "\n\n".join(_website_item(entry) for entry in by_technology[technology])
+            sections.append(f"### {_technology_label(technology)}\n\n{rendered}")
+        # The per-item heading level drops one step inside this grouped section.
+        grouped = "\n\n".join(sections).replace("\n### [", "\n#### [")
+        body_parts.append("## New and notable\n\n" + grouped)
+
+    rest = [item for item in remainder if item is not lead]
+    if rest:
+        body_parts.append(
+            "## Everything else\n\n"
+            "<details>\n"
+            f"<summary>{len(rest)} smaller update"
+            f"{'s' if len(rest) != 1 else ''} and refreshed docs</summary>\n\n"
+            + "\n".join(_one_liner(item) for item in rest)
+            + "\n\n</details>"
         )
 
     failed_sources = [
@@ -248,14 +426,31 @@ def _render_website_post(
         + ", ".join(str(state.get("name", "unknown source")) for state in failed_sources)
         + "."
     )
+    body_parts.append(f"## Source health\n\n{source_note}")
+
     tags = ["Azure"] + sorted(
-        {WEBSITE_TAGS.get(item.technology, item.technology) for item in changed_items}
+        {_technology_label(item.technology) for item in changed_items}
     )
-    tag_text = ", ".join(tags)
-    title = f"The Azure Update - {as_of.strftime('%d %B %Y')}"
-    excerpt = (
-        f"{len(changed_items)} verified Azure, AI, developer, and data-platform updates "
-        "with customer impact and next actions."
+    title = _post_title(as_of, lead, len(changed_items))
+    if lead is None:
+        excerpt = "No new first-party updates were published for the tracked technologies."
+    else:
+        excerpt = (
+            f"{len(changed_items)} verified update"
+            f"{'s' if len(changed_items) != 1 else ''} across "
+            f"{len({item.technology for item in changed_items})} technologies, "
+            f"led by {_display_title(lead)}."
+        )
+        if len(excerpt) > 200:
+            excerpt = excerpt[:197].rstrip() + "..."
+    featured = any(item.customer_impact in {"critical", "high"} for item in changed_items)
+
+    intro = (
+        f"**{len(changed_items)} source-grounded update"
+        f"{'s' if len(changed_items) != 1 else ''}** observed on "
+        f"**{as_of.date().isoformat()}**, ranked by how much they change your day. "
+        "Lifecycle and availability move fast, so verify volatile regional, quota, "
+        "health, and preview details before making commitments."
     )
 
     return "\n\n".join(
@@ -264,42 +459,21 @@ def _render_website_post(
                 [
                     "---",
                     f"id: azure-update-{as_of.date().isoformat()}",
-                    f'title: "{title}"',
+                    f'title: "{_yaml_quote(title)}"',
                     f"date: {as_of.date().isoformat()}",
                     "author: Werner Rall",
-                    f"tags: [{tag_text}]",
-                    "featured: false",
-                    f'excerpt: "{excerpt}"',
+                    f"tags: [{', '.join(tags)}]",
+                    f"featured: {'true' if featured else 'false'}",
+                    f'excerpt: "{_yaml_quote(excerpt)}"',
                     "---",
                 ]
             ),
             GENERATED_MARKER,
+            intro,
+            *body_parts,
             (
-                f"This edition contains **{len(changed_items)} source-grounded updates** "
-                f"observed on **{as_of.date().isoformat()}**. Lifecycle and availability can "
-                "change; verify volatile regional, quota, health, and preview details before "
-                "making customer commitments."
-            ),
-            section(
-                "Action Required",
-                action_required,
-                "No new high-impact actions were detected in this refresh.",
-            ),
-            section(
-                "Customer Conversation Opportunities",
-                opportunities,
-                "No new launch or expansion opportunities were detected.",
-            ),
-            section(
-                "Architecture Watch",
-                architecture,
-                "No additional architecture-specific changes were detected.",
-            ),
-            "\n\n".join(technology_sections) or "## Other Updates\n\nNo other updates.",
-            f"## Source Health\n\n{source_note}",
-            (
-                "_This post is generated from first-party public sources and is reviewed "
-                "through a pull request before publication._"
+                "_Generated from first-party public sources and reviewed through a "
+                "pull request before publication._"
             ),
         ]
     )

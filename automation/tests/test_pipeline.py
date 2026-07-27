@@ -78,8 +78,13 @@ def test_refresh_renders_and_then_detects_no_substantive_change(tmp_path: Path) 
     assert website_post.exists()
     post_text = website_post.read_text(encoding="utf-8")
     assert post_text.startswith("---\nid: azure-update-2026-07-21")
-    assert "title: \"The Azure Update - 21 July 2026\"" in post_text
-    assert "[Generally Available: Test capability](https://github.com/example/update)" in post_text
+    # The title leads with the date and the highest-ranked item, and the
+    # redundant "Generally Available:" prefix is dropped because the
+    # lifecycle is shown beside the item.
+    assert 'title: "21 July 2026: Test capability"' in post_text
+    assert "## At a glance" in post_text
+    assert "## The one to read first" in post_text
+    assert "[Test capability](https://github.com/example/update)" in post_text
     assert validate_repository(root) == []
     payload = json.loads((root / "automation" / "state" / "items.json").read_text(encoding="utf-8"))
     assert len(payload["items"]) == 1
