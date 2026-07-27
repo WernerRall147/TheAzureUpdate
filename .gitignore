@@ -5,3 +5,9 @@ api/local.settings.json
 /pw-report/
 /playwright/.cache/
 pw-output.txt
+/report.json
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/

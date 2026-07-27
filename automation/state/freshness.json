@@ -1,0 +1,195 @@
+{
+  "sources": {
+    "agent-framework-releases": {
+      "error": null,
+      "etag": "W/\"14efd420cc653081e2614cee1ac127990ae7e03ddc10843d2ebac29ae93eec9e\"",
+      "item_count": 4,
+      "last_content_change": "2026-07-21T10:30:00Z",
+      "last_modified": null,
+      "name": "Microsoft Agent Framework releases",
+      "status": "healthy"
+    },
+    "aks-release-tracker": {
+      "error": null,
+      "item_count": 1,
+      "last_content_change": "2026-07-21T11:30:00Z",
+      "last_error_at": "2026-07-21T10:45:00Z",
+      "name": "AKS release tracker",
+      "status": "healthy"
+    },
+    "aks-releases": {
+      "error": null,
+      "etag": "W/\"23adf910a7cdf448c9d3fa37abf41f3d8f82426673bdfcdcb5fd0cda4c7fafb7\"",
+      "item_count": 0,
+      "last_content_change": "none",
+      "last_modified": null,
+      "name": "Azure Kubernetes Service releases",
+      "status": "healthy"
+    },
+    "apim-releases": {
+      "error": null,
+      "etag": "W/\"fb68f56ef0ac4deab73df9c88f8086d61d1813b8e6f8fea9be64a50782dfa88f\"",
+      "item_count": 0,
+      "last_content_change": "none",
+      "last_modified": null,
+      "name": "Azure API Management releases",
+      "status": "healthy"
+    },
+    "apim-update-guidance": {
+      "error": null,
+      "item_count": 1,
+      "last_content_change": "2026-07-21T11:30:00Z",
+      "last_error_at": "2026-07-21T10:45:00Z",
+      "name": "API Management update guidance",
+      "status": "healthy"
+    },
+    "app-service-announcements": {
+      "error": null,
+      "etag": "W/\"e525b5e1da4dd6d8fc9b36ce0e2f9f8e6e77fefa6163243c9f6abb1e4e632768\"",
+      "item_count": 0,
+      "last_content_change": "none",
+      "last_modified": null,
+      "name": "Azure App Service announcements",
+      "status": "healthy"
+    },
+    "app-service-blog": {
+      "error": null,
+      "etag": "W/\"6a5ebd7b-181e0\"",
+      "item_count": 1,
+      "last_content_change": "2026-07-21T10:30:00Z",
+      "last_modified": "Tue, 21 Jul 2026 00:29:47 GMT",
+      "name": "Azure App Service product team blog",
+      "status": "healthy"
+    },
+    "app-service-runtime-patching": {
+      "error": null,
+      "item_count": 1,
+      "last_content_change": "2026-07-21T11:30:00Z",
+      "last_error_at": "2026-07-21T10:45:00Z",
+      "name": "App Service OS and runtime patching",
+      "status": "healthy"
+    },
+    "azure-quantum-python-releases": {
+      "error": null,
+      "etag": "W/\"f725173150c4fd3f76326e88a733336ca9aca36d6fd66e9a91d5f9c2188eb915\"",
+      "item_count": 0,
+      "last_content_change": "none",
+      "last_modified": null,
+      "name": "Azure Quantum Python SDK releases",
+      "status": "healthy"
+    },
+    "azure-sql-blog": {
+      "error": null,
+      "etag": "W/\"f95896a16060f4b3b6c066828923d755\"",
+      "item_count": 7,
+      "last_content_change": "2026-07-21T10:30:00Z",
+      "last_modified": "Tue, 21 Jul 2026 07:16:23 GMT",
+      "name": "Azure SQL engineering blog",
+      "status": "healthy"
+    },
+    "azure-sql-whats-new": {
+      "error": null,
+      "item_count": 1,
+      "last_content_change": "2026-07-21T11:30:00Z",
+      "last_error_at": "2026-07-21T10:45:00Z",
+      "name": "Azure SQL Database what's new",
+      "status": "healthy"
+    },
+    "azure-updates": {
+      "error": null,
+      "etag": null,
+      "item_count": 16,
+      "last_content_change": "2026-07-21T10:00:00Z",
+      "last_modified": null,
+      "name": "Microsoft Azure Updates",
+      "status": "healthy"
+    },
+    "cosmos-db-blog": {
+      "error": null,
+      "etag": "W/\"8a6258437eb0c10a2dcf8166f939b5f9\"",
+      "item_count": 4,
+      "last_content_change": "2026-07-21T10:30:00Z",
+      "last_modified": "Tue, 21 Jul 2026 10:20:27 GMT",
+      "name": "Azure Cosmos DB engineering blog",
+      "status": "healthy"
+    },
+    "cosmos-db-documentation": {
+      "error": null,
+      "item_count": 1,
+      "last_content_change": "2026-07-21T11:30:00Z",
+      "last_error_at": "2026-07-21T10:45:00Z",
+      "name": "Azure Cosmos DB documentation",
+      "status": "healthy"
+    },
+    "cosmos-dotnet-releases": {
+      "error": null,
+      "etag": "W/\"7e0216f9ecd370d80eb4a9e945c4e24c04a965dafced519bee4d2cb5f1982a73\"",
+      "item_count": 2,
+      "last_content_change": "2026-07-21T10:30:00Z",
+      "last_modified": null,
+      "name": "Azure Cosmos DB .NET SDK releases",
+      "status": "healthy"
+    },
+    "foundry-whats-new": {
+      "error": null,
+      "item_count": 1,
+      "last_content_change": "2026-07-21T11:05:00Z",
+      "last_error_at": "2026-07-21T10:45:00Z",
+      "name": "Microsoft Foundry what's new",
+      "status": "healthy"
+    },
+    "github-changelog": {
+      "error": null,
+      "etag": "W/\"6eae1e7fc38152de958468cb9de27a31\"",
+      "item_count": 10,
+      "last_content_change": "2026-07-21T10:30:00Z",
+      "last_modified": "Tue, 21 Jul 2026 00:21:29 GMT",
+      "name": "GitHub Changelog",
+      "status": "healthy"
+    },
+    "github-status-current": {
+      "error": null,
+      "etag": "W/\"a08cdbb577033558eeb51f20c43263ec\"",
+      "item_count": 0,
+      "last_content_change": "none",
+      "last_modified": null,
+      "name": "GitHub current status",
+      "status": "healthy"
+    },
+    "github-status-history": {
+      "error": null,
+      "etag": "W/\"384fac8adf4ddabc12873eedc27925ba\"",
+      "item_count": 15,
+      "last_content_change": "2026-07-21T10:30:00Z",
+      "last_modified": null,
+      "name": "GitHub incident history",
+      "status": "healthy"
+    },
+    "postgresql-release-notes": {
+      "error": null,
+      "item_count": 1,
+      "last_content_change": "2026-07-21T11:30:00Z",
+      "last_error_at": "2026-07-21T10:45:00Z",
+      "name": "Azure Database for PostgreSQL release notes",
+      "status": "healthy"
+    },
+    "qdk-releases": {
+      "error": null,
+      "etag": "W/\"718605ae85c62b75f6415946d531d49ba9bb20a73c5c0a471ea0c126c31df75e\"",
+      "item_count": 1,
+      "last_content_change": "2026-07-21T10:30:00Z",
+      "last_modified": null,
+      "name": "Microsoft Quantum Development Kit releases",
+      "status": "healthy"
+    },
+    "quantum-release-notes": {
+      "error": null,
+      "item_count": 1,
+      "last_content_change": "2026-07-21T11:30:00Z",
+      "last_error_at": "2026-07-21T10:45:00Z",
+      "name": "QDK and Azure Quantum release notes",
+      "status": "healthy"
+    }
+  },
+  "version": 1
+}

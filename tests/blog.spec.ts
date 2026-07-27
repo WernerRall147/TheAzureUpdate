@@ -13,7 +13,11 @@ test.describe('Blog page', () => {
     // Wait for at least one card to render (posts are fetched async)
     await expect(page.locator('.post-card').first()).toBeVisible();
     const cards = page.locator('.post-card');
-    await expect(cards).toHaveCount(3); // welcome + static-web-apps + mimur
+    const manifestCount = await page.evaluate(() => {
+      const manifest = (window as typeof window & { BLOG_MANIFEST?: string[] }).BLOG_MANIFEST;
+      return Array.isArray(manifest) ? manifest.length : 0;
+    });
+    await expect(cards).toHaveCount(manifestCount);
   });
 
   test('each post card has title, date, tags, excerpt, and read more link', async ({ page }) => {

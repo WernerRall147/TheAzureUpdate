@@ -1,0 +1,8 @@
+- AI Foundry
+- GitHub
+- Quantum Computing
+- APIM
+- AKS
+- Azure Cosmos DB
+- Azure Database for PostgreSQL
+- Azure SQL Databases

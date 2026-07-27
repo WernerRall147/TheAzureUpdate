@@ -109,6 +109,15 @@ Each post is a **self-contained folder**. The manifest is generated for you - yo
 
 > The folder name is the post's default `id` and its URL slug (`blog.html?post=my-post`). Images can later live alongside `index.md` in the same folder.
 
+### Daily Azure Update automation
+
+The source-grounded collector under [automation/](automation/) creates reviewable daily posts from first-party Microsoft, Azure, and GitHub sources. It stores evidence under [knowledge/](knowledge/) and writes the publishable edition to `src/posts/azure-update-YYYY-MM-DD/index.md`.
+
+- Run the GitHub Actions workflow **Generate daily Azure Update** for normal operation.
+- Review and merge its pull request to publish through the existing Static Web Apps deployment.
+- In VS Code, run the workspace prompt **Generate Daily Azure Update** for a guided local refresh.
+- See [automation/README.md](automation/README.md) for setup, validation, and recovery commands.
+
 ### Hosting / deployment notes
 
 - **Azure Static Web Apps** serves everything in `src/` as-is - no bundler, no SSR.

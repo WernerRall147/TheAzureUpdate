@@ -1,0 +1,50 @@
+version: 1
+
+technologies:
+  ai-foundry:
+    display_name: Microsoft Foundry
+    folder: knowledge/AI Foundry
+  github:
+    display_name: GitHub and GitHub Copilot
+    folder: knowledge/GitHub
+  quantum:
+    display_name: Quantum Computing and Azure Quantum
+    folder: knowledge/Quantum
+  apim:
+    display_name: Azure API Management
+    folder: knowledge/APIM
+  aks:
+    display_name: Azure Kubernetes Service
+    folder: knowledge/AKS
+  app-service:
+    display_name: Azure App Service
+    folder: knowledge/App Service
+  cosmos-db:
+    display_name: Azure Cosmos DB
+    folder: knowledge/Azure Cosmos DB
+  postgresql:
+    display_name: Azure Database for PostgreSQL
+    folder: knowledge/Azure Database for PostgreSQL
+  azure-sql:
+    display_name: Azure SQL Database
+    folder: knowledge/Azure SQL Databases
+  cross-cutting:
+    display_name: Cross-cutting Azure guidance
+    folder: automation/cross-cutting
+
+waf_pillars:
+  - reliability
+  - security
+  - cost-optimization
+  - operational-excellence
+  - performance-efficiency
+
+csa_outcomes:
+  - delivery
+  - architecture
+  - blocker-mitigation
+  - consumption
+  - opportunity
+  - skilling
+  - feedback
+  - reusable-ip

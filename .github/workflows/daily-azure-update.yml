@@ -1,0 +1,103 @@
+name: Generate daily Azure Update
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+    inputs:
+      full_refresh:
+        description: Ignore conditional-fetch state
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-azure-update
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: automation/requirements.lock
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: |
+          python -m pip install --disable-pip-version-check --require-hashes -r automation/requirements.lock
+          python -m pip install --disable-pip-version-check --no-deps -e automation
+
+      - name: Run knowledge tests
+        working-directory: automation
+        run: python -m pytest
+
+      - name: Verify Microsoft Learn access
+        run: npx --yes @microsoft/learn-cli@0.1.0 doctor --format json
+
+      - name: Collect and generate post
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          args=(refresh --root .)
+          if [[ "${{ inputs.full_refresh }}" == "true" ]]; then
+            args+=(--full-refresh)
+          fi
+          python -m knowledge_workflow.cli "${args[@]}"
+          npm run posts
+          python -m knowledge_workflow.cli validate --root .
+
+      - name: Create or update content pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if [[ -z "$(git status --porcelain -- automation knowledge src/posts)" ]]; then
+            echo "No substantive knowledge changes detected."
+            exit 0
+          fi
+
+          branch="automation/daily-azure-update"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "$branch:refs/remotes/origin/$branch" || true
+          git switch -C "$branch"
+          git add automation knowledge src/posts
+          git commit -m "docs: generate daily Azure Update"
+          git push --force-with-lease --set-upstream origin "$branch"
+
+          existing_pr="$(gh pr list --head "$branch" --base "$GITHUB_REF_NAME" --state open --json number --jq '.[0].number // empty')"
+          if [[ -n "$existing_pr" ]]; then
+            gh pr edit "$existing_pr" \
+              --title "Daily Azure Update" \
+              --body-file automation/reports/daily/pr-body.md
+          else
+            gh pr create \
+              --base "$GITHUB_REF_NAME" \
+              --head "$branch" \
+              --title "Daily Azure Update" \
+              --body-file automation/reports/daily/pr-body.md
+          fi

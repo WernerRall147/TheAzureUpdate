@@ -1,0 +1,238 @@
+version: 1
+
+defaults:
+  enabled: true
+  timeout_seconds: 30
+  max_retries: 3
+  max_items: 25
+  since_days: 21
+
+allowed_hosts:
+  - api.github.com
+  - azure.microsoft.com
+  - azure.github.io
+  - devblogs.microsoft.com
+  - docs.github.com
+  - github.com
+  - github.blog
+  - learn.microsoft.com
+  - www.githubstatus.com
+  - www.microsoft.com
+
+allowed_github_owners:
+  - actions
+  - Azure
+  - AzureCosmosDB
+  - github
+  - microsoft
+
+sources:
+  - id: azure-updates
+    name: Microsoft Azure Updates
+    adapter: rss
+    url: https://www.microsoft.com/releasecommunications/api/v2/azure/rss
+    source_tier: 1
+    publisher: Microsoft
+    content_type: update
+    category_map:
+      Microsoft Foundry: ai-foundry
+      Azure OpenAI: ai-foundry
+      API Management: apim
+      Azure Kubernetes Service (AKS): aks
+      App Service: app-service
+      Azure Cosmos DB: cosmos-db
+      Azure Database for PostgreSQL: postgresql
+      Azure SQL Database: azure-sql
+      Azure Quantum: quantum
+
+  - id: github-changelog
+    name: GitHub Changelog
+    adapter: rss
+    url: https://github.blog/changelog/feed/
+    source_tier: 1
+    publisher: GitHub
+    technology: github
+    content_type: update
+
+  - id: github-status-current
+    name: GitHub current status
+    adapter: statuspage
+    url: https://www.githubstatus.com/api/v2/summary.json
+    source_tier: 1
+    publisher: GitHub
+    technology: github
+    content_type: status
+    replace_on_fetch: true
+
+  - id: github-status-history
+    name: GitHub incident history
+    adapter: rss
+    url: https://www.githubstatus.com/history.rss
+    source_tier: 1
+    publisher: GitHub
+    technology: github
+    content_type: status
+
+  - id: app-service-blog
+    name: Azure App Service product team blog
+    adapter: rss
+    url: https://azure.github.io/AppService/feed.xml
+    source_tier: 2
+    publisher: Microsoft
+    technology: app-service
+    content_type: update
+
+  - id: cosmos-db-blog
+    name: Azure Cosmos DB engineering blog
+    adapter: rss
+    url: https://devblogs.microsoft.com/cosmosdb/feed/
+    source_tier: 2
+    publisher: Microsoft
+    technology: cosmos-db
+    content_type: update
+
+  - id: azure-sql-blog
+    name: Azure SQL engineering blog
+    adapter: rss
+    url: https://devblogs.microsoft.com/azure-sql/feed/
+    source_tier: 2
+    publisher: Microsoft
+    technology: azure-sql
+    content_type: update
+
+  - id: agent-framework-releases
+    name: Microsoft Agent Framework releases
+    adapter: github-releases
+    repository: microsoft/agent-framework
+    source_tier: 2
+    publisher: Microsoft
+    technology: ai-foundry
+    content_type: release-note
+
+  - id: qdk-releases
+    name: Microsoft Quantum Development Kit releases
+    adapter: github-releases
+    repository: microsoft/qdk
+    source_tier: 2
+    publisher: Microsoft
+    technology: quantum
+    content_type: release-note
+
+  - id: azure-quantum-python-releases
+    name: Azure Quantum Python SDK releases
+    adapter: github-releases
+    repository: microsoft/azure-quantum-python
+    source_tier: 2
+    publisher: Microsoft
+    technology: quantum
+    content_type: release-note
+
+  - id: apim-releases
+    name: Azure API Management releases
+    adapter: github-releases
+    repository: Azure/API-Management
+    source_tier: 1
+    publisher: Microsoft
+    technology: apim
+    content_type: release-note
+
+  - id: aks-releases
+    name: Azure Kubernetes Service releases
+    adapter: github-releases
+    repository: Azure/AKS
+    source_tier: 1
+    publisher: Microsoft
+    technology: aks
+    content_type: release-note
+
+  - id: cosmos-dotnet-releases
+    name: Azure Cosmos DB .NET SDK releases
+    adapter: github-releases
+    repository: Azure/azure-cosmos-dotnet-v3
+    source_tier: 2
+    publisher: Microsoft
+    technology: cosmos-db
+    content_type: release-note
+
+  - id: app-service-announcements
+    name: Azure App Service announcements
+    adapter: github-issues
+    repository: Azure/app-service-announcements
+    labels:
+      - web-apps
+    source_tier: 1
+    publisher: Microsoft
+    technology: app-service
+    content_type: update
+
+  - id: foundry-whats-new
+    name: Microsoft Foundry what's new
+    adapter: learn-cli
+    url: https://learn.microsoft.com/azure/foundry/whats-new-foundry
+    source_tier: 1
+    publisher: Microsoft
+    technology: ai-foundry
+    content_type: docs
+
+  - id: quantum-release-notes
+    name: QDK and Azure Quantum release notes
+    adapter: learn-cli
+    url: https://learn.microsoft.com/azure/quantum/release-notes
+    source_tier: 1
+    publisher: Microsoft
+    technology: quantum
+    content_type: docs
+
+  - id: apim-update-guidance
+    name: API Management update guidance
+    adapter: learn-cli
+    url: https://learn.microsoft.com/azure/api-management/api-management-faq#how-do-i-find-out-about-updates-and-changes-to-api-management
+    source_tier: 1
+    publisher: Microsoft
+    technology: apim
+    content_type: docs
+
+  - id: aks-release-tracker
+    name: AKS release tracker
+    adapter: learn-cli
+    url: https://learn.microsoft.com/azure/aks/release-tracker
+    source_tier: 1
+    publisher: Microsoft
+    technology: aks
+    content_type: docs
+
+  - id: app-service-runtime-patching
+    name: App Service OS and runtime patching
+    adapter: learn-cli
+    url: https://learn.microsoft.com/azure/app-service/overview-patch-os-runtime
+    source_tier: 1
+    publisher: Microsoft
+    technology: app-service
+    content_type: docs
+
+  - id: cosmos-db-documentation
+    name: Azure Cosmos DB documentation
+    adapter: learn-cli
+    url: https://learn.microsoft.com/azure/cosmos-db/
+    source_tier: 1
+    publisher: Microsoft
+    technology: cosmos-db
+    content_type: docs
+
+  - id: postgresql-release-notes
+    name: Azure Database for PostgreSQL release notes
+    adapter: learn-cli
+    url: https://learn.microsoft.com/azure/postgresql/release-notes/release-notes
+    source_tier: 1
+    publisher: Microsoft
+    technology: postgresql
+    content_type: docs
+
+  - id: azure-sql-whats-new
+    name: Azure SQL Database what's new
+    adapter: learn-cli
+    url: https://learn.microsoft.com/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new?view=azuresql
+    source_tier: 1
+    publisher: Microsoft
+    technology: azure-sql
+    content_type: docs

@@ -1,0 +1,10 @@
+version: 1
+
+knowledge_owner: Senior CSA - Cloud and AI Apps
+automation_owner: Senior CSA - Cloud and AI Apps
+internal_content_owner: To be assigned before protected-source ingestion
+
+review_policy:
+  critical_and_high: required
+  medium: required_during_pilot
+  low: sampled_during_pilot
