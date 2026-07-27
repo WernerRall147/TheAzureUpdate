@@ -59,7 +59,9 @@ test.describe('Blog page', () => {
     await expect(page.locator('.post-full')).toBeVisible();
     await expect(page.locator('.post-full-title')).toHaveText(firstTitle!.trim());
 
-    // Markdown rendered: at least one paragraph or heading element in the body
+    // Markdown rendered: at least one paragraph or heading element in the body,
+    // and the progressive-render placeholder has been replaced by real content.
+    await expect(page.locator('.post-body .post-loading')).toHaveCount(0);
     const bodyChildren = await page.locator('.post-body > *').count();
     expect(bodyChildren).toBeGreaterThan(0);
 

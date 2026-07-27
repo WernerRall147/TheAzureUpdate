@@ -429,6 +429,7 @@ html.dark-mode .disclaimer-section { background: #1a1a2e; color: #888; }
 }
 .post-body { margin-top: 18px; color: #333; line-height: 1.7; overflow-wrap: break-word; }
 .post-body p { margin-bottom: 14px; }
+.post-loading { color: #888; font-style: italic; }
 /* Long unbroken URLs in generated summaries must not widen the page. */
 .post-body a { overflow-wrap: anywhere; }
 .post-body h3 { margin: 22px 0 10px; color: #0078d4; font-size: 1.2rem; }

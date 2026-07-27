@@ -313,11 +313,18 @@
     }).join("") + pagerHtml(current, totalPages);
   }
 
+  // The post shell (title, meta, tags) comes from the prebuilt index and is
+  // painted immediately; the body is filled in once its Markdown arrives, so
+  // the reader never stares at a blank page during the fetch.
   function renderSinglePost(post) {
     var listEl = document.getElementById("postList");
     var emptyEl = document.getElementById("emptyState");
     if (!listEl) return;
     if (emptyEl) emptyEl.hidden = true;
+
+    var body = post.content == null
+      ? '<p class="post-loading">Loading post&hellip;</p>'
+      : renderMarkdown(post.content);
 
     listEl.innerHTML =
       '<article class="post-full">' +
@@ -331,12 +338,25 @@
           viewsBadgeHtml(post.id, null) +
         "</div>" +
         tagsHtml(post.tags) +
-        '<div class="post-body">' + renderMarkdown(post.content) + "</div>" +
+        '<div class="post-body">' + body + "</div>" +
       "</article>";
 
-    renderMermaid(listEl);
+    if (post.content != null) renderMermaid(listEl);
 
     document.title = post.title + " - The Azure Update";
+  }
+
+  // Swap the placeholder for the rendered Markdown once it has loaded.
+  function fillPostBody(post) {
+    var bodyEl = document.querySelector(".post-full .post-body");
+    if (!bodyEl) return renderSinglePost(post);
+    bodyEl.innerHTML = renderMarkdown(post.content);
+    renderMermaid(bodyEl);
+    var titleEl = document.querySelector(".post-full-title");
+    if (titleEl && post.title) {
+      titleEl.textContent = post.title;
+      document.title = post.title + " - The Azure Update";
+    }
   }
 
   function renderFeatured(posts) {
@@ -386,8 +406,10 @@
 
     var entry = findPost(meta, postId);
     if (entry) {
+      // Paint the shell first, then fill the body when the Markdown lands.
+      renderSinglePost(entry);
       fetchPostContent(entry).then(function (post) {
-        renderSinglePost(post);
+        fillPostBody(post);
         trackSingleView(post);
       }).catch(function (err) {
         console.error(err);
