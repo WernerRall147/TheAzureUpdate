@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/jxd617hfwfq8
 source_tier: 1
 published_at: '2026-07-24T20:23:10Z'
-observed_at: '2026-07-27T11:22:54Z'
+observed_at: '2026-08-03T07:40:27Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/jxd617hfwfq8
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:ae1f97920e3015bcf84feba3814acfeeab95f1fdac6981f772641b8ded37a87a
+content_hash: sha256:e4cc4944ebf81119a78bdba86a4cbaf497f6872df9ded12ea6a7a91cd983c199
 ---
 
 # Incident with Pull Requests
 
 ## What Changed
 
-Jul 24, 20:23 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 24, 20:02 UTC Monitoring - The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability. Jul 24, 19:59 UTC Update - We have applied a mitigation and are monitoring for recovery Jul 24, 19:43 UTC Update - Pull Requests is experiencing degraded availability. We are continuing to investigate. Jul 24, 19:40 UTC Update - We are investigating errors creating pull requests Jul 24, 19:37 UTC Investigating - We are investigating reports of degraded performance for Pull Requests
+Jul 24, 20:23 UTC Resolved - Between July 24, 19:17 UTC and July 24, 20:02 UTC, users were unable to create pull requests due to a database schema change. In total, 113,930 pull request creation attempts were impacted across 50,904 users, with an average error rate of 1.75% and a maximum error rate of 2.25% for all requests to Pull Requests service. Existing pull requests and other GitHub functionality were not affected. The issue was resolved by reverting the change to the affected database, upon which pull request creation immediately resumed. The root cause was related to a backfill workflow into the Vitess keyspace hosting Pull Request data. The backfill Vitess command encountered errors and increased VReplication lag, and the workflow was canceled at 19:17 UTC. The cancellation executed a misunderstood Vitess codepath that dropped the backing table to the target keyspace, leaving a non-existent reference that resulted in errors creating Pull Requests. The mitigation was executing a command to drop the vschema reference to the dropped table, allowing Pull Request creation to resume. We are adding stronger pre-flight validation to our tooling to prevent similar issues and exp...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.
+State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.

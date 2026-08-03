@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/vv9vvksmj4s9
 source_tier: 1
 published_at: '2026-07-25T10:11:16Z'
-observed_at: '2026-07-27T11:22:54Z'
+observed_at: '2026-08-03T07:40:27Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/vv9vvksmj4s9
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:b0ead2bc315834efa7c5bce837d6ad2e1ad17edbf1110044c49d4047780980fe
+content_hash: sha256:999a8e3d8fa2557b7e8e5f24af2244252b7fc8332c42886db5432aec06d0083e
 ---
 
 # Several GPT models degraded
 
 ## What Changed
 
-Jul 25, 10:11 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 25, 10:04 UTC Monitoring - The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. Jul 25, 09:48 UTC Update - We are experiencing degraded availability for the GPT-5.2, GPT-5.3-Codex, GPT-5.4, GPT-5.4 Mini, GPT-5.6 Sol, GPT-5.6 Terra, and GPT-5.6 Luna models in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot. Jul 25, 09:42 UTC Investigating - We are investigating reports of degraded availability for Copilot AI Model Providers
+Jul 25, 10:11 UTC Resolved - On July 25, 2026, between 09:07 and 10:04 UTC, the GPT-5.2, GPT-5.3-Codex, GPT-5.4, GPT-5.4 Mini, GPT-5.6 Sol, GPT-5.6 Terra and GPT-5.6 Luna models experienced degraded availability in GitHub Copilot products and IDE surfaces. Requests to these models had an average failure rate of 5.6%. Other Copilot models remained available as alternatives. The degradation was caused by an issue with an upstream model provider. Success rates returned to normal after the upstream issue was mitigated, and we continued monitoring before resolving the incident. We are working on improving the automated failover for the affected models to prevent similar incidents in the future. Jul 25, 10:04 UTC Monitoring - The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. Jul 25, 09:48 UTC Update - We are experiencing degraded availability for the GPT-5.2, GPT-5.3-Codex, GPT-5.4, GPT-5.4 Mini, GPT-5.6 Sol, GPT-5.6 Terra, and GPT-5.6 Luna models in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.
+State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.
