@@ -94,10 +94,26 @@ jobs:
             gh pr edit "$existing_pr" \
               --title "Daily Azure Update" \
               --body-file automation/reports/daily/pr-body.md
-          else
-            gh pr create \
+            echo "Updated pull request #$existing_pr." >> "$GITHUB_STEP_SUMMARY"
+          elif gh pr create \
               --base "$GITHUB_REF_NAME" \
               --head "$branch" \
               --title "Daily Azure Update" \
-              --body-file automation/reports/daily/pr-body.md
+              --body-file automation/reports/daily/pr-body.md; then
+            echo "Opened a new Daily Azure Update pull request." >> "$GITHUB_STEP_SUMMARY"
+          else
+            # The generated content is already safe on $branch. Surface a link
+            # rather than failing the run and discarding the day's collection.
+            echo "::warning::Content was pushed to $branch but the pull request could not be created."
+            {
+              echo "### Daily Azure Update needs a pull request"
+              echo
+              echo "Today's content was pushed to \`$branch\`, but the pull request could not be created."
+              echo
+              echo "If the log says Actions is not permitted to create pull requests, enable"
+              echo "**Settings > Actions > General > Workflow permissions >**"
+              echo "**Allow GitHub Actions to create and approve pull requests**."
+              echo
+              echo "[Open the pull request](https://github.com/$GITHUB_REPOSITORY/compare/$GITHUB_REF_NAME...$branch?expand=1)"
+            } >> "$GITHUB_STEP_SUMMARY"
           fi
