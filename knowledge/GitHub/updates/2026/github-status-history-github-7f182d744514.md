@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/pz7g535gbs6p
 source_tier: 1
 published_at: '2026-07-25T13:13:21Z'
-observed_at: '2026-07-27T11:22:54Z'
+observed_at: '2026-08-03T07:40:27Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/pz7g535gbs6p
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:dd5bfa0ccbefca38b9376b5a7a49c1d0f0df2736f0d50ab58eb5037c1c9caec6
+content_hash: sha256:49b444ae5b6490c38cdf22ac3df77bd0d3fed85a525e36f75a2d728499f14347
 ---
 
 # Actions run failures and delays
 
 ## What Changed
 
-Jul 25, 13:13 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 25, 13:12 UTC Update - We have seen recovery in GitHub Actions performance following our earlier mitigation. Workflow runs are processing normally, though jobs queued before 12:40 UTC may still experience failures and will need to be retried. Jul 25, 12:59 UTC Monitoring - The degradation affecting Actions has been mitigated. We are monitoring to ensure stability. Jul 25, 12:58 UTC Update - We have applied a mitigation for the infrastructure issue affecting GitHub Actions. Workflow run failures and delays are improving but not yet fully resolved. Our engineering team continues to work on restoring full functionality across all affected infrastructure. Jul 25, 12:34 UTC Update - We are experiencing issues with GitHub Actions that are causing workflow run failures and delays for some users. Our engineering team is actively investigating the infrastructure issue and working to restore full functionality. Jul 25, 12:31 UTC Investigating - We are investigating reports of de...
+Jul 25, 13:13 UTC Resolved - Please refer to the combined summary in this related incident: https://www.githubstatus.com/incidents/s65j9gslmfm8 Jul 25, 13:12 UTC Update - We have seen recovery in GitHub Actions performance following our earlier mitigation. Workflow runs are processing normally, though jobs queued before 12:40 UTC may still experience failures and will need to be retried. Jul 25, 12:59 UTC Monitoring - The degradation affecting Actions has been mitigated. We are monitoring to ensure stability. Jul 25, 12:58 UTC Update - We have applied a mitigation for the infrastructure issue affecting GitHub Actions. Workflow run failures and delays are improving but not yet fully resolved. Our engineering team continues to work on restoring full functionality across all affected infrastructure. Jul 25, 12:34 UTC Update - We are experiencing issues with GitHub Actions that are causing workflow run failures and delays for some users. Our engineering team is actively investigating the infrastructure issue and working to restore full functionality. Jul 25, 12:31 UTC Investigating - We are investigating reports of degraded availability for Actions
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.
+State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.

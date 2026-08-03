@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/ph5nns5y4gxj
 source_tier: 1
 published_at: '2026-07-20T01:46:02Z'
-observed_at: '2026-07-21T10:30:00Z'
+observed_at: '2026-08-03T07:40:27Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/ph5nns5y4gxj
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:115c5bb6542517707f51c663dfcf83c8b7ecc1cf62dc29cfde2600f6b0c94994
+content_hash: sha256:5f4782dab27ac4665f933377c6b33eb246fa73e44d3ca6f7fa0ea23c63c5f5d7
 ---
 
 # Disruption with some GitHub services
 
 ## What Changed
 
-Jul 20, 01:46 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 20, 01:45 UTC Update - Git LFS API success rates have returned to normal. We will continue to monitor the service closely. Jul 20, 01:15 UTC Investigating - The Git LFS API issues have been identified as being related to a separate incident where Actions is experiencing degraded availability. We’re consolidating our investigation efforts under that incident. Jul 20, 00:26 UTC Update - Some Git LFS operations, and loading files through the API are failing. We are investigating. Jul 20, 00:25 UTC Monitoring - Some Git LFS operations, and loading files through the API are failing. We are investigating. Jul 20, 00:25 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
+Jul 20, 01:46 UTC Resolved - Between July 19, 2026, at 23:05 UTC and July 20, 2026, at 03:55 UTC, Actions self-hosted and larger runners were unable to connect to GitHub. During this period, Actions jobs were delayed or failed when trying to acquire a runner. Jobs using standard and Mac hosted runners were not affected. Reconnection traffic from affected runners also increased load on GitHub APIs, resulting in 3-4 seconds of additional average request latency and elevated 5xx error rates. The incident was caused by a certificate lifecycle management failure in a subset of internal services, resulting in an SSL certificate expiration that disrupted runner connectivity. We restored service by rotating the affected certificate. Recovery began at 02:45 UTC. By 03:55 UTC, queued workflow backlog had been processed and workflow delay rates returned to normal. To prevent recurrence, we are strengthening certificate renewal automation, adding fallback expiry monitoring and alerting, and improving circuit-breaker protections during runner API disruptions to reduce the risk of cascading impact to other APIs. Jul 20, 01:45 UTC Update - Git LFS API success rates have returned to normal. We...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-21T10:30:00Z`.
+State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.

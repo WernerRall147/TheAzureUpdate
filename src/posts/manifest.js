@@ -14,6 +14,7 @@
      3. Run npm start (or npm run posts) - done.
 */
 window.BLOG_MANIFEST = [
+  "azure-update-2026-08-03",
   "azure-update-2026-07-27",
   "azure-update-2026-07-21",
   "Building-Mimur-a-private-NPU-accelerated-digital-twin-that-answers-in-my-own-voice",
@@ -22,6 +23,7 @@ window.BLOG_MANIFEST = [
 ];
 
 window.BLOG_INDEX = [
+  {"id":"azure-update-2026-08-03","url":"posts/azure-update-2026-08-03/index.md","title":"03 August 2026: Restricting npm bypass-2FA granular access tokens, and 33 more","date":"2026-08-03","author":"Werner Rall","tags":["Azure","AI","AKS","APIM","Azure SQL","GitHub","PostgreSQL","Quantum"],"featured":true,"excerpt":"34 verified updates across 7 technologies, led by Restricting npm bypass-2FA granular access tokens."},
   {"id":"azure-update-2026-07-27","url":"posts/azure-update-2026-07-27/index.md","title":"27 July 2026: Upcoming GHES change impacting uploading support bundles, and 30 more","date":"2026-07-27","author":"Werner Rall","tags":["Azure","AI","AKS","Azure SQL","Cosmos DB","GitHub","PostgreSQL"],"featured":true,"excerpt":"31 verified updates across 6 technologies, led by Upcoming GHES change impacting uploading support bundles."},
   {"id":"azure-update-2026-07-21","url":"posts/azure-update-2026-07-21/index.md","title":"21 July 2026: GitHub Code Quality is now generally available, and 67 more","date":"2026-07-21","author":"Werner Rall","tags":["Azure","AI","AKS","APIM","App Service","Azure SQL","Cosmos DB","GitHub","PostgreSQL","Quantum"],"featured":true,"excerpt":"68 verified updates across 9 technologies, led by GitHub Code Quality is now generally available."},
   {"id":"building-mimur","url":"posts/Building-Mimur-a-private-NPU-accelerated-digital-twin-that-answers-in-my-own-voice/index.md","title":"Building Mimur: a private, NPU-accelerated digital twin that answers in my own voice","date":"2026-06-30","author":"Werner Rall","tags":["AI","NPU","Local AI","Privacy","RAG"],"featured":true,"excerpt":"How I built Mimur — a local-first \"second brain\" that ingests 286k personal memories and answers in my own voice, with the fast path running on a Ryzen AI NPU."},

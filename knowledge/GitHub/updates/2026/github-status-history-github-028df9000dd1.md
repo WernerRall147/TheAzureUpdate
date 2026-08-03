@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/yjysg0xrl67m
 source_tier: 1
 published_at: '2026-07-24T17:36:50Z'
-observed_at: '2026-07-27T11:22:54Z'
+observed_at: '2026-08-03T07:40:27Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/yjysg0xrl67m
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:3433947f573a3dd51a9cc0ee69cc1935dc9bec2946d3c8c4de2632afa6c5379f
+content_hash: sha256:76b83eb913ca260438fb78a7c4e9a101f60ff9cee7664c07524850072b83256e
 ---
 
 # Disruption with some GitHub services
 
 ## What Changed
 
-Jul 24, 17:36 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 24, 17:24 UTC Update - We are seeing recovery across all services Jul 24, 17:16 UTC Update - The degradation affecting API Requests, Actions, Copilot, Issues, Pages and Pull Requests has been mitigated. We are monitoring to ensure stability. Jul 24, 16:41 UTC Update - Actions is experiencing degraded performance. We are continuing to investigate. Jul 24, 16:40 UTC Update - We have applied a mitigation and are monitoring for recovery Jul 24, 16:28 UTC Update - Actions is experiencing degraded availability. We are continuing to investigate. Jul 24, 16:27 UTC Update - Pages is experiencing degraded performance. We are continuing to investigate. Jul 24, 16:26 UTC Update - Copilot is experiencing degraded performance. We are continuing to investigate. Jul 24, 16:22 UTC Update - We are investigating timeouts to some GitHub services Jul 24, 16:20 UTC Update - Pull Requests is experiencing degraded performance. We are continuing to investigate. Jul 24, 16:19 UTC Update - Actio...
+Jul 24, 17:36 UTC Resolved - On July 24th at 16:04 UTC, a loss of connectivity occurred in network paths in one of our three physical data center availability zones (AZs). This resulted in packet loss due to the remaining active paths becoming saturated. Our data centers use a leaf-spine switch fabric in each compute cage, and an aggregation layer interconnecting the spines from each cage within each AZ. The loss of connectivity affected links between one cage’s spine switches and the aggregation layer within that specific AZ. Workloads depending on compute resources in this cage became degraded due to packet loss, and exhibited intermittent errors: - Actions saw 10% of jobs fail during the impact window, and 5% of jobs succeeded but with delayed starts. - 27% of GitHub issues interactions saw slow requests or timeouts. - 4% of GitHub Copilot requests experienced errors, though most automatically retry. - 4% of git push operations saw impacts during the affected window. - Authentication requests saw increased latency during the affected window, but error rates, while elevated, were < 1% in all cases. We were able to mitigate the outage by re-routing affected connections to avail...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.
+State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.

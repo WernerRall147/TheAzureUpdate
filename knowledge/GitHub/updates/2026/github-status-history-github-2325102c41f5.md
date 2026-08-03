@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/g40zcbvchny4
 source_tier: 1
 published_at: '2026-07-21T11:57:01Z'
-observed_at: '2026-07-27T11:22:54Z'
+observed_at: '2026-08-03T07:40:27Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/g40zcbvchny4
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:ece2245ff3b37324ea1db256f9fa41a91f55e580ed8a4e49d2fe9bfa8ae61a4a
+content_hash: sha256:789b23b799d0a879b0367f034ec7f9eaeab756abd9ba1d6b404b27dace092fdb
 ---
 
 # Some SSH connections using deploy keys are failing
 
 ## What Changed
 
-Jul 21, 11:57 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 21, 11:46 UTC Update - We have identified a recent code change as a potential cause of the SSH authentication failures affecting deploy key connections. Our engineering team is rolling back this change. Customers using deploy keys for SSH access to repositories may continue to experience intermittent connection failures until the fix is deployed. Jul 21, 11:04 UTC Update - We are investigating reports of intermittent SSH authentication failures affecting connections that use deploy keys. Customers may experience failed SSH connections when interacting with repositories via deploy keys. Our engineering team is actively investigating the root cause and working toward resolution. Jul 21, 10:31 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
+Jul 21, 11:57 UTC Resolved - On July 21, 2026, between 07:41 UTC and 11:57 UTC, the SSH Authentication service was degraded and some SSH connections failed to authenticate. On average, 12.2% of SSH authentication requests failed, peaking at 15.7%. Both user RSA keys and deploy keys were impacted. This was due to a change in how our SSH service handled one public-key authentication method that caused the affected authentication attempts to be rejected as invalid. We mitigated the incident by reverting the change, after which SSH authentication returned to normal. We are working to expand our automated test coverage for our SSH public-key authentication flows to catch more edge cases and to improve observability and alerting on SSH authentication failures, to reduce our time to detection and mitigation of issues like this one in the future. Jul 21, 11:46 UTC Update - We have identified a recent code change as a potential cause of the SSH authentication failures affecting deploy key connections. Our engineering team is rolling back this change. Customers using deploy keys for SSH access to repositories may continue to experience intermittent connection failures until the fix is dep...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.
+State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.

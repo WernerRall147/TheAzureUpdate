@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/s65j9gslmfm8
 source_tier: 1
 published_at: '2026-07-25T09:25:30Z'
-observed_at: '2026-07-27T11:22:54Z'
+observed_at: '2026-08-03T07:40:27Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/s65j9gslmfm8
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:7d29f2f29a30d0b634a6f04f74e75a97bd0acbeac8ffa40559e386ddbf38b7bb
+content_hash: sha256:56be55fdb87a0b3f27a03b46ecf7234c433f6bb350bfe0d48559cc76019a661e
 ---
 
 # Incident with Actions
 
 ## What Changed
 
-Jul 25, 09:25 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 25, 09:20 UTC Update - We identified an issue causing delays in GitHub Actions run starts. Some users may have experienced longer than expected wait times when triggering workflow runs. We have applied mitigations and have recovered. Our team continues to monitor and investigate the root cause. Jul 25, 09:13 UTC Monitoring - The degradation affecting Actions has been mitigated. We are monitoring to ensure stability. Jul 25, 08:59 UTC Investigating - We are investigating reports of degraded performance for Actions
+Jul 25, 09:25 UTC Resolved - On July 25, 2026, GitHub Actions experienced two related periods of degradation that caused some workflow runs to be delayed by more than 5 minutes or end with infrastructure failures. First period (08:45 – 09:13 UTC): During planned maintenance on a critical-path Redis cluster for Actions, one participating region was left in a degraded state. Separately, an independent capacity operation temporarily removed another region from the cluster and redirected its traffic to the degraded region. This created cross-region inconsistencies in job-assignment state, causing workflow runs to be delayed, exhaust retries, or fail outright. At peak, about 7% of runs were delayed by more than 5 minutes, and 25% of runs failed with an infrastructure error during the course of the incident. We mitigated the incident at 09:13 UTC by returning traffic to its normal distribution. Second period (12:08 – 12:48 UTC): As part of mitigating the first incident, traffic was returned to the regional instance that was still undergoing its capacity increase. Multiple Redis nodes in the scaling region experienced failures, increasing traffic to healthy nodes and causing connection...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.
+State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.

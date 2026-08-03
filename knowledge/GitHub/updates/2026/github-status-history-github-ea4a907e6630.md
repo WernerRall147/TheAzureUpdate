@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/zq3c1jst2vkq
 source_tier: 1
 published_at: '2026-07-23T09:39:19Z'
-observed_at: '2026-07-27T11:22:54Z'
+observed_at: '2026-08-03T07:40:27Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/zq3c1jst2vkq
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:0d6f5c52feb1ed1bb45c4cf9e673e754a2d85d62a730e38c844d435878b60cc3
+content_hash: sha256:8031337aa7dbc3769f86f0e027946e108e73ed5b01bddd554d8c2d6bed8f8717
 ---
 
 # Latency issues across a number of services
 
 ## What Changed
 
-Jul 23, 09:39 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 23, 09:39 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Jul 23, 09:35 UTC Update - Webhooks is operating normally. Jul 23, 09:27 UTC Update - The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability. Jul 23, 09:22 UTC Update - We identified the source of latency affecting multiple services and applied a fix. Issues and Actions are recovering, and remaining affected services are seeing improvement as processing backlogs clear. We are actively monitoring recovery across all services. Jul 23, 09:19 UTC Update - The degradation affecting Actions has been mitigated. We are monitoring to ensure stability. Jul 23, 09:18 UTC Update - The degradation affecting Issues has been mitigated. We are monitoring to ensure stability. Jul 23, 08:34 UTC Update - We're currently investigating latency across multiple services. This can show as Actions jobs taking longer to start, Issues search serving sta...
+Jul 23, 09:39 UTC Resolved - On July 23, 2026, between 07:08 and 09:39 UTC, several services experienced delays: 8% of actions workflow runs experienced an average run start delay of 10 minutes, 5% of webhook deliveries exceeded SLO, and code scanning, repos, notifications, issues and pull requests experienced increased latency over the life of the incident. The root cause of the incident was a node of our background job processing system which did not recover after entering scheduled host maintenance. The incident was mitigated by identifying the problematic shard and restoring its correct state, after which queue backlogs drained and services recovered. To speed mitigation, we have added monitors for nodes in this unhealthy state after maintenance operations. To prevent future recurrence, we are adapting our lifecycle automation to verify host rejoin after a scheduled reboot. Jul 23, 09:39 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Jul 23, 09:35 UTC Update - Webhooks is operating normally. Jul 23, 09:27 UTC Update - The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability. Jul 23, 09:22 U...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.
+State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.
