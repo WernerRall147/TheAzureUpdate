@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/9tpgqq1h4bs7
 source_tier: 1
 published_at: '2026-07-30T10:12:15Z'
-observed_at: '2026-08-03T07:40:27Z'
+observed_at: '2026-08-11T04:43:10Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/9tpgqq1h4bs7
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:5e174b8143ed56bfaca2f684f42e4c67d44f7d292af5cb24d4ebdf224353719a
+content_hash: sha256:8527ebee3daa0343546cf67913c7669d98837a7ab256b12221cd7a4e2de57861
 ---
 
 # Copilot model Claude Fable 5 experiencing elevated errors
 
 ## What Changed
 
-Jul 30, 10:12 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 30, 10:11 UTC Update - The issues with our upstream model provider have been resolved, and Claude Fable 5 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. Jul 30, 09:17 UTC Update - We are experiencing degraded availability for the Claude Fable 5 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot. Jul 30, 09:07 UTC Investigating - We are investigating reports of degraded performance for Copilot AI Model Providers
+Jul 30, 10:12 UTC Resolved - On July 30, 2026, the Claude Fable 5 model in GitHub Copilot experienced degraded availability for approximately 73 minutes, from 08:33 to 09:46 UTC. During this time, requests to Claude Fable 5 in Copilot chat and IDE surfaces frequently failed or timed out. This was caused by an issue with an upstream model provider. Other Copilot models were not affected, and users could continue working by selecting another model or 'Auto'. Availability for Claude Fable 5 fully recovered once the provider resolved their outage at 09:46 UTC, and we confirmed resolution at 10:12 UTC. Jul 30, 10:11 UTC Update - The issues with our upstream model provider have been resolved, and Claude Fable 5 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. Jul 30, 09:17 UTC Update - We are experiencing degraded availability for the Claude Fable 5 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot. Jul 30, 09:07 UTC Inv...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.
+State: `machine-draft`. Observed: `2026-08-11T04:43:10Z`.
