@@ -10,7 +10,7 @@ source_name: App Service OS and runtime patching
 source_url: https://learn.microsoft.com/azure/app-service/overview-patch-os-runtime
 source_tier: 1
 published_at: null
-observed_at: '2026-07-21T11:30:00Z'
+observed_at: '2026-08-11T04:43:10Z'
 effective_at: null
 publisher: Microsoft
 customer_impact: low
@@ -25,14 +25,14 @@ external_id: https://learn.microsoft.com/azure/app-service/overview-patch-os-run
 raw_categories:
 - documentation
 supporting_urls: []
-content_hash: sha256:3744efd26e318879cd836f9078e46914656bf920f5dcce314ea3703b107b9a8e
+content_hash: sha256:c8569b9163713bfa5709f6ac03215d2e4b312fed032968961d7f44ec781691fc
 ---
 
 # Azure App Service OS and runtime patching
 
 ## What Changed
 
-This article explains how Azure App Service updates operating system (OS) and runtime software, how you can get version information, and how you can manually upgrade to new versions. App Service is a Platform as a Service (PaaS), so Azure manages the OS and application stack for you. You manage only your application and its data. If you need more control over the OS and application stack, you can use Azure Virtual Machines. It's still helpful for you as an App Service user to know information such as: How and when OS updates are applied. How App Service is patched against significant and zero day vulnerabilities. When supported language runtimes are updated, added, or deprecated. How to find out which OS and runtime versions are running your apps. This article provides transparency on the process, and helps you stay updated on security related announcements and runtime updates. For security reasons, certain specific security information isn't published. How and when are OS updates applied? Azure manages OS patching for both the physical servers and the guest virtual machines (VMs) that run App Service resources. Both machine layers are updated monthly, aligning to the monthly Pa...
+This article explains how Azure App Service updates operating system (OS) and runtime software, how you can get version information, and how you can manually upgrade to new versions. App Service is a Platform as a Service (PaaS), so Azure manages the OS and application stack for you. You manage only your application and its data. If you need more control over the OS and application stack, you can use Azure Virtual Machines. It's still helpful for you as an App Service user to know information such as: How and when OS updates are applied. How App Service is patched against significant and zero day vulnerabilities. When supported language runtimes are updated, added, or deprecated. How to control runtime patch update timing with the Platform Release Channel (Linux). How to find out which OS and runtime versions are running your apps. This article provides transparency on the process, and helps you stay updated on security related announcements and runtime updates. For security reasons, certain specific security information isn't published. How and when are OS updates applied? Azure manages OS patching for both the physical servers and the guest virtual machines (VMs) that run App...
 
 ## Why It Matters to a CSA
 
@@ -52,4 +52,4 @@ Review substantive page changes and update human-authored guidance when needed.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-21T11:30:00Z`.
+State: `machine-draft`. Observed: `2026-08-11T04:43:10Z`.
