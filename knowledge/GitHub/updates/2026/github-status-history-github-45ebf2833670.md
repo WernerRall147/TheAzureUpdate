@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/sj1tzyrx599x
 source_tier: 1
 published_at: '2026-08-01T18:44:28Z'
-observed_at: '2026-08-03T07:40:27Z'
+observed_at: '2026-08-17T04:06:09Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/sj1tzyrx599x
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:9cb26162f2c6ff2e233f94f1711fafaceedb36ee6594c4e44720d50a2dcdad24
+content_hash: sha256:28383f9a132d58c6cf3c17c2d58ef06b9732bc2386d3deb73a956468ce04ddeb
 ---
 
 # Incident with Copilot AI Model Providers
 
 ## What Changed
 
-Aug 1, 18:44 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 1, 18:23 UTC Update - The issues with our upstream model provider have been resolved, and Fable 5 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. Aug 1, 18:20 UTC Monitoring - The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. Aug 1, 18:20 UTC Update - We are experiencing degraded availability for the Fable 5 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot. Aug 1, 18:03 UTC Update - We are seeing increased error rates from specific upstream AI Model Providers Aug 1, 18:03 UTC Investigating - We are investigating reports of degraded performance for Copilot AI Model Providers
+Aug 1, 18:44 UTC Resolved - On August 1, 2026, between 17:47 UTC and 18:20 UTC, users of the Fable 5 model in GitHub Copilot experienced increased request failures and latency. The average failure rate across all Copilot requests was 0.007%, while failures for Fable 5 peaked at 5.6%. Other models remained available. This was caused by degradation of an upstream model provider. The affected endpoint recovered, and we monitored the service until error rates and latency returned to normal levels. We are working to add endpoint redundancy to mitigate similar provider issues in the future. Aug 1, 18:23 UTC Update - The issues with our upstream model provider have been resolved, and Fable 5 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. Aug 1, 18:20 UTC Monitoring - The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. Aug 1, 18:20 UTC Update - We are experiencing degraded availability for the Fable 5 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve th...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.
+State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.

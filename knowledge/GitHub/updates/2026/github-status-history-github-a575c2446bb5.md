@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/kk183dslzdzd
 source_tier: 1
 published_at: '2026-08-01T12:30:21Z'
-observed_at: '2026-08-03T07:40:27Z'
+observed_at: '2026-08-17T04:06:09Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/kk183dslzdzd
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:e5f76136f91b5bcf1d45d29f9b19ba01e65044a2c76ec802d8921406e94e9869
+content_hash: sha256:789b90fa8637c528d99d7faf9ba94b987a19ed5bd8ab5ce65278a1c08c649d61
 ---
 
 # Degraded availability GPT 5.6 Luna
 
 ## What Changed
 
-Aug 1, 12:30 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 1, 12:29 UTC Update - The issues with our upstream model provider have been resolved, and GPT-5.6 Luna is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. Aug 1, 12:13 UTC Update - We keep working with our upstream model provider, and are observing recovery. We continue monitoring to ensure stability. Aug 1, 11:20 UTC Update - We are experiencing degraded availability for the GPT-5.6 Luna model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot Aug 1, 11:16 UTC Investigating - We are investigating reports of degraded performance for Copilot AI Model Providers
+Aug 1, 12:30 UTC Resolved - On August 1st, 2026, the GPT-5.6 Luna model in GitHub Copilot experienced degraded availability in intermittent time intervals between ~08:05 UTC and ~16:30 UTC. Specifically the timeframes observed were 10:00-10:20 UTC, 10:45-11:50 UTC, 13:00-14:25 UTC, and 16:00-16:30 UTC. During this time, requests to GPT-5.6 Luna in Copilot chat and IDE surfaces frequently failed or timed out. This was caused by an issue with an upstream model provider. Other Copilot models were not affected, and users could continue working by selecting another model or 'Auto'. Availability for GPT-5.6 Luna fully recovered once the provider resolved their outage at 16:30 UTC. Aug 1, 12:29 UTC Update - The issues with our upstream model provider have been resolved, and GPT-5.6 Luna is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. Aug 1, 12:13 UTC Update - We keep working with our upstream model provider, and are observing recovery. We continue monitoring to ensure stability. Aug 1, 11:20 UTC Update - We are experiencing degraded availability for the GPT-5.6 Luna model in Copilot products and...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.
+State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.

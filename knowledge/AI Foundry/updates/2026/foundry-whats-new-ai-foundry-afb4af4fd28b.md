@@ -10,7 +10,7 @@ source_name: Microsoft Foundry what's new
 source_url: https://learn.microsoft.com/azure/foundry/whats-new-foundry
 source_tier: 1
 published_at: null
-observed_at: '2026-07-21T11:05:00Z'
+observed_at: '2026-08-17T04:06:09Z'
 effective_at: null
 publisher: Microsoft
 customer_impact: low
@@ -25,18 +25,18 @@ external_id: https://learn.microsoft.com/azure/foundry/whats-new-foundry
 raw_categories:
 - documentation
 supporting_urls: []
-content_hash: sha256:8b8c37e276fe10e6e88a34e848e5e51ad084a8fbaabd1515774a63b7a232e521
+content_hash: sha256:6dd67d462cdef4fe4e5b8dc3be2236703331ae0de3e55280e15c399dbdb30a27
 ---
 
 # What's new in Microsoft Foundry?
 
 ## What Changed
 
-Welcome! This article highlights key updates for Microsoft Foundry in June 2026. New articles Foundry Agent Service Publish agents to Microsoft 365 Copilot and Microsoft Teams Publish agents in a virtual network to Microsoft 365 Copilot and Teams Create and use memory in Foundry Agent Service (preview) Publish agents to Microsoft 365 Copilot and Microsoft Teams Publish agents in a virtual network to Microsoft 365 Copilot and Teams Create and use memory in Foundry Agent Service (preview) Foundry Models and platform Deploy and use Claude models in Microsoft Foundry Foundry Local What's new in Foundry Local on Azure Local Speech Voice Live 2026 06 01 preview API Reference Models Deploy and use Claude models in Microsoft Foundry Toolboxes, routines, and tool orchestration Curate intent based toolbox in Foundry (preview) Routines in Microsoft Foundry (preview) Automate agents with routines (preview) Enable tool search in a toolbox (preview) Connect agents to Microsoft 365 with Work IQ (preview) Connect agents to Microsoft Fabric with Fabric IQ (preview) Memory and optimization Memory in Microsoft Foundry Agent Service (preview) Create and use memory in Foundry Agent Service (preview)...
+Welcome! This article highlights key updates for Microsoft Foundry in July 2026. New articles Foundry Agent Service Author azure.yaml for hosted agents Reminder tool for self scheduling hosted agents What is Microsoft Foundry Canvas? What is Toolbox in Microsoft Foundry? Toolbox authentication in Microsoft Foundry Use a toolbox with a hosted agent in Microsoft Foundry Foundry IQ Tutorial: Deploy Private Agentic Retrieval Validate End to End Private Agentic Retrieval Foundry Models and APIs Use tool search with the Azure OpenAI Responses API Compare hosting options for Claude models in Microsoft Foundry Observability Export hosted agent telemetry by using OpenTelemetry Restrict access to sensitive content in Microsoft Foundry traces Foundry platform Microsoft Foundry Notification Center overview Updated articles Foundry Agent Service Hosted agents in Foundry Agent Service Quickstart: Deploy your first hosted agent Deploy a hosted agent Types of tools in Microsoft Foundry Agent Service Add managed MCP servers powered by connector namespaces (preview) Connect to an A2A agent endpoint from Foundry Agent Service Enable incoming A2A on a Foundry agent Use web search tool in Foundry Ag...
 
 ## Why It Matters to a CSA
 
-The change may affect current guidance, readiness material, or customer conversations.
+Canonical documentation is durable evidence for technical readiness and customer guidance.
 
 ## Customer Impact
 
@@ -44,7 +44,7 @@ The change may affect current guidance, readiness material, or customer conversa
 
 ## Recommended Action
 
-Review the canonical source and update reusable guidance when the change is relevant.
+Review substantive page changes and update human-authored guidance when needed.
 
 ## Evidence
 
@@ -52,4 +52,4 @@ Review the canonical source and update reusable guidance when the change is rele
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-21T11:05:00Z`.
+State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.

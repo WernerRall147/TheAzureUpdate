@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/fmmsrcg5x638
 source_tier: 1
 published_at: '2026-07-27T04:09:10Z'
-observed_at: '2026-07-27T11:22:54Z'
+observed_at: '2026-08-17T04:06:09Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/fmmsrcg5x638
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:dc189411dfac615fd70d95f0f90c15f920eb54ae58d55ad2f48ab904c4c202f4
+content_hash: sha256:009e3a113708d4eadcde9a7e14aa19769ce9025243d697bfed4b79b87ad9465b
 ---
 
 # Incident with GraphQL API Requests
 
 ## What Changed
 
-Jul 27, 04:09 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 27, 04:09 UTC Monitoring - The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability. Jul 27, 03:53 UTC Investigating - We are investigating reports of degraded performance for API Requests
+Jul 27, 04:09 UTC Resolved - On July 26, 2026 at 21:34 UTC we began seeing intermittent errors on the GitHub GraphQL API. A subset of GraphQL API requests returned HTTP 502 errors in short bursts. During the impact window an average of 0.09% of GraphQL API requests in the affected region failed, with a peak of 0.50% of requests failing during the worst two-minute period at 03:02 UTC on July 27. Requests that failed generally succeeded when retried, and no data was lost or altered. Other GitHub services were not affected. The errors were traced to a single group of servers handling a share of GraphQL API traffic. Application processes on that group intermittently closed connections before completing responses. Impact ended at 03:52 UTC on July 27 when those processes were replaced, and we resolved the incident at 04:09 UTC on July 27 after confirming error rates had returned to normal. We are still investigating why those processes closed connections, and that work is being carried out by the team that owns the underlying compute platform. In the meantime we are adding detection and automated mitigation for when a single group of servers behaves differently from its peers. Jul 27...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-27T11:22:54Z`.
+State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.

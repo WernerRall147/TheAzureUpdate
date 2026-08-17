@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/s19bth7wzkf7
 source_tier: 1
 published_at: '2026-08-10T18:46:22Z'
-observed_at: '2026-08-11T04:43:10Z'
+observed_at: '2026-08-17T04:06:09Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/s19bth7wzkf7
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:e95da5f6efb2929bd78fe7c3017f415c3520e92175cdb8d4d8e03405d7b8edcf
+content_hash: sha256:a6a8fef7f4348265df0d91900596872cb41bd97b1a1921611cec6c889e2d3a91
 ---
 
 # Disruption with creation of fine grained personal access tokens
 
 ## What Changed
 
-Aug 10, 18:46 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 10, 18:22 UTC Update - We identified the source of the issue affecting creation of fine-grained personal access tokens and have applied a mitigation. Users should now be able to create new fine-grained tokens successfully. We are continuing to monitor to confirm full recovery. Aug 10, 18:21 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Aug 10, 18:09 UTC Update - We are investigating reports of users being unable to create fine-grained Personal Access Tokens. Attempting to create a new token redirects the user back to the token overview page without an error message, but the token was not created. Aug 10, 18:02 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
+Aug 10, 18:46 UTC Resolved - On August 10, 2026, between 17:16 and 18:21 UTC, users were unable to create new fine-grained personal access tokens (FG PAT) through the GitHub website. When a user submitted the FG PAT creation form, they were returned to the FG PAT list without an error message and no FG PAT was created. Creating classic personal access tokens, as well as editing or deleting existing FG PAT were not affected. The cause was a change to how the website loads certain front-end JavaScript that was enabled for all users at 17:15 UTC; the change interacted with an issue in the token creation form's confirmation step that prevented it from running, so the final submission that actually creates the token never completed. Because the page still loaded and the server returned a normal response, the failure produced no error message. GitHub mitigated the incident by disabling the change at 18:21 UTC, at which point token creation recovered immediately, and the incident was resolved at 18:46 UTC. To reduce the chance of recurrence, GitHub is adding monitoring and alerting for anomalies in the FG PAT creation success rate and is removing the issue in the FG PAT creation form t...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-11T04:43:10Z`.
+State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.
