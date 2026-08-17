@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/dsrfymph7my0
 source_tier: 1
 published_at: '2026-07-29T21:51:26Z'
-observed_at: '2026-08-03T07:40:27Z'
+observed_at: '2026-08-17T04:06:09Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/dsrfymph7my0
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:c58b887b8a7c8a82e08d8985a8fa3066039f7bc0e20243dec6471c1475899350
+content_hash: sha256:8750c46c2893902538baea443c605c2fe2fa66d7fe3f34d4f2f274481918e952
 ---
 
 # Incident with Copilot AI Model Providers
 
 ## What Changed
 
-Jul 29, 21:51 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Jul 29, 21:51 UTC Update - The external ai model provider has resolved the issues, and we have verified Copilot's traffic is fully recovered. Jul 29, 21:08 UTC Update - The external AI model provider is continuing to investigate. Jul 29, 20:38 UTC Update - The external AI model provider has identified the issue and is working to resolve. Jul 29, 20:18 UTC Update - We are investigating increased error rates affecting GitHub Copilot requests to external AI model providers. Some users may experience failures or degraded performance when using Copilot features. Jul 29, 20:07 UTC Update - We are seeing increased error rates with requests to specific model providers. Jul 29, 20:07 UTC Investigating - We are investigating reports of degraded performance for Copilot AI Model Providers
+Jul 29, 21:51 UTC Resolved - On July 29, 2026, between 19:45 UTC and 21:51 UTC, users of the Fable 5 model in GitHub Copilot experienced increased request failures and latency. The average failure rate across all Copilot requests was 0.006%, while failures for Fable 5 peaked at 21%. Other models remained available. This was caused by degradation of an upstream model provider. The affected endpoint recovered, and we monitored the service until error rates and latency returned to normal levels. We are working to add endpoint redundancy to mitigate similar provider issues in the future. Jul 29, 21:51 UTC Update - The external ai model provider has resolved the issues, and we have verified Copilot's traffic is fully recovered. Jul 29, 21:08 UTC Update - The external AI model provider is continuing to investigate. Jul 29, 20:38 UTC Update - The external AI model provider has identified the issue and is working to resolve. Jul 29, 20:18 UTC Update - We are investigating increased error rates affecting GitHub Copilot requests to external AI model providers. Some users may experience failures or degraded performance when using Copilot features. Jul 29, 20:07 UTC Update - We are seeing i...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-03T07:40:27Z`.
+State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.

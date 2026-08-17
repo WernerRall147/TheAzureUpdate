@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/7s119p1yxttr
 source_tier: 1
 published_at: '2026-08-03T11:25:12Z'
-observed_at: '2026-08-11T04:43:10Z'
+observed_at: '2026-08-17T04:06:09Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/7s119p1yxttr
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:a9f3eb0c10feeb1d720c63d36cb0dd389d3ca3daed7161443d57b01cab2081fc
+content_hash: sha256:26ec73579359c04bc281469c74ff800bc61679915d0278f2108877d3bc23f03f
 ---
 
 # Incident with Copilot
 
 ## What Changed
 
-Aug 3, 11:25 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 3, 11:19 UTC Monitoring - The degradation affecting Copilot has been mitigated. We are monitoring to ensure stability. Aug 3, 10:35 UTC Update - We are still seeing intermittent errors with Copilot, and are continuing to investigate and consider mitigations. Aug 3, 09:54 UTC Update - We are experiencing degraded availability for chat & agent models in Copilot. Multiple models are impacted and customers may experience requests failing. We are investigating and will provide an update as soon as possible. Aug 3, 09:53 UTC Investigating - We are investigating reports of degraded performance for Copilot
+Aug 3, 11:25 UTC Resolved - On 2026-08-03, between 06:52 and 11:25 UTC, some GitHub Copilot users experienced errors when using chat and agent features. Requests to list the available models failed, and because every chat or agent interaction begins by retrieving the list of models, affected users saw their requests fail. On average about 3% of these model-listing requests failed during the incident (roughly 97% succeeded), but failures were significantly higher during peak-traffic periods, at times approaching 100% for the affected internal lookups. Approximately 4,066 users were affected in a single 60-minute window, concentrated among IDE-based clients. The underlying AI models themselves remained healthy throughout. The incident was caused by an increase in how often clients requested the model list, which pushed an internal user-authorization lookup past a rate limit; the rate-limited responses were surfaced to users as errors. We mitigated the impact by increasing how long Copilot caches that authorization lookup, which reduced load on the internal service, and we have additional capacity and rate-limit changes in progress. To prevent recurrence we are improving monitoring...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-11T04:43:10Z`.
+State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.
