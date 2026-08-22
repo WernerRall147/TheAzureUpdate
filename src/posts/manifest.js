@@ -14,6 +14,7 @@
      3. Run npm start (or npm run posts) - done.
 */
 window.BLOG_MANIFEST = [
+  "azure-update-2026-08-22",
   "azure-update-2026-08-17",
   "azure-update-2026-08-11",
   "azure-update-2026-08-03",
@@ -25,6 +26,7 @@ window.BLOG_MANIFEST = [
 ];
 
 window.BLOG_INDEX = [
+  {"id":"azure-update-2026-08-22","url":"posts/azure-update-2026-08-22/index.md","title":"22 August 2026: Separate GitHub Actions path for GitHub Code Quality, and 24 more","date":"2026-08-22","author":"Werner Rall","tags":["Azure","AI","App Service","Azure SQL","Cosmos DB","GitHub"],"featured":true,"excerpt":"25 verified updates across 5 technologies, led by Separate GitHub Actions path for GitHub Code Quality."},
   {"id":"azure-update-2026-08-17","url":"posts/azure-update-2026-08-17/index.md","title":"17 August 2026: License data quality improvements, and 28 more","date":"2026-08-17","author":"Werner Rall","tags":["Azure","AI","AKS","App Service","Azure SQL","GitHub","PostgreSQL"],"featured":true,"excerpt":"29 verified updates across 6 technologies, led by License data quality improvements."},
   {"id":"azure-update-2026-08-11","url":"posts/azure-update-2026-08-11/index.md","title":"11 August 2026: Custom thread subscriptions are being deprecated, and 25 more","date":"2026-08-11","author":"Werner Rall","tags":["Azure","AI","App Service","Azure SQL","Cosmos DB","GitHub","PostgreSQL"],"featured":true,"excerpt":"26 verified updates across 6 technologies, led by Custom thread subscriptions are being deprecated."},
   {"id":"azure-update-2026-08-03","url":"posts/azure-update-2026-08-03/index.md","title":"03 August 2026: Restricting npm bypass-2FA granular access tokens, and 33 more","date":"2026-08-03","author":"Werner Rall","tags":["Azure","AI","AKS","APIM","Azure SQL","GitHub","PostgreSQL","Quantum"],"featured":true,"excerpt":"34 verified updates across 7 technologies, led by Restricting npm bypass-2FA granular access tokens."},
