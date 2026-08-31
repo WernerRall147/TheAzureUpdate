@@ -10,7 +10,7 @@ source_name: Azure Database for PostgreSQL release notes
 source_url: https://learn.microsoft.com/azure/postgresql/release-notes/release-notes
 source_tier: 1
 published_at: null
-observed_at: '2026-08-11T04:43:10Z'
+observed_at: '2026-08-31T09:52:48Z'
 effective_at: null
 publisher: Microsoft
 customer_impact: low
@@ -25,14 +25,14 @@ external_id: https://learn.microsoft.com/azure/postgresql/release-notes/release-
 raw_categories:
 - documentation
 supporting_urls: []
-content_hash: sha256:f5cb91421199a106fbdf8e95c68bef0cb7f69ce5a6d9951259298db7e98dc251
+content_hash: sha256:5c16a4bc32c007f7d116d83fd9b9ec5a633ddb025846aeb677c75e63cea52fae
 ---
 
 # Release notes - Azure Database for PostgreSQL flexible server
 
 ## What Changed
 
-This article highlights the latest updates and enhancements for Azure Database for PostgreSQL service, including new feature releases, supported engine versions, available extensions, and other important announcements. Release: August 2026 General availability Pre upgrade validation checks to identify upgrade blocking problems before starting a major version upgrade. Release: July 2026 General availability Support for new PgBouncer in Azure Database for PostgreSQL 1.25.2. ^$^ Release: June 2026 General availability Support for latest minor versions 18.4, 17.10, 16.14, 15.18, and 14.23. ^$^ Microsoft Defender Cloud Security Posture Management (CSPM) assessments in Azure Database for PostgreSQL Support for view upcoming maintenance Support for view maintenance history Support for reschedule maintenance to a future date Support for apply maintenance on demand Preview Pre upgrade validation checks to help identify upgrade blocking problems before starting the upgrade. Release: April 2026 General availability Support for latest minor versions 18.3, 17.9, 16.13, 15.17, and 14.22. ^$^ Support for Premium SSD v2 storage option in Azure Database for PostgreSQL now available in Azure port...
+This article highlights the latest updates and enhancements for Azure Database for PostgreSQL service, including new feature releases, supported engine versions, available extensions, and other important announcements. Release: August 2026 General availability Support for latest minor versions 18.6, 17.11, 16.15, 15.19, and 14.24. ^$^ Pre upgrade validation checks to identify upgrade blocking problems before starting a major version upgrade. Release: July 2026 General availability Support for new PgBouncer in Azure Database for PostgreSQL 1.25.2. ^$^ Release: June 2026 General availability Support for latest minor versions 18.4, 17.10, 16.14, 15.18, and 14.23. ^$^ Microsoft Defender Cloud Security Posture Management (CSPM) assessments in Azure Database for PostgreSQL Support for view upcoming maintenance Support for view maintenance history Support for reschedule maintenance to a future date Support for apply maintenance on demand Preview Pre upgrade validation checks to help identify upgrade blocking problems before starting the upgrade. Release: April 2026 General availability Support for latest minor versions 18.3, 17.9, 16.13, 15.17, and 14.22. ^$^ Support for Premium SSD v2...
 
 ## Why It Matters to a CSA
 
@@ -52,4 +52,4 @@ Review substantive page changes and update human-authored guidance when needed.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-11T04:43:10Z`.
+State: `machine-draft`. Observed: `2026-08-31T09:52:48Z`.

@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/1t7x65n7kvt1
 source_tier: 1
 published_at: '2026-08-10T21:50:43Z'
-observed_at: '2026-08-11T04:43:10Z'
+observed_at: '2026-08-31T09:52:48Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/1t7x65n7kvt1
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:516a5f7f62281ed2547bb387913f272478f23a9ec53b4d9b92fd45c2ccffd103
+content_hash: sha256:c048211df4826b495e34123b0f997e051e524b60dc8b6bc71ca259c4c0feccd8
 ---
 
 # Disruption with Copilot for access to some models
 
 ## What Changed
 
-Aug 10, 21:50 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 10, 21:50 UTC Update - We have deployed and validated the fix to prevent immediate reoccurrence. We will be performing additional work to limit these kinds of failures in the future. Aug 10, 21:19 UTC Update - The issue has been mitigated across all affected environments. We are currently deploying on a fix to prevent reoccurrence. We will provide another update once the fix has been deployed. Aug 10, 20:49 UTC Update - The degradation has been mitigated. We are monitoring to ensure stability. Aug 10, 20:39 UTC Monitoring - We are currently investigating reports of some Copilot users experiencing issues accessing certain models. Affected users may see errors or degraded functionality when attempting to use specific models. We are actively working on a fix and will provide updates as we have more information. Aug 10, 20:27 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
+Aug 10, 21:50 UTC Resolved - On August 10, 2026, between 19:48 UTC and 20:49 UTC, GitHub Copilot users saw an incomplete list of available models. During this window, the service could return as few as one model instead of the full catalog. Requests that tried to use a model missing from that shortened list failed with a "model not found" error. Copilot requests that used an available model were not affected. This did not affect customers on data-residency (Proxima) environments. The issue was caused by a change to how model data was published, which our systems could not read back correctly and fell back to a limited default list. We mitigated the incident by 20:49 UTC and deployed a fix to prevent immediate recurrence by 21:50 UTC. We are adding validation and retry safeguards so that model data is verified before it is served. We apologize for the disruption. Aug 10, 21:50 UTC Update - We have deployed and validated the fix to prevent immediate reoccurrence. We will be performing additional work to limit these kinds of failures in the future. Aug 10, 21:19 UTC Update - The issue has been mitigated across all affected environments. We are currently deploying on a fix to preven...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-11T04:43:10Z`.
+State: `machine-draft`. Observed: `2026-08-31T09:52:48Z`.

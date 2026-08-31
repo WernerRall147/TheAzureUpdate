@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/lsvy8xsf0gxv
 source_tier: 1
 published_at: '2026-08-12T22:56:39Z'
-observed_at: '2026-08-17T04:06:09Z'
+observed_at: '2026-08-31T09:52:48Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/lsvy8xsf0gxv
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:1fdaa8625dca865388921ffdffb3b0d70c88064f67950e3a7ee7a4759f31f339
+content_hash: sha256:3a7152c6f8b2222e40179fe065cf9a3caf57228a9f524a9ca83167cd22702220
 ---
 
 # Disruption with Login and Release Asset downloads
 
 ## What Changed
 
-Aug 12, 22:56 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 12, 22:22 UTC Update - We have identified the root cause and are working on mitigation. Errors on the login page and downloading release assets have decreased, but we are not fully mitigated. We will continue to provide updates. Aug 12, 21:43 UTC Update - We are investigating issues with Login and when downloading Release Assets. We will continue to keep users updated on progress towards mitigation. Aug 12, 21:39 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
+Aug 12, 22:56 UTC Resolved - On August 12 and 13, 2026, some anonymous (logged-out) requests to github.com experienced HTTP 5xx errors when loading pages like the sign-in page, and when downloading release assets, due to an unusual traffic pattern that repeatedly overloaded a part of our infrastructure that serves these types of requests. There were three windows of impact: (1) August 12 from 16:34 to 18:34 UTC, with an average error rate of 16.16% that peaked at 28.6%; (2) August 12 from 19:00 to 22:56 UTC, with an average error rate of 16.55% that peaked at 24.18%; and (3) August 13 from 06:19 to 08:05 UTC, with an average error rate of 2.01% that peaked at 7.49%. Requests from signed-in users were unaffected. We mitigated the incidents by applying traffic controls at our network edge that limited any requests matching the pattern identified previously, thereby preventing overload on our systems. Since these incidents occurred, we have tightened our monitoring systems to alert server-side errors that affect logged-out traffic. We are also working to further strengthen our edge protections and reduce the time to detect and mitigate similar incidents. Aug 12, 22:22 UTC Update -...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.
+State: `machine-draft`. Observed: `2026-08-31T09:52:48Z`.
