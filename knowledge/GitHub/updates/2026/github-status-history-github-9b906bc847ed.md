@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/pf25whpq58hh
 source_tier: 1
 published_at: '2026-08-13T18:27:54Z'
-observed_at: '2026-08-17T04:06:09Z'
+observed_at: '2026-08-31T09:52:48Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/pf25whpq58hh
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:a418d40d79cf78a61e7197ab43dea05e17842c9d39f817bc994234eade095f6d
+content_hash: sha256:daaf2e46385769f809040e6fb53025b979870ba11175f566b54a964a5d45586b
 ---
 
 # Disruption with GHEC Team Sync
 
 ## What Changed
 
-Aug 13, 18:27 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 13, 18:27 UTC Update - We have deployed a mitigation. At this time GHEC Team Sync has recovered for enterprises with personal accounts. Teams syncing to IdP groups have returned to their normal cadence. Aug 13, 16:21 UTC Update - GHEC Team Sync is currently degraded for enterprises with personal accounts, causing delays when syncing teams to IdP groups. We have identified the cause of the delays and are working on a mitigation. We will provide an update on our progress at 20:00 UTC. Aug 13, 16:21 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
+Aug 13, 18:27 UTC Resolved - On August 13, 2026, from 15:31:21 UTC to 18:27:55 UTC, GitHub Enterprise Cloud team synchronization was degraded for enterprises using personal accounts. Organization teams experienced delays of up to 3 to 13 hours (median 8 hours) when syncing with IdP groups, resulting in delayed access grants or removals for enterprise users across 2.8% of teams. A temporary change introduced to address a previous issue due to increased usage of this feature remained active after it was intended to be removed, causing synchronization delays during periods of high volume. We removed the temporary change and provisioned additional resources to handle the increased volume. Aug 13, 18:27 UTC Update - We have deployed a mitigation. At this time GHEC Team Sync has recovered for enterprises with personal accounts. Teams syncing to IdP groups have returned to their normal cadence. Aug 13, 16:21 UTC Update - GHEC Team Sync is currently degraded for enterprises with personal accounts, causing delays when syncing teams to IdP groups. We have identified the cause of the delays and are working on a mitigation. We will provide an update on our progress at 20:00 UTC. Aug 13, 16:...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.
+State: `machine-draft`. Observed: `2026-08-31T09:52:48Z`.

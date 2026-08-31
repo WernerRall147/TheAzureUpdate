@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/76t89hbfb09h
 source_tier: 1
 published_at: '2026-08-12T16:41:18Z'
-observed_at: '2026-08-17T04:06:09Z'
+observed_at: '2026-08-31T09:52:48Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/76t89hbfb09h
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:d8f6fd32acbe4061e015f6047bd803104c928bd48a2dfb17d981e14185f0b39f
+content_hash: sha256:51b1cf52b050bdbff6608e24178ed64598e27a3f588189b01e51438858baf184
 ---
 
 # Incident with Pull Requests and Issues
 
 ## What Changed
 
-Aug 12, 16:41 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 12, 16:38 UTC Update - We identified the source of errors affecting Pull Requests, Issues, and Search on GitHub.com and have applied a mitigation. A database index hint was referencing an index that had been removed by a recent migration, causing query failures for some users. We disabled the problematic configuration and are seeing recovery across affected services. We are continuing to monitor to confirm full resolution. Aug 12, 16:35 UTC Monitoring - The degradation affecting Issues and Pull Requests has been mitigated. We are monitoring to ensure stability. Aug 12, 16:24 UTC Update - We are investigating reports of errors affecting Pull Requests and Issues on GitHub.com. Some users may encounter 500 errors when loading pull request and issue pages. Our engineering teams are actively investigating the root cause, which appears to be related to a database infrastructure issue. We will provide an update as soon as we have more information. Aug 12, 16:16 UTC Investigat...
+Aug 12, 16:41 UTC Resolved - Between 16:03 and 16:29 UTC on August 12, some users encountered errors when viewing pull requests, issues, and search results. During this period, about 1.9% of Pull Request requests and 0.9% of Issues requests failed. During a database migration, two indexes were removed while application settings still referenced them, causing affected requests to fail. We detected the issue after the migration reached one database shard and before it progressed to the remaining shards. We restored service by disabling both settings. We are improving safeguards around database migrations and application configuration to prevent similar mismatches from causing errors. Aug 12, 16:38 UTC Update - We identified the source of errors affecting Pull Requests, Issues, and Search on GitHub.com and have applied a mitigation. A database index hint was referencing an index that had been removed by a recent migration, causing query failures for some users. We disabled the problematic configuration and are seeing recovery across affected services. We are continuing to monitor to confirm full resolution. Aug 12, 16:35 UTC Monitoring - The degradation affecting Issues and Pull Re...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.
+State: `machine-draft`. Observed: `2026-08-31T09:52:48Z`.
