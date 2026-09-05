@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/5bn0vk444m1w
 source_tier: 1
 published_at: '2026-08-27T19:44:08Z'
-observed_at: '2026-08-31T09:52:48Z'
+observed_at: '2026-09-05T07:44:05Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/5bn0vk444m1w
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:90a4f2a645abda28585e3afe74052a00e00e52e6f617eaab774670ac883d7160
+content_hash: sha256:a2a12c1654c14e3f6ab99da8a31fe02c54307a0649761888bd18efef1184ad14
 ---
 
 # Disruption with GitHub Billing
 
 ## What Changed
 
-Aug 27, 19:44 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 27, 17:58 UTC Update - No material change since the previous update. Service conditions remain stable following the mitigation, and we have not observed any further customer impact. We are actively monitoring the service while implementing targeted fixes to address the underlying root cause. Aug 27, 16:20 UTC Update - Our mitigation continues to hold, and service conditions remain stable. We are continuing to investigate the concentrated workload responsible for the issue and are preparing additional preventative improvements. We have not identified a material change in customer impact since the previous update. We will provide another update as the investigation progresses. Aug 27, 14:49 UTC Update - Our mitigation is still holding as we continue to investigate to find the root cause. Aug 27, 01:35 UTC Update - We are continuing to monitor the mitigation that we have applied for the billing page disruption. Aug 27, 00:31 UTC Update - We've applied a mitigation to unbl...
+Aug 27, 19:44 UTC Resolved - On August 26, 2026, between 20:40 UTC and 00:51 UTC on August 27, GitHub Billing experienced degraded performance affecting billing budget pages and GitHub Copilot CLI sessions. Affected customers encountered failed budget page loads or failures when starting or continuing CLI sessions. We confirmed this impact for a small number of customers (<1%). This was caused by a concentrated workload that created processing delays in our data storage layer. Automated retries increased the load and prolonged the degradation. We mitigated the incident by rebalancing traffic within our infrastructure. We are improving workload isolation, retry behavior, and detection of concentrated load to reduce the likelihood of recurrence and shorten our time to detect and mitigate similar incidents. Aug 27, 17:58 UTC Update - No material change since the previous update. Service conditions remain stable following the mitigation, and we have not observed any further customer impact. We are actively monitoring the service while implementing targeted fixes to address the underlying root cause. Aug 27, 16:20 UTC Update - Our mitigation continues to hold, and service conditions...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-31T09:52:48Z`.
+State: `machine-draft`. Observed: `2026-09-05T07:44:05Z`.

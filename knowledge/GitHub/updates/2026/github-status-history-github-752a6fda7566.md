@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/tx9qn4khd664
 source_tier: 1
 published_at: '2026-08-27T12:12:58Z'
-observed_at: '2026-08-31T09:52:48Z'
+observed_at: '2026-09-05T07:44:05Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/tx9qn4khd664
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:6593cbd4f9d3a583371822f2701a0bdcf19995983805b3dad0a8ade398696a29
+content_hash: sha256:1b32833d0d794226a3ee2d78ba3a2ddedf6b0c7a5b830a8f38837673339e14be
 ---
 
 # Incident with Copilot AI Model Providers
 
 ## What Changed
 
-Aug 27, 12:12 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Aug 27, 12:12 UTC Update - The issues with our upstream model provider have been mitigated, and Kimi K3 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability. Aug 27, 11:58 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Aug 27, 10:43 UTC Update - We are experiencing degraded availability for the Kimi K3 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot. Aug 27, 10:04 UTC Investigating - We are investigating reports of degraded availability for Copilot AI Model Providers
+Aug 27, 12:12 UTC Resolved - On August 27th, 2026, between approximately 09:20 and 12:14 UTC, the Copilot service experienced a degradation of the Kimi K3 model due to an issue with our upstream provider. Users encountered elevated error rates when using Kimi K3. No other models were impacted. The issue was resolved by a mitigation put in place by our provider. GitHub is working with our provider to further improve the resiliency of the service to prevent similar incidents in the future. Aug 27, 12:12 UTC Update - The issues with our upstream model provider have been mitigated, and Kimi K3 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability. Aug 27, 11:58 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Aug 27, 10:43 UTC Update - We are experiencing degraded availability for the Kimi K3 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot. Aug 27, 10:04 UTC Investigating - We are investi...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-31T09:52:48Z`.
+State: `machine-draft`. Observed: `2026-09-05T07:44:05Z`.

@@ -10,7 +10,7 @@ source_name: Microsoft Foundry what's new
 source_url: https://learn.microsoft.com/azure/foundry/whats-new-foundry
 source_tier: 1
 published_at: null
-observed_at: '2026-08-17T04:06:09Z'
+observed_at: '2026-09-05T07:44:05Z'
 effective_at: null
 publisher: Microsoft
 customer_impact: low
@@ -25,14 +25,14 @@ external_id: https://learn.microsoft.com/azure/foundry/whats-new-foundry
 raw_categories:
 - documentation
 supporting_urls: []
-content_hash: sha256:6dd67d462cdef4fe4e5b8dc3be2236703331ae0de3e55280e15c399dbdb30a27
+content_hash: sha256:dce53e3a006ef857f26610099c2d0e93cd17795fa712456bd3421cd3e6095a40
 ---
 
 # What's new in Microsoft Foundry?
 
 ## What Changed
 
-Welcome! This article highlights key updates for Microsoft Foundry in July 2026. New articles Foundry Agent Service Author azure.yaml for hosted agents Reminder tool for self scheduling hosted agents What is Microsoft Foundry Canvas? What is Toolbox in Microsoft Foundry? Toolbox authentication in Microsoft Foundry Use a toolbox with a hosted agent in Microsoft Foundry Foundry IQ Tutorial: Deploy Private Agentic Retrieval Validate End to End Private Agentic Retrieval Foundry Models and APIs Use tool search with the Azure OpenAI Responses API Compare hosting options for Claude models in Microsoft Foundry Observability Export hosted agent telemetry by using OpenTelemetry Restrict access to sensitive content in Microsoft Foundry traces Foundry platform Microsoft Foundry Notification Center overview Updated articles Foundry Agent Service Hosted agents in Foundry Agent Service Quickstart: Deploy your first hosted agent Deploy a hosted agent Types of tools in Microsoft Foundry Agent Service Add managed MCP servers powered by connector namespaces (preview) Connect to an A2A agent endpoint from Foundry Agent Service Enable incoming A2A on a Foundry agent Use web search tool in Foundry Ag...
+Welcome! This article highlights key updates for Microsoft Foundry in August 2026. New articles Foundry Agent Service Agent optimizer cost and token usage overview Autopilot lifecycle in Microsoft Foundry What is an autopilot in Microsoft Foundry? Long running agent API reference (preview) Resilience for long running Microsoft Foundry hosted agents (preview) Add a human in the loop approval step (preview) Deploy a crash resilient long running agent (preview) Deploy a steerable agent (preview) Manage state for long running agents (preview) Bring your own registry for hosted agents Create a private skill catalog in Foundry Agent Service Recover long running work after a crash (preview) Steer an in flight agent turn (preview) Stream long running agent output with reconnect (preview) Network isolation for a toolbox in Microsoft Foundry Quickstart: Optimize a prompt agent (preview) Foundry Models and APIs Model migration: Upgrade or switch models in Microsoft Foundry Microsoft Foundry reasoning models Deploy and use Grok models in Microsoft Foundry Deploy and use MAI Thinking 1 in Microsoft Foundry Evaluate model router for your workload Use multi agent orchestration with the Azure O...
 
 ## Why It Matters to a CSA
 
@@ -52,4 +52,4 @@ Review substantive page changes and update human-authored guidance when needed.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-08-17T04:06:09Z`.
+State: `machine-draft`. Observed: `2026-09-05T07:44:05Z`.
