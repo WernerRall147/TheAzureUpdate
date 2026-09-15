@@ -2,9 +2,9 @@
   "sources": {
     "agent-framework-releases": {
       "error": null,
-      "etag": "W/\"77789383d5758c142dc86b67b65bdaf5663bff6bbf82e97f58a7a2f6f9927735\"",
+      "etag": "W/\"129db3da0fb0a2fa3f49c2bc1afb66909c40f15e86247bcb3ec08b5d49585f0b\"",
       "item_count": 5,
-      "last_content_change": "2026-08-31T09:52:48Z",
+      "last_content_change": "2026-09-15T08:46:33Z",
       "last_modified": null,
       "name": "Microsoft Agent Framework releases",
       "status": "healthy"
@@ -19,16 +19,16 @@
     },
     "aks-releases": {
       "error": null,
-      "etag": "W/\"83548b03a808d8e55488ba87d25ae03a98ed385b465bbbb889851bd8cad6e07b\"",
-      "item_count": 1,
-      "last_content_change": "2026-08-17T04:06:09Z",
+      "etag": "W/\"50db8240fb52ff140e23801ee451b7bb432bd30919775df017c07c7473fdad72\"",
+      "item_count": 2,
+      "last_content_change": "2026-09-15T08:46:33Z",
       "last_modified": null,
       "name": "Azure Kubernetes Service releases",
       "status": "healthy"
     },
     "apim-releases": {
       "error": null,
-      "etag": "W/\"a9676dc0c92ac6f1f198db50a1fc6849ec806855526736a7f141fb1273d8218a\"",
+      "etag": "W/\"4e04bc0fd8fe330e5e260f07ad829ca68074bec61b8de40d5269a0e03d7768a4\"",
       "item_count": 0,
       "last_content_change": "none",
       "last_modified": null,
@@ -45,7 +45,7 @@
     },
     "app-service-announcements": {
       "error": null,
-      "etag": "\"5287f3744686286390aa44c27f4a84bc879501a4f6f6162af012a1be17e13236\"",
+      "etag": "\"833563bf8bd5b3c458193bde4a764f5cfbb37ead2259b303138c82fed5bddcb2\"",
       "item_count": 0,
       "last_content_change": "none",
       "last_modified": null,
@@ -54,10 +54,10 @@
     },
     "app-service-blog": {
       "error": null,
-      "etag": "W/\"6a94c980-142ab\"",
-      "item_count": 1,
-      "last_content_change": "2026-08-31T09:52:48Z",
-      "last_modified": "Mon, 31 Aug 2026 00:23:28 GMT",
+      "etag": "W/\"6aa7c65b-16d5f\"",
+      "item_count": 3,
+      "last_content_change": "2026-09-15T08:46:33Z",
+      "last_modified": "Mon, 14 Sep 2026 10:03:07 GMT",
       "name": "Azure App Service product team blog",
       "status": "healthy"
     },
@@ -71,7 +71,7 @@
     },
     "azure-quantum-python-releases": {
       "error": null,
-      "etag": "W/\"4389827402fd110be5ce31c44610ad1c8d69443814e2209e3a77de8a59629499\"",
+      "etag": "W/\"12d7fd4849f5866e71b04d7b36d2b27fb970af4bb7bb33d1b4cf46ac1c15f45b\"",
       "item_count": 1,
       "last_content_change": "2026-08-31T09:52:48Z",
       "last_modified": null,
@@ -80,10 +80,10 @@
     },
     "azure-sql-blog": {
       "error": null,
-      "etag": "W/\"0ab5adbd11d83c1bbf093013f0c3c755\"",
-      "item_count": 8,
-      "last_content_change": "2026-08-31T09:52:48Z",
-      "last_modified": "Sun, 30 Aug 2026 00:56:15 GMT",
+      "etag": "W/\"e6a930021c01603c6a3769e39204555d\"",
+      "item_count": 5,
+      "last_content_change": "2026-09-15T08:46:33Z",
+      "last_modified": "Mon, 14 Sep 2026 15:51:25 GMT",
       "name": "Azure SQL engineering blog",
       "status": "healthy"
     },
@@ -98,18 +98,18 @@
     "azure-updates": {
       "error": null,
       "etag": null,
-      "item_count": 12,
-      "last_content_change": "2026-08-31T09:52:48Z",
+      "item_count": 6,
+      "last_content_change": "2026-09-15T08:46:33Z",
       "last_modified": null,
       "name": "Microsoft Azure Updates",
       "status": "healthy"
     },
     "cosmos-db-blog": {
       "error": null,
-      "etag": "W/\"68d2e33da7bbb4c40de76e39b2936cf2\"",
-      "item_count": 3,
-      "last_content_change": "2026-08-31T09:52:48Z",
-      "last_modified": "Thu, 27 Aug 2026 14:45:17 GMT",
+      "etag": "W/\"3fee758b3d9fa1280030ea18076f786f\"",
+      "item_count": 2,
+      "last_content_change": "2026-09-15T08:46:33Z",
+      "last_modified": "Mon, 14 Sep 2026 20:03:56 GMT",
       "name": "Azure Cosmos DB engineering blog",
       "status": "healthy"
     },
@@ -123,9 +123,9 @@
     },
     "cosmos-dotnet-releases": {
       "error": null,
-      "etag": "W/\"c8ac15828bbc172f9defaf99d389c7ebadf890f0ddcdeda549f14fb62235631d\"",
-      "item_count": 0,
-      "last_content_change": "2026-08-11T04:43:10Z",
+      "etag": "W/\"fab897e965661e4f42860418b175b9e7d5bdc6cceed3e8c100bac98586a4fe47\"",
+      "item_count": 2,
+      "last_content_change": "2026-09-15T08:46:33Z",
       "last_modified": null,
       "name": "Azure Cosmos DB .NET SDK releases",
       "status": "healthy"
@@ -133,23 +133,23 @@
     "foundry-whats-new": {
       "error": null,
       "item_count": 1,
-      "last_content_change": "2026-08-17T04:06:09Z",
+      "last_content_change": "2026-09-15T08:46:33Z",
       "last_error_at": "2026-07-21T10:45:00Z",
       "name": "Microsoft Foundry what's new",
       "status": "healthy"
     },
     "github-changelog": {
       "error": null,
-      "etag": "W/\"9d38b0797cf40e8b84c9e928a461a990\"",
+      "etag": "W/\"bfc060b4ea2706190426dfa150674068\"",
       "item_count": 10,
-      "last_content_change": "2026-08-31T09:52:48Z",
-      "last_modified": "Fri, 28 Aug 2026 22:45:11 GMT",
+      "last_content_change": "2026-09-15T08:46:33Z",
+      "last_modified": "Mon, 14 Sep 2026 16:57:18 GMT",
       "name": "GitHub Changelog",
       "status": "healthy"
     },
     "github-status-current": {
       "error": null,
-      "etag": "W/\"097ae172fed06573f6dcf74d313474a2\"",
+      "etag": "W/\"1f95fe03505f9e5ef7d261ad7c26bf62\"",
       "item_count": 0,
       "last_content_change": "none",
       "last_modified": null,
@@ -158,9 +158,9 @@
     },
     "github-status-history": {
       "error": null,
-      "etag": "W/\"6e14c4848548be4fb5531d0774184a82\"",
-      "item_count": 21,
-      "last_content_change": "2026-08-31T09:52:48Z",
+      "etag": "W/\"56eeb47c79b06b5fccf28aea255353b2\"",
+      "item_count": 12,
+      "last_content_change": "2026-09-15T08:46:33Z",
       "last_modified": null,
       "name": "GitHub incident history",
       "status": "healthy"
@@ -175,9 +175,9 @@
     },
     "qdk-releases": {
       "error": null,
-      "etag": "W/\"765555c4c412a5ad2e2057ed0b4f463d3d42a9a13fb3e86eb5a7d9c6965becfe\"",
-      "item_count": 0,
-      "last_content_change": "2026-08-03T07:40:27Z",
+      "etag": "W/\"a8d365d2101089ed10ea4eac3f47430c89c476d313d3a4a4768c0d438dafc827\"",
+      "item_count": 1,
+      "last_content_change": "2026-09-15T08:46:33Z",
       "last_modified": null,
       "name": "Microsoft Quantum Development Kit releases",
       "status": "healthy"
