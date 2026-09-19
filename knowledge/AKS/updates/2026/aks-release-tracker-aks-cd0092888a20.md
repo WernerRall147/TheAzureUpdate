@@ -10,7 +10,7 @@ source_name: AKS release tracker
 source_url: https://learn.microsoft.com/azure/aks/release-tracker
 source_tier: 1
 published_at: null
-observed_at: '2026-07-21T11:30:00Z'
+observed_at: '2026-09-19T08:08:36Z'
 effective_at: null
 publisher: Microsoft
 customer_impact: low
@@ -25,14 +25,14 @@ external_id: https://learn.microsoft.com/azure/aks/release-tracker
 raw_categories:
 - documentation
 supporting_urls: []
-content_hash: sha256:3ecd7ad67279d66bdbb0dccfc4276df476b4a8f1aeef6a9af0ace32cb0eece9a
+content_hash: sha256:d6aec86d58390225f75355c689c76be0e348740ea49dc9f29e0edcea2daadf1b
 ---
 
 # AKS release tracker
 
 ## What Changed
 
-AKS regularly releases security patches, bug fixes, component updates, and feature updates for all AKS clusters. AKS release tracker provides real time information on when these AKS releases are landing in the region your AKS cluster is located in. Important Starting on November 30, 2025 , Azure Kubernetes Service (AKS) no longer supports or provides security updates for Azure Linux 2.0. The Azure Linux 2.0 node image is frozen at the 202512.06.0 release. Beginning on March 31, 2026 , node images will be removed, and you'll be unable to scale your node pools. Migrate to a supported Azure Linux version by upgrading your node pools to a supported Kubernetes version or migrating to osSku AzureLinux3. For more information, see the Retirement GitHub issue and the Azure Updates retirement announcement. To stay informed on announcements and updates, follow the AKS release notes. Overview With AKS release tracker, you can follow specific component updates present in an AKS version release, such as fixes shipped to a core add on, and node image updates for Azure Linux, Ubuntu, and Windows. The tracker provides links to the specific version of the AKS release notes to help you identify re...
+AKS regularly releases security patches, bug fixes, component updates, and feature updates for all AKS clusters. AKS release tracker provides real time information on when these AKS releases are landing in the region your AKS cluster is located in. Important Starting on November 30, 2025 , Azure Kubernetes Service (AKS) no longer supports or provides security updates for Azure Linux 2.0. The Azure Linux 2.0 node image is frozen at the 202512.06.0 release. Beginning on October 31, 2026 , node images will be removed, and you'll be unable to scale your node pools. Migrate to a supported Azure Linux version by upgrading your node pools to a supported Kubernetes version or migrating to osSku AzureLinux3. For more information, see the Retirement GitHub issue and the Azure Updates retirement announcement. To stay informed on announcements and updates, follow the AKS release notes. Overview With AKS release tracker, you can follow specific component updates present in an AKS version release, such as fixes shipped to a core add on, and node image updates for Azure Linux, Ubuntu, and Windows. The tracker provides links to the specific version of the AKS release notes to help you identify...
 
 ## Why It Matters to a CSA
 
@@ -52,4 +52,4 @@ Review substantive page changes and update human-authored guidance when needed.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-21T11:30:00Z`.
+State: `machine-draft`. Observed: `2026-09-19T08:08:36Z`.
