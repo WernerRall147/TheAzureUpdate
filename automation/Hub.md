@@ -13,14 +13,14 @@ This repository combines source-grounded evidence with reviewable daily website 
 
 | Technology | Collected items |
 | --- | ---: |
-| [Microsoft Foundry](../knowledge/AI%20Foundry/README.md) | 31 |
-| [GitHub and GitHub Copilot](../knowledge/GitHub/README.md) | 113 |
-| [Quantum Computing and Azure Quantum](../knowledge/Quantum/README.md) | 5 |
+| [Microsoft Foundry](../knowledge/AI%20Foundry/README.md) | 42 |
+| [GitHub and GitHub Copilot](../knowledge/GitHub/README.md) | 134 |
+| [Quantum Computing and Azure Quantum](../knowledge/Quantum/README.md) | 6 |
 | [Azure API Management](../knowledge/APIM/README.md) | 2 |
-| [Azure Kubernetes Service](../knowledge/AKS/README.md) | 10 |
-| [Azure App Service](../knowledge/App%20Service/README.md) | 7 |
-| [Azure Cosmos DB](../knowledge/Azure%20Cosmos%20DB/README.md) | 14 |
-| [Azure Database for PostgreSQL](../knowledge/Azure%20Database%20for%20PostgreSQL/README.md) | 6 |
-| [Azure SQL Database](../knowledge/Azure%20SQL%20Databases/README.md) | 24 |
+| [Azure Kubernetes Service](../knowledge/AKS/README.md) | 15 |
+| [Azure App Service](../knowledge/App%20Service/README.md) | 9 |
+| [Azure Cosmos DB](../knowledge/Azure%20Cosmos%20DB/README.md) | 18 |
+| [Azure Database for PostgreSQL](../knowledge/Azure%20Database%20for%20PostgreSQL/README.md) | 10 |
+| [Azure SQL Database](../knowledge/Azure%20SQL%20Databases/README.md) | 29 |
 
 Generated content is marked and should be changed through the source registry or automation code. Unmarked files remain human-owned.
