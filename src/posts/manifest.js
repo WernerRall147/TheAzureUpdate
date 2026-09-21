@@ -14,6 +14,7 @@
      3. Run npm start (or npm run posts) - done.
 */
 window.BLOG_MANIFEST = [
+  "azure-update-2026-09-21",
   "azure-update-2026-08-31",
   "azure-update-2026-08-17",
   "azure-update-2026-08-11",
@@ -26,6 +27,7 @@ window.BLOG_MANIFEST = [
 ];
 
 window.BLOG_INDEX = [
+  {"id":"azure-update-2026-09-21","url":"posts/azure-update-2026-09-21/index.md","title":"21 September 2026: Manage the code coverage ruleset condition with the REST API, and 56 more","date":"2026-09-21","author":"Werner Rall","tags":["Azure","AI","AKS","App Service","Azure SQL","Cosmos DB","GitHub","PostgreSQL","Quantum"],"featured":true,"excerpt":"57 verified updates across 8 technologies, led by Manage the code coverage ruleset condition with the REST API."},
   {"id":"azure-update-2026-08-31","url":"posts/azure-update-2026-08-31/index.md","title":"31 August 2026: Actions retention will cover checks, workflow runs, and statuses, and 52 more","date":"2026-08-31","author":"Werner Rall","tags":["Azure","AI","AKS","App Service","Azure SQL","Cosmos DB","GitHub","PostgreSQL","Quantum"],"featured":true,"excerpt":"53 verified updates across 8 technologies, led by Actions retention will cover checks, workflow runs, and statuses."},
   {"id":"azure-update-2026-08-17","url":"posts/azure-update-2026-08-17/index.md","title":"17 August 2026: License data quality improvements, and 28 more","date":"2026-08-17","author":"Werner Rall","tags":["Azure","AI","AKS","App Service","Azure SQL","GitHub","PostgreSQL"],"featured":true,"excerpt":"29 verified updates across 6 technologies, led by License data quality improvements."},
   {"id":"azure-update-2026-08-11","url":"posts/azure-update-2026-08-11/index.md","title":"11 August 2026: Custom thread subscriptions are being deprecated, and 25 more","date":"2026-08-11","author":"Werner Rall","tags":["Azure","AI","App Service","Azure SQL","Cosmos DB","GitHub","PostgreSQL"],"featured":true,"excerpt":"26 verified updates across 6 technologies, led by Custom thread subscriptions are being deprecated."},
