@@ -2275,6 +2275,39 @@
     },
     {
       "change_type": "updated",
+      "content_hash": "sha256:108cc06644be1833d6679bf2d4160dbe2469433e23b7c1ae996c1392cd248953",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/09/17/network-capture",
+      "id": "app-service-blog-app-service-2d5c6c384eb6",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-22T08:38:26Z",
+      "published_at": "2026-09-17T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/09/17/network-capture.html",
+      "summary": "Troubleshooting network issues in Azure App Service for Linux has traditionally required several manual steps. You would typically SSH into your app, run a packet capture from the container, download the resulting trace, and then open it in a tool such as Wireshark to investigate what happened.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": "Capture and analyze network traces in Azure App Service for Linux",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
       "content_hash": "sha256:7ace82831b321aab97d57436cfb10699ab7eb79dc3f0576771793d3cf041acac",
       "content_type": "update",
       "csa_outcomes": [
@@ -2304,6 +2337,39 @@
       "supporting_urls": [],
       "technology": "app-service",
       "title": "A Practical Path to Building AI-Ready Applications on Azure App Service",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:94313159b57890e7d056021953ff357b9c38a8eee0f92af30a799a3369cd0186",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/09/11/dotnet11-python315-node26",
+      "id": "app-service-blog-app-service-7c71ebc1af7b",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-22T08:38:26Z",
+      "published_at": "2026-09-11T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/09/11/dotnet11-python315-node26.html",
+      "summary": ".NET 11, Python 3.15, and Node.js 26 on Azure App Service for Linux",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": ".NET 11, Python 3.15, and Node.js 26 on Azure App Service for Linux",
       "waf_pillars": [
         "operational-excellence",
         "performance-efficiency"
@@ -3251,6 +3317,46 @@
       "supporting_urls": [],
       "technology": "azure-sql",
       "title": "Your best friend: BlockOnPossibleDataLoss=True",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:f983da146f5c4263f3440dc3e696f37c9b5320af8a72654ff13961a75aafb348",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/azure-sql/?p=7603",
+      "id": "azure-sql-blog-azure-sql-dcf1a0b46f7e",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-22T08:38:26Z",
+      "published_at": "2026-09-21T22:44:58Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Azure SQL",
+        "SQL Server 2025",
+        "T-SQL",
+        "Microsoft SQL",
+        "Modernize",
+        "PostgreSQL"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure SQL engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/azure-sql/pg-to-sql-date-time/",
+      "summary": "Moving from PostgreSQL to SQL Server? Learn the key differences between timestamp, timestamptz, datetime2, and datetimeoffset, including precision, time zones, offsets, and storage.",
+      "supporting_urls": [],
+      "technology": "azure-sql",
+      "title": "PostgreSQL to SQL Field Notes: Date & Time",
       "waf_pillars": [
         "operational-excellence",
         "performance-efficiency"
@@ -5223,6 +5329,43 @@
     },
     {
       "change_type": "new",
+      "content_hash": "sha256:ba7b6aa02adb6f47b9e894631eaa3828346835036db9ca7f1475d1f4e6c46fc2",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available",
+      "id": "github-changelog-github-5580c57bea18",
+      "lifecycle": "ga",
+      "observed_at": "2026-09-22T08:38:26Z",
+      "published_at": "2026-09-22T01:25:53Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "collaboration tools"
+      ],
+      "recommended_action": "Confirm regional availability and evaluate it against active customer architectures.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available",
+      "summary": "The new repository pull requests page is now generally available to all GitHub users. Highlights The new page makes it easier to find and act on pull requests in a\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Refreshed repository pull requests page generally available",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
+    },
+    {
+      "change_type": "new",
       "content_hash": "sha256:34c1b514b12388e1c8d9c719dce6949313e1ef79a0004f7e0b32696df4b550bf",
       "content_type": "update",
       "csa_outcomes": [
@@ -5980,6 +6123,41 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Repository admins can archive pull requests",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:e6e41986de53e61c5141ef17f4cb126d467246e35be94882a1c27781638f8344",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
+      "id": "github-changelog-github-9c38b0e540fa",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-22T08:38:26Z",
+      "published_at": "2026-09-21T14:54:12Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "copilot"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
+      "summary": "Grok 4.7, xAI\u2019s latest reasoning model, is now rolling out in GitHub Copilot. Building on Grok 4.6, it is designed for agentic coding and complex, multistep workflows. This model is\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Grok 4.7 is now available in GitHub Copilot",
       "waf_pillars": [
         "operational-excellence"
       ],
@@ -6895,6 +7073,44 @@
         "operational-excellence"
       ],
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:2abc02756b76a627e4f05607a0d88816aab8f810c9020c0f21e3046acc612b93",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports",
+      "id": "github-changelog-github-f631d543deb0",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-22T08:38:26Z",
+      "published_at": "2026-09-21T21:13:18Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "application security",
+        "enterprise management tools"
+      ],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports",
+      "summary": "Enterprise owners can now export a complete inventory of every credential that can access their enterprise (e.g., SSH keys, classic and fine-grained personal access tokens, OAuth App access tokens, and\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "GitHub Enterprise adds credential inventory exports",
+      "waf_pillars": [
+        "operational-excellence",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
     },
     {
       "change_type": "new",
