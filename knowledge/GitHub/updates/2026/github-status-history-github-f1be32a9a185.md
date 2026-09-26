@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/nlxnbqnkdzdl
 source_tier: 1
 published_at: '2026-09-16T17:48:49Z'
-observed_at: '2026-09-21T09:04:42Z'
+observed_at: '2026-09-26T08:41:30Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/nlxnbqnkdzdl
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:761885fd4efa25332166a8d0c3d521354f6aec90879c53ce54d7ada8967191db
+content_hash: sha256:9fa7d4c21c67e8006f98cc54b3a2428b193d8c2350b6f05f3b7c9a76cc4644f4
 ---
 
 # Degradation with Gemini 3.8 Flash
 
 ## What Changed
 
-Sep 16, 17:48 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Sep 16, 11:45 UTC Monitoring - The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. Sep 16, 10:58 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep 16, 08:28 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep 16, 07:21 UTC Investigating - We are investigating reports of degraded availability for Copilot AI Model Providers
+Sep 16, 17:48 UTC Resolved - On September 16, 2026, between 04:40 and 11:45 UTC, the Gemini 3.8 Flash model in GitHub Copilot experienced degraded availability. Requests to this model failed at an average rate of 6.4%, and the impact was highest during peak traffic hours. Other Copilot models were not affected. Users could continue to work with a different model or with 'Auto'. The degradation was caused due to a capacity issue with an upstream model provider. Failure rates returned to normal as the daily traffic peak passed. We monitored the model until it was healthy and resolved the incident at 17:48 UTC. We are working to make our systems resilient to cover peak demand for all the Copilot models. Sep 16, 11:45 UTC Monitoring - The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. Sep 16, 10:58 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep 16, 08:28 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep 16, 07:21 UTC Investigating - We are investigating reports of degraded availability for...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-09-21T09:04:42Z`.
+State: `machine-draft`. Observed: `2026-09-26T08:41:30Z`.

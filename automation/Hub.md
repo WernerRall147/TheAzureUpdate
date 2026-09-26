@@ -14,10 +14,10 @@ This repository combines source-grounded evidence with reviewable daily website 
 | Technology | Collected items |
 | --- | ---: |
 | [Microsoft Foundry](../knowledge/AI%20Foundry/README.md) | 42 |
-| [GitHub and GitHub Copilot](../knowledge/GitHub/README.md) | 137 |
+| [GitHub and GitHub Copilot](../knowledge/GitHub/README.md) | 149 |
 | [Quantum Computing and Azure Quantum](../knowledge/Quantum/README.md) | 6 |
 | [Azure API Management](../knowledge/APIM/README.md) | 2 |
-| [Azure Kubernetes Service](../knowledge/AKS/README.md) | 15 |
+| [Azure Kubernetes Service](../knowledge/AKS/README.md) | 16 |
 | [Azure App Service](../knowledge/App%20Service/README.md) | 11 |
 | [Azure Cosmos DB](../knowledge/Azure%20Cosmos%20DB/README.md) | 18 |
 | [Azure Database for PostgreSQL](../knowledge/Azure%20Database%20for%20PostgreSQL/README.md) | 10 |

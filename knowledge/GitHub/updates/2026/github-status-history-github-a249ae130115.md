@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/qwdwmtqghpk5
 source_tier: 1
 published_at: '2026-09-15T11:17:22Z'
-observed_at: '2026-09-21T09:04:42Z'
+observed_at: '2026-09-26T08:41:30Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/qwdwmtqghpk5
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:81f1e457de2300bbb3bd48e4eb6303d0af62d9ed87ed7ae3f39c45f73685ed75
+content_hash: sha256:75b522004510e6fc8464dc32a871b76ad40b4b1054e3dbcf7837052b046bbaff
 ---
 
 # Disruption with some GitHub services
 
 ## What Changed
 
-Sep 15, 11:17 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Sep 15, 11:17 UTC Update - The issues with our upstream model provider have been resolved, and Claude Fable 5.1 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. Sep 15, 11:09 UTC Update - We continue to monitor intermittent errors affecting Claude Fable 5.1 in some Copilot products and integrated development environments. Customer-facing metrics have recovered, and we are awaiting confirmation from our upstream provider that the issue will not recur. Customers can select another model or Auto in the meantime. Sep 15, 10:32 UTC Update - We continue to investigate intermittent errors affecting Claude Fable 5.1 in some Copilot products and integrated development environments. Customers can use another model or select Auto while we monitor the situation. Sep 15, 10:20 UTC Investigating - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep...
+Sep 15, 11:17 UTC Resolved - On September 15, 2026, between 05:45 and 09:50 UTC, the Claude Fable 5.1 model in GitHub Copilot experienced intermittently degraded availability, with an average error rate of 2.8%. During brief recurring 15 minute periods that recurred every ~45 minutes, availability for Claude Fable 5.1 dropped to a maximum of ~40% before recovering completely. Other Copilot models were not affected. Users could continue to work with a different model or with 'Auto'. The cause was an issue with an upstream model provider that intermittently rejected requests while overloaded. GitHub worked with the provider, who acknowledged and then resolved the underlying issue at 9:50 UTC, after which the model returned to constant normal availability. Once recovery was guaranteed, we resolved the incident at 11:17 UTC. To reduce the chance of recurrence and customer impact, GitHub is reviewing per-model availability alerting and automatic in-product fallback so that requests to a degraded model can shift to a healthy alternative more quickly. Sep 15, 11:17 UTC Update - The issues with our upstream model provider have been resolved, and Claude Fable 5.1 is once again available...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-09-21T09:04:42Z`.
+State: `machine-draft`. Observed: `2026-09-26T08:41:30Z`.
