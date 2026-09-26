@@ -2161,6 +2161,47 @@
     },
     {
       "change_type": "updated",
+      "content_hash": "sha256:6432302eb12f022f07b5d5edda73a56cbda1ce07c9a7c3ac9a4bf7213776725f",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "571919",
+      "id": "azure-updates-aks-571919",
+      "lifecycle": "public-preview",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-22T18:51:48Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "In preview",
+        "Compute",
+        "Containers",
+        "Azure Kubernetes Service (AKS)",
+        "Feature"
+      ],
+      "recommended_action": "Review preview terms, regions, limitations, and support before proposing a customer pilot.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Azure Updates",
+      "source_tier": 1,
+      "source_url": "https://azure.microsoft.com/updates?id=571919",
+      "summary": "Flex Nodes for AKS is a deployment option for application and platform teams to use hybrid and edge infrastructure as connected worker nodes to an AKS control plane in Azure. Flex Nodes provide a consistent Kubernetes control plane while enabling teams to",
+      "supporting_urls": [],
+      "technology": "aks",
+      "title": "[In preview] Public Preview: Flex Nodes for AKS",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "A preview can inform roadmap and technical validation, but is not a production commitment."
+    },
+    {
+      "change_type": "updated",
       "content_hash": "sha256:ef7ffedc517862f655d55a6e39d39695dda49173d2f28d8d87bc206a8dd66845",
       "content_type": "docs",
       "csa_outcomes": [
@@ -4741,6 +4782,42 @@
     },
     {
       "change_type": "updated",
+      "content_hash": "sha256:912267761452ca0aa7ac634c2f2c7269ed97592fe930de3c2187715acb50c755",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator",
+      "id": "github-changelog-github-07dade882106",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-25T23:24:57Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator",
+      "summary": "You can now use an in-product validator for enterprise managed settings for GitHub Copilot. The validator detects malformed JSON, unsupported configurations, invalid team mappings, and other errors that can prevent\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Enterprise managed settings in-product validator",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
       "content_hash": "sha256:7bbdf44bc760e75036e0547782794a1b01fff021e9cc96dd1c22bdc69ac837f8",
       "content_type": "update",
       "csa_outcomes": [
@@ -4810,6 +4887,43 @@
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
+      "change_type": "updated",
+      "content_hash": "sha256:74b0fb8e8f78855508c340a2c24804f3762cf0102ea1be0f54f3f06e2869a11d",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages",
+      "id": "github-changelog-github-0a10d0252c63",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-25T21:09:40Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages",
+      "summary": "The enterprise and organization repository-level Copilot usage metrics reports now break down how long pull requests spend in each stage of review. A new pull_request_review_times array on each repos-1-day row\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Usage metrics API adds pull request review stages",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "new",
       "content_hash": "sha256:b44480be9b947378af430c11b9b4b1b02aea569af837803e7b423640643c4af1",
       "content_type": "update",
@@ -4843,6 +4957,43 @@
         "operational-excellence"
       ],
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:ad57af09bf4db77b151b71fd26e37180dfa3a76a9d47cabf3daefebcd9afa93d",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-25-personal-saved-views-for-repository-issues-and-more",
+      "id": "github-changelog-github-10030137c3a0",
+      "lifecycle": "ga",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-25T19:05:03Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "projects & issues"
+      ],
+      "recommended_action": "Confirm regional availability and evaluate it against active customer architectures.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-25-personal-saved-views-for-repository-issues-and-more",
+      "summary": "Private saved views for repository issues Repository issues pages now support private saved views, making it easier to create and save personalized views of your issues. \u201cRelates to\u201d issue relationship\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Private saved views for repository issues and \u201cRelates to\u201d issue relationship is generally available",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
     },
     {
       "change_type": "updated",
@@ -4983,6 +5134,44 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Secret scanning coverage updates",
+      "waf_pillars": [
+        "operational-excellence",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:d3b76a4272fc9eface3aec72d9554b88059c2a7c04e09f92152b9d385cbde073",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory",
+      "id": "github-changelog-github-2653f5794fb9",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-25T17:25:50Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "application security",
+        "copilot"
+      ],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory",
+      "summary": "Agentic autofix now uses Copilot Memory for customers who\u2019ve enabled it. When you use agentic autofix, it reviews existing memories for context that can help resolve security alerts. When it\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Agentic autofix now uses Copilot Memory",
       "waf_pillars": [
         "operational-excellence",
         "security"
@@ -5176,6 +5365,41 @@
         "security"
       ],
       "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:a0ff2397c7374af514cf1261b9c964e1871902ca3e865a854f6c35a4f92d6c20",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21",
+      "id": "github-changelog-github-48eaa8bbafaa",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-25T16:42:48Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "copilot"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21",
+      "summary": "This week\u2019s releases add new models to Copilot, local sandboxing in the Copilot app, and updates to Copilot in Slack, Microsoft Teams, JetBrains, and VS Code. GitHub Copilot Claude Opus\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "GitHub Copilot weekly releases \u2014 September 21",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
       "change_type": "deprecated",
@@ -5950,6 +6174,44 @@
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
+      "change_type": "new",
+      "content_hash": "sha256:3590bbe8648b9c73f43083ad022bdccc40052e0df73cd9c30d3f69c692774573",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
+      "id": "github-changelog-github-9111ec33ec96",
+      "lifecycle": "ga",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-25T03:13:23Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ],
+      "recommended_action": "Confirm regional availability and evaluate it against active customer architectures.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
+      "summary": "We\u2019re introducing a new global default policy for generally available GitHub Copilot features and supported client capabilities in enterprise and organization Copilot settings. For the next 28 days, you can\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Default Enablement of Copilot features for Copilot Business and Enterprise",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
+    },
+    {
       "change_type": "updated",
       "content_hash": "sha256:00765e2bec008c4e2973a9356f5207239294501979746a8afd7f66022ee56e03",
       "content_type": "update",
@@ -6421,6 +6683,45 @@
     },
     {
       "change_type": "security",
+      "content_hash": "sha256:f31181db1b180101ed2d3b114b35084904bbb153d1c110bfab35d6c3b6cdb543",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions",
+      "id": "github-changelog-github-b0878320c6bd",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-24T20:28:33Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "account management",
+        "application security",
+        "enterprise management tools"
+      ],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions",
+      "summary": "You can now require an interactive re-authentication or a multi-factor challenge before members take high-impact actions on GitHub Enterprise Cloud accounts. Proof of presence is an expansion of GitHub\u2019s sudo\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Require proof of presence for high-impact actions",
+      "waf_pillars": [
+        "operational-excellence",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "security",
       "content_hash": "sha256:7abf69bf4fda9ae9627bbcd268796312c70370544a838384715a645e56a53715",
       "content_type": "security",
       "csa_outcomes": [
@@ -6677,6 +6978,42 @@
       "why_it_matters": "This can create a customer delivery blocker or migration requirement."
     },
     {
+      "change_type": "updated",
+      "content_hash": "sha256:ee3d72c61690a535ddc9f08cc786b7abe894db5a4c93c3af7c62c136035dd833",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams",
+      "id": "github-changelog-github-c1d4e08f8273",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-25T16:33:42Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "collaboration tools",
+        "copilot"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams",
+      "summary": "GitHub Copilot in Slack and Microsoft Teams now gives you more context, more control, and a clearer path from conversation to GitHub work. Whether you\u2019re sharing files in Slack or\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Updates to GitHub Copilot for Slack and Microsoft Teams",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "new",
       "content_hash": "sha256:f937367eb0128f193a89167957566a1f0af3e3f7dda48330785f32d0c8eade17",
       "content_type": "update",
@@ -6886,6 +7223,41 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Enterprise-managed settings now support autoUpdate for plugin marketplaces",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:a25105187d8c9fff621beb86f63a1c065fe8a8a8ab4de75abd4d56e59e7dda59",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-25-changes-to-query-results-in-the-github-actions-api-and-ui",
+      "id": "github-changelog-github-de36fa73b854",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-25T18:17:06Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "actions"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-25-changes-to-query-results-in-the-github-actions-api-and-ui",
+      "summary": "Queries for workflow runs in the GitHub Actions API and UI now return a less precise but more accurate count of records when you search by workflow, event, status, branch,\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Changes to query results in the GitHub Actions API and UI",
       "waf_pillars": [
         "operational-excellence"
       ],
@@ -7113,6 +7485,43 @@
       "why_it_matters": "This may change the workload security posture or required controls."
     },
     {
+      "change_type": "security",
+      "content_hash": "sha256:ce3bf3c422f8fde77c28d2800c238909ee4b728fc28c9e223a6014ca21a11f8c",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support",
+      "id": "github-changelog-github-f79e7d7a6338",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-25T09:55:23Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "application security"
+      ],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support",
+      "summary": "CodeQL 2.27.1 adds new queries for C/C++ and C#, support for Kotlin 2.4.20, and query-accuracy improvements. CodeQL is the static analysis engine behind GitHub code scanning, which helps you find\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "CodeQL 2.27.1 adds C and C++ query and Kotlin 2.4.20 support",
+      "waf_pillars": [
+        "operational-excellence",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
       "change_type": "new",
       "content_hash": "sha256:3c117ccdb4c55a05e63bcbb421227570f9dd6373af60e34312082a02d2e03239",
       "content_type": "update",
@@ -7245,6 +7654,40 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Incident with Actions and Pull Requests",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
+      "content_hash": "sha256:a5544e8c330148f75b1e10bf67c3e21fe50b2d1a80c6914be0de613556546e6d",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/8zc63m64hy36",
+      "id": "github-status-history-github-186decdec228",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-24T04:55:33Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/8zc63m64hy36",
+      "summary": "Sep 24, 04:55 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Sep 24, 04:55 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Sep 24, 03:14 UTC Update - We are continuing to process the backlog of issue label updates for Projects. Label changes may still be delayed. All other services are operating normally. Sep 24, 02:00 UTC Update - We are continuing to process the backlog of issue label updates for Projects. Users may still see delays before label changes are reflected in Projects. All other services are operating normally. Sep 24, 00:16 UTC Update - We've deployed a change intended to accelerate processing of the backlog of issue label updates in Projects. A sizable backlog still remains and we continue working through it. All other services are operating normally. We will provide another update within the next hour. Sep 23, 21:39 UTC Update - Updates to issue labels may be delayed in being reflected in Projects. We are continuing to deploy a change that will accelerate processing of the...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Incident across several services",
       "waf_pillars": [
         "operational-excellence",
         "reliability"
@@ -7661,7 +8104,7 @@
     },
     {
       "change_type": "incident",
-      "content_hash": "sha256:d3fec4832450398ded30ad536f686fcd2dd12e037c1fdd4e1613b340cde100e7",
+      "content_hash": "sha256:879b7a926c49f1a43823a433efa4906b451b233ac292f5fd18b7757c5359d3f7",
       "content_type": "status",
       "csa_outcomes": [
         "blocker-mitigation",
@@ -7672,7 +8115,7 @@
       "external_id": "https://www.githubstatus.com/incidents/f6yrxnz5f7bs",
       "id": "github-status-history-github-443e67ef1b4d",
       "lifecycle": "unknown",
-      "observed_at": "2026-09-21T09:04:42Z",
+      "observed_at": "2026-09-26T08:41:30Z",
       "published_at": "2026-09-20T23:22:16Z",
       "publisher": "GitHub",
       "raw_categories": [],
@@ -7683,7 +8126,7 @@
       "source_name": "GitHub incident history",
       "source_tier": 1,
       "source_url": "https://www.githubstatus.com/incidents/f6yrxnz5f7bs",
-      "summary": "Sep 20, 23:22 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Sep 20, 22:32 UTC Update - A git fileserver issue caused a brief delay in creating some merge commits - we've isolated the underlying server and already observed recovery. Sep 20, 22:27 UTC Monitoring - The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability. Sep 20, 22:13 UTC Investigating - We are investigating reports of degraded performance for Pull Requests",
+      "summary": "Sep 20, 23:22 UTC Resolved - On September 20, 2026, between 21:46 and 22:24 UTC the Pull Requests service was degraded and pull request merge and test-merge commits were created late, with delays reaching approximately four minutes at peak. Merge commits were delayed rather than lost. Because some Actions workflow runs start only after a pull request's merge commit is created, a subset of workflow runs for pull request events were also delayed. This was due to a routine repository maintenance job for an unusually large repository consuming nearly all of the memory on a single Git storage server, which left that server unable to serve the Git operations used to create merge commits. We mitigated the incident by removing the affected server from service at 22:18 UTC, after which the queued merge commits were created within six minutes. We have capped the memory a single repository maintenance job may consume so that one repository cannot exhaust a server, and we have improved monitoring and alerting on storage server health to reduce our time to detection and mitigation of issues like this one in the future. Sep 20, 22:32 UTC Update - A git fileserver issue caused a brief delay in...",
       "supporting_urls": [],
       "technology": "github",
       "title": "Incident with Pull Requests",
@@ -8545,6 +8988,40 @@
     },
     {
       "change_type": "incident",
+      "content_hash": "sha256:6a16c5d47da89b98adc489c817617aba8d9275c6f835b18b87e335e30a2b1338",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/1dk955gg3bvz",
+      "id": "github-status-history-github-9fc511e9627b",
+      "lifecycle": "unknown",
+      "observed_at": "2026-09-26T08:41:30Z",
+      "published_at": "2026-09-24T20:41:12Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/1dk955gg3bvz",
+      "summary": "Sep 24, 20:41 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Sep 24, 20:24 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Sep 24, 20:10 UTC Update - We have applied the mitigation and are seeing signs of recovery. We are continuing to monitor the system closely. Sep 24, 18:22 UTC Update - We are continuing to work on mitigation. We will post another update in approximately one hour. Sep 24, 17:40 UTC Update - We have identified the problem and are actively working on mitigation. Sep 24, 16:51 UTC Update - We are investigating failures on billing information updates. Customers may be unable to create or update their billing information in the meantime. Sep 24, 16:51 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Disruption with billing information updates",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
       "content_hash": "sha256:0e3601c1817b1c3ab9fd2979a630fbdc14360a36eb34f16e18d884590151c967",
       "content_type": "status",
       "csa_outcomes": [
@@ -8579,7 +9056,7 @@
     },
     {
       "change_type": "incident",
-      "content_hash": "sha256:81f1e457de2300bbb3bd48e4eb6303d0af62d9ed87ed7ae3f39c45f73685ed75",
+      "content_hash": "sha256:75b522004510e6fc8464dc32a871b76ad40b4b1054e3dbcf7837052b046bbaff",
       "content_type": "status",
       "csa_outcomes": [
         "blocker-mitigation",
@@ -8590,7 +9067,7 @@
       "external_id": "https://www.githubstatus.com/incidents/qwdwmtqghpk5",
       "id": "github-status-history-github-a249ae130115",
       "lifecycle": "unknown",
-      "observed_at": "2026-09-21T09:04:42Z",
+      "observed_at": "2026-09-26T08:41:30Z",
       "published_at": "2026-09-15T11:17:22Z",
       "publisher": "GitHub",
       "raw_categories": [],
@@ -8601,7 +9078,7 @@
       "source_name": "GitHub incident history",
       "source_tier": 1,
       "source_url": "https://www.githubstatus.com/incidents/qwdwmtqghpk5",
-      "summary": "Sep 15, 11:17 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Sep 15, 11:17 UTC Update - The issues with our upstream model provider have been resolved, and Claude Fable 5.1 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete. Sep 15, 11:09 UTC Update - We continue to monitor intermittent errors affecting Claude Fable 5.1 in some Copilot products and integrated development environments. Customer-facing metrics have recovered, and we are awaiting confirmation from our upstream provider that the issue will not recur. Customers can select another model or Auto in the meantime. Sep 15, 10:32 UTC Update - We continue to investigate intermittent errors affecting Claude Fable 5.1 in some Copilot products and integrated development environments. Customers can use another model or select Auto while we monitor the situation. Sep 15, 10:20 UTC Investigating - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep...",
+      "summary": "Sep 15, 11:17 UTC Resolved - On September 15, 2026, between 05:45 and 09:50 UTC, the Claude Fable 5.1 model in GitHub Copilot experienced intermittently degraded availability, with an average error rate of 2.8%. During brief recurring 15 minute periods that recurred every ~45 minutes, availability for Claude Fable 5.1 dropped to a maximum of ~40% before recovering completely. Other Copilot models were not affected. Users could continue to work with a different model or with 'Auto'. The cause was an issue with an upstream model provider that intermittently rejected requests while overloaded. GitHub worked with the provider, who acknowledged and then resolved the underlying issue at 9:50 UTC, after which the model returned to constant normal availability. Once recovery was guaranteed, we resolved the incident at 11:17 UTC. To reduce the chance of recurrence and customer impact, GitHub is reviewing per-model availability alerting and automatic in-product fallback so that requests to a degraded model can shift to a healthy alternative more quickly. Sep 15, 11:17 UTC Update - The issues with our upstream model provider have been resolved, and Claude Fable 5.1 is once again available...",
       "supporting_urls": [],
       "technology": "github",
       "title": "Disruption with some GitHub services",
@@ -9155,7 +9632,7 @@
     },
     {
       "change_type": "incident",
-      "content_hash": "sha256:761885fd4efa25332166a8d0c3d521354f6aec90879c53ce54d7ada8967191db",
+      "content_hash": "sha256:9fa7d4c21c67e8006f98cc54b3a2428b193d8c2350b6f05f3b7c9a76cc4644f4",
       "content_type": "status",
       "csa_outcomes": [
         "blocker-mitigation",
@@ -9166,7 +9643,7 @@
       "external_id": "https://www.githubstatus.com/incidents/nlxnbqnkdzdl",
       "id": "github-status-history-github-f1be32a9a185",
       "lifecycle": "unknown",
-      "observed_at": "2026-09-21T09:04:42Z",
+      "observed_at": "2026-09-26T08:41:30Z",
       "published_at": "2026-09-16T17:48:49Z",
       "publisher": "GitHub",
       "raw_categories": [],
@@ -9177,7 +9654,7 @@
       "source_name": "GitHub incident history",
       "source_tier": 1,
       "source_url": "https://www.githubstatus.com/incidents/nlxnbqnkdzdl",
-      "summary": "Sep 16, 17:48 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Sep 16, 11:45 UTC Monitoring - The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. Sep 16, 10:58 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep 16, 08:28 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep 16, 07:21 UTC Investigating - We are investigating reports of degraded availability for Copilot AI Model Providers",
+      "summary": "Sep 16, 17:48 UTC Resolved - On September 16, 2026, between 04:40 and 11:45 UTC, the Gemini 3.8 Flash model in GitHub Copilot experienced degraded availability. Requests to this model failed at an average rate of 6.4%, and the impact was highest during peak traffic hours. Other Copilot models were not affected. Users could continue to work with a different model or with 'Auto'. The degradation was caused due to a capacity issue with an upstream model provider. Failure rates returned to normal as the daily traffic peak passed. We monitored the model until it was healthy and resolved the incident at 17:48 UTC. We are working to make our systems resilient to cover peak demand for all the Copilot models. Sep 16, 11:45 UTC Monitoring - The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. Sep 16, 10:58 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep 16, 08:28 UTC Update - Copilot AI Model Providers is experiencing degraded performance. We are continuing to investigate. Sep 16, 07:21 UTC Investigating - We are investigating reports of degraded availability for...",
       "supporting_urls": [],
       "technology": "github",
       "title": "Degradation with Gemini 3.8 Flash",

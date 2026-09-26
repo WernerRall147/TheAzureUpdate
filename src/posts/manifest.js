@@ -14,6 +14,7 @@
      3. Run npm start (or npm run posts) - done.
 */
 window.BLOG_MANIFEST = [
+  "azure-update-2026-09-26",
   "azure-update-2026-09-22",
   "azure-update-2026-09-21",
   "azure-update-2026-08-31",
@@ -28,6 +29,7 @@ window.BLOG_MANIFEST = [
 ];
 
 window.BLOG_INDEX = [
+  {"id":"azure-update-2026-09-26","url":"posts/azure-update-2026-09-26/index.md","title":"26 September 2026: Agentic autofix now uses Copilot Memory, and 15 more","date":"2026-09-26","author":"Werner Rall","tags":["Azure","AKS","GitHub"],"featured":true,"excerpt":"16 verified updates across 2 technologies, led by Agentic autofix now uses Copilot Memory."},
   {"id":"azure-update-2026-09-22","url":"posts/azure-update-2026-09-22/index.md","title":"22 September 2026: GitHub Enterprise adds credential inventory exports, and 5 more","date":"2026-09-22","author":"Werner Rall","tags":["Azure","App Service","Azure SQL","GitHub"],"featured":true,"excerpt":"6 verified updates across 3 technologies, led by GitHub Enterprise adds credential inventory exports."},
   {"id":"azure-update-2026-09-21","url":"posts/azure-update-2026-09-21/index.md","title":"21 September 2026: Manage the code coverage ruleset condition with the REST API, and 56 more","date":"2026-09-21","author":"Werner Rall","tags":["Azure","AI","AKS","App Service","Azure SQL","Cosmos DB","GitHub","PostgreSQL","Quantum"],"featured":true,"excerpt":"57 verified updates across 8 technologies, led by Manage the code coverage ruleset condition with the REST API."},
   {"id":"azure-update-2026-08-31","url":"posts/azure-update-2026-08-31/index.md","title":"31 August 2026: Actions retention will cover checks, workflow runs, and statuses, and 52 more","date":"2026-08-31","author":"Werner Rall","tags":["Azure","AI","AKS","App Service","Azure SQL","Cosmos DB","GitHub","PostgreSQL","Quantum"],"featured":true,"excerpt":"53 verified updates across 8 technologies, led by Actions retention will cover checks, workflow runs, and statuses."},
