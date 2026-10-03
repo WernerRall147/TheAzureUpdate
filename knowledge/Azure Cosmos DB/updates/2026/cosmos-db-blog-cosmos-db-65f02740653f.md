@@ -11,7 +11,7 @@ source_name: Azure Cosmos DB engineering blog
 source_url: https://devblogs.microsoft.com/cosmosdb/genspark-protects-live-agent-sessions-with-azure-cosmos-db-global-secondary-indexes/
 source_tier: 2
 published_at: '2026-10-01T16:00:12Z'
-observed_at: '2026-10-02T09:53:07Z'
+observed_at: '2026-10-03T09:15:40Z'
 effective_at: null
 publisher: Microsoft
 customer_impact: low
@@ -28,14 +28,14 @@ raw_categories:
 - Azure Cosmos DB
 - Azure Cosmos DB for NoSQL
 supporting_urls: []
-content_hash: sha256:b2d65b0023db04283edb40d6c58314b06b4ac2ae503a2fdb8d89d1c482b89c6e
+content_hash: sha256:8ef9f88f6b504a429e520bff34065868fd6842867e7479434936c8c10cc6cbcf
 ---
 
 # Genspark protects live agent sessions with Azure Cosmos DB Global Secondary Indexes
 
 ## What Changed
 
-The work does not end when the prompt does A user comes to Genspark with a goal: research a market, build a presentation, produce a report, analyze a dataset, or complete another complex assignment. Our agents take it from there, working across tools, sources, and multiple steps until the user has a finished result. The […]
+This article was authored by Justin Liu, co-founder and chief architect, Genspark. The work does not end when the prompt does A user comes to Genspark with a goal: research a market, build a presentation, produce a report, analyze a dataset, or complete another complex assignment. Our agents take it from there, working across tools, […]
 
 ## Why It Matters to a CSA
 
@@ -55,4 +55,4 @@ Review the canonical source and update reusable guidance when the change is rele
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-10-02T09:53:07Z`.
+State: `machine-draft`. Observed: `2026-10-03T09:15:40Z`.
