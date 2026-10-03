@@ -859,6 +859,40 @@
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
+      "change_type": "new",
+      "content_hash": "sha256:ab0ea5042601f77a3592d8afc8c4c1bae8696b81b3abb8680eb1b20440adc6fc",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "401898449",
+      "id": "agent-framework-releases-ai-foundry-401898449",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-03T09:15:40Z",
+      "published_at": "2026-10-02T14:40:44Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Agent Framework releases",
+      "source_tier": 2,
+      "source_url": "https://github.com/microsoft/agent-framework/releases/tag/python-1.20.0",
+      "summary": "[1.20.0] 2026 10 02 Added agent framework foundry hosting : Host native workflows over Foundry Responses and Foundry Invocations ( 8947, 8966) agent framework duckdb , agent framework sql server , agent framework typesafe : Add DuckDB and SQL Server native vector store connectors and the TypeSafe AI connector ( 8675, 8686, 8592) agent framework , agent framework core : Add response stream gates and buffering, session scoped file access isolation, an AgentExecutor checkpoint state TypedDict , and opt in FunctionInvocationContext injection for skill scripts ( 8829, 8542, 8284, 8749) agent framework foundry , agent framework foundry hosting , agent framework openai : Add native computer use support to Responses clients and Foundry project embeddings ( 8751, 8454) agent framework azure ai search : Support knowledge source params in AzureAISearchContextProvider ( 8673) agent framework mongodb , samples : Add a MongoDB agent RAG sample ( 8725) Changed agent framework foundry hosting : [BREAKING] Redesign Foundry hosting around request scoped agent factories, persistent sandbox isolated sessions, parsed and durable Invocations runs, and configurable Responses history, background execut...",
+      "supporting_urls": [],
+      "technology": "ai-foundry",
+      "title": "python-1.20.0",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "updated",
       "content_hash": "sha256:46e6fa7b62e331e6a9ae6727be9b383955036b71374f92e7cf741b2b46b263d3",
       "content_type": "update",
@@ -5174,7 +5208,7 @@
     },
     {
       "change_type": "updated",
-      "content_hash": "sha256:b2d65b0023db04283edb40d6c58314b06b4ac2ae503a2fdb8d89d1c482b89c6e",
+      "content_hash": "sha256:8ef9f88f6b504a429e520bff34065868fd6842867e7479434936c8c10cc6cbcf",
       "content_type": "update",
       "csa_outcomes": [
         "skilling"
@@ -5184,7 +5218,7 @@
       "external_id": "https://devblogs.microsoft.com/cosmosdb/?p=13005",
       "id": "cosmos-db-blog-cosmos-db-65f02740653f",
       "lifecycle": "unknown",
-      "observed_at": "2026-10-02T09:53:07Z",
+      "observed_at": "2026-10-03T09:15:40Z",
       "published_at": "2026-10-01T16:00:12Z",
       "publisher": "Microsoft",
       "raw_categories": [
@@ -5198,7 +5232,7 @@
       "source_name": "Azure Cosmos DB engineering blog",
       "source_tier": 2,
       "source_url": "https://devblogs.microsoft.com/cosmosdb/genspark-protects-live-agent-sessions-with-azure-cosmos-db-global-secondary-indexes/",
-      "summary": "The work does not end when the prompt does A user comes to Genspark with a goal: research a market, build a presentation, produce a report, analyze a dataset, or complete another complex assignment. Our agents take it from there, working across tools, sources, and multiple steps until the user has a finished result. The [\u2026]",
+      "summary": "This article was authored by Justin Liu, co-founder and chief architect, Genspark. The work does not end when the prompt does A user comes to Genspark with a goal: research a market, build a presentation, produce a report, analyze a dataset, or complete another complex assignment. Our agents take it from there, working across tools, [\u2026]",
       "supporting_urls": [],
       "technology": "cosmos-db",
       "title": "Genspark protects live agent sessions with Azure Cosmos DB Global Secondary Indexes",
@@ -6742,6 +6776,42 @@
       "why_it_matters": "This can create a customer delivery blocker or migration requirement."
     },
     {
+      "change_type": "updated",
+      "content_hash": "sha256:a8dd0fff7c2c3228a1b73a36734f72d5d45e1425a1412dbf188461c4852e584a",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out",
+      "id": "github-changelog-github-4ce371788dc0",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-03T09:15:40Z",
+      "published_at": "2026-10-02T22:18:23Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "actions",
+        "ecosystem & accessibility"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out",
+      "summary": "The staged rollout of the stateless GitHub App installation token format, which began on April 27, 2026, is complete. By default, all newly minted GitHub App installation tokens will be\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Stateless GitHub App installation tokens rolled out",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "security",
       "content_hash": "sha256:cc465582f7cbd4962f5aad820dbd410edf5e09f8b56ab3736d12b98130c61783",
       "content_type": "security",
@@ -6772,6 +6842,44 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Stage-only npm tokens for safer automation",
+      "waf_pillars": [
+        "operational-excellence",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:ff26934a696443599941668ed96bb1a127f5f93c5f0c31af46ab5fabe2af0ca6",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-10-02-new-fields-for-securityadvisory-graphql-api",
+      "id": "github-changelog-github-532f5738d069",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-03T09:15:40Z",
+      "published_at": "2026-10-02T13:18:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "ecosystem & accessibility",
+        "supply chain security"
+      ],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-02-new-fields-for-securityadvisory-graphql-api",
+      "summary": "You can now read more of the GitHub Advisory Database directly from the GraphQL API without falling back to the REST API. The SecurityAdvisory object gained five new fields: cveId:\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "New fields for SecurityAdvisory GraphQL API",
       "waf_pillars": [
         "operational-excellence",
         "security"
@@ -6851,6 +6959,43 @@
         "operational-excellence"
       ],
       "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:eeddfddea3d4abc98b55f254586b86ccb4b3f7c8334d68910c048096c58cfd59",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories",
+      "id": "github-changelog-github-59fc4a70abc3",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-03T09:15:40Z",
+      "published_at": "2026-10-02T13:15:40Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "supply chain security"
+      ],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories",
+      "summary": "You can now post confidential comments on repository security advisories. Confidential comments are visible only to people with write access to the repository, so you can discuss a report with\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Confidential comments on repository security advisories",
+      "waf_pillars": [
+        "operational-excellence",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
     },
     {
       "change_type": "new",
@@ -7179,6 +7324,43 @@
       "why_it_matters": "A preview can inform roadmap and technical validation, but is not a production commitment."
     },
     {
+      "change_type": "deprecated",
+      "content_hash": "sha256:0f5d4f95a0d27faa925885cf1b10ce234dda68b8a757eaac53d36d80cb1eaf6e",
+      "content_type": "retirement",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+      "id": "github-changelog-github-705956e4f1fc",
+      "lifecycle": "deprecated",
+      "observed_at": "2026-10-03T09:15:40Z",
+      "published_at": "2026-10-02T18:24:19Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Retired",
+        "copilot"
+      ],
+      "recommended_action": "Identify affected workloads, verify the effective date, and create a tested migration action.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+      "summary": "As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Model\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Selected models in GitHub Copilot deprecated",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "This can create a customer delivery blocker or migration requirement."
+    },
+    {
       "change_type": "updated",
       "content_hash": "sha256:9035097d70316698a0cb34747ada03cbdb80efc4f61cb674715024e8a0f98c13",
       "content_type": "update",
@@ -7433,6 +7615,46 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Workflow execution protections in GitHub Actions generally available",
+      "waf_pillars": [
+        "operational-excellence",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:40e532d15706f4ebd96e9f458988041bc9bb216a7e1eb8db037e2f97afa4e539",
+      "content_type": "security",
+      "csa_outcomes": [
+        "architecture",
+        "blocker-mitigation",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-10-02-repository-security-advisory-comments-api-in-public-preview",
+      "id": "github-changelog-github-8430be4786d8",
+      "lifecycle": "public-preview",
+      "observed_at": "2026-10-03T09:15:40Z",
+      "published_at": "2026-10-02T13:15:25Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "ecosystem & accessibility",
+        "supply chain security"
+      ],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-02-repository-security-advisory-comments-api-in-public-preview",
+      "summary": "You can now read, add, and edit comments on repository security advisories using the REST API, including advisories created from private vulnerability reports. Until now, the discussion on an advisory\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Repository security advisory comments API in public preview",
       "waf_pillars": [
         "operational-excellence",
         "security"
@@ -8309,6 +8531,41 @@
         "reliability"
       ],
       "why_it_matters": "This can create a customer delivery blocker or migration requirement."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:1ae0c6e6caa91e5b227162570d47615844633a033e30180321461eb88de0feee",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
+      "id": "github-changelog-github-be3b1d341079",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-03T09:15:40Z",
+      "published_at": "2026-10-02T19:13:50Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "copilot"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
+      "summary": "You can now request a GitHub Copilot code review through the REST and GraphQL APIs and set the review effort level for each request. Balanced is also now the default\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Copilot code review: API support and new default effort level",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
       "change_type": "deprecated",
@@ -11635,6 +11892,47 @@
         "performance-efficiency"
       ],
       "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:b971d9264a63f649ae9fae620d496dec56bab48db90ec246e440efeb71ebaa66",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "571504",
+      "id": "azure-updates-postgresql-571504",
+      "lifecycle": "public-preview",
+      "observed_at": "2026-10-03T09:15:40Z",
+      "published_at": "2026-10-02T17:35:21Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "In preview",
+        "Databases",
+        "Hybrid + multicloud",
+        "Azure Database for PostgreSQL",
+        "Feature"
+      ],
+      "recommended_action": "Review preview terms, regions, limitations, and support before proposing a customer pilot.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Azure Updates",
+      "source_tier": 1,
+      "source_url": "https://azure.microsoft.com/updates?id=571504",
+      "summary": "MVUs are now available for elastic clusters in Azure Database for PostgreSQL. You can upgrade an existing elastic cluster to a supported newer PostgreSQL version in place without provisioning a replacement cluster, migrating distributed data, or changing",
+      "supporting_urls": [],
+      "technology": "postgresql",
+      "title": "[In preview] Public Preview: Major version upgrades (MVU) for Azure Database for PostgreSQL elastic clusters",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "A preview can inform roadmap and technical validation, but is not a production commitment."
     },
     {
       "change_type": "new",
