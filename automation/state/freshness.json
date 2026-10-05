@@ -2,7 +2,7 @@
   "sources": {
     "agent-framework-releases": {
       "error": null,
-      "etag": "W/\"7493eabf0a3425ad778d5cc23cee8a8b87c67029200e2811ded43602b7e85c76\"",
+      "etag": "W/\"5ecd8313abf78cb15edc273a9709bcd62502fbe96e0c2597d0823fd3ac3b764a\"",
       "item_count": 4,
       "last_content_change": "2026-10-04T09:54:21Z",
       "last_modified": null,
@@ -19,7 +19,7 @@
     },
     "aks-releases": {
       "error": null,
-      "etag": "W/\"a3a5df61793cdb82cdff1adcb349337f56e1607607cc244343b6480cbcb8f86e\"",
+      "etag": "W/\"08ac6aa31eebe61e99512661a140c2c7f0ec868ecb3d8e9e3c7323ec1cb5a1ac\"",
       "item_count": 1,
       "last_content_change": "2026-10-02T09:53:07Z",
       "last_modified": null,
@@ -28,7 +28,7 @@
     },
     "apim-releases": {
       "error": null,
-      "etag": "W/\"3b8d13f9150c148b2676044cdea3c71810b95959643ba66dd6f534518d777072\"",
+      "etag": "W/\"35061331555a9f5a9bd4ec4827ab4fe8caabc11453205a508c5a6ac562f359d1\"",
       "item_count": 0,
       "last_content_change": "none",
       "last_modified": null,
@@ -45,7 +45,7 @@
     },
     "app-service-announcements": {
       "error": null,
-      "etag": "\"01c76cd6793b157daa99c5a05a08dafe1319642b021999541e1bde982be416d5\"",
+      "etag": "\"e2e25a06390c4a219a81ebe0502f68b79a8f32b65901bb440a9424ed0543b87a\"",
       "item_count": 0,
       "last_content_change": "none",
       "last_modified": null,
@@ -54,10 +54,10 @@
     },
     "app-service-blog": {
       "error": null,
-      "etag": "W/\"6ac197f8-15f76\"",
+      "etag": "W/\"6ac2e9b4-15f76\"",
       "item_count": 3,
       "last_content_change": "2026-10-02T09:53:07Z",
-      "last_modified": "Sun, 04 Oct 2026 00:04:08 GMT",
+      "last_modified": "Mon, 05 Oct 2026 00:05:08 GMT",
       "name": "Azure App Service product team blog",
       "status": "healthy"
     },
@@ -71,7 +71,7 @@
     },
     "azure-quantum-python-releases": {
       "error": null,
-      "etag": "W/\"49a6cccf350028fdb5ceff70b677662c12918ca29cccebd1370e6941620e1545\"",
+      "etag": "W/\"768b62d2bda6c46554972db3c066cfcb61ef2bb10ba184d29bab390a00403bcc\"",
       "item_count": 1,
       "last_content_change": "2026-10-02T09:53:07Z",
       "last_modified": null,
@@ -123,7 +123,7 @@
     },
     "cosmos-dotnet-releases": {
       "error": null,
-      "etag": "W/\"eacbbbcb224647c5ad0a7287db0f0ecb4956e46886f633d439b3e5279c1b4494\"",
+      "etag": "W/\"f2a1eccb996e6d687654f22264d96952057aec1f934fba4e46fdf65efdb94eb8\"",
       "item_count": 4,
       "last_content_change": "2026-10-02T09:53:07Z",
       "last_modified": null,
@@ -149,7 +149,7 @@
     },
     "github-status-current": {
       "error": null,
-      "etag": "W/\"b1074597e5dcc7139472448526cd3e91\"",
+      "etag": "W/\"f2d2c37ebb93da0dcdefbaad3d671cff\"",
       "item_count": 0,
       "last_content_change": "none",
       "last_modified": null,
@@ -158,8 +158,8 @@
     },
     "github-status-history": {
       "error": null,
-      "etag": "W/\"5c15b10c6f8cf332e3d4613970930f70\"",
-      "item_count": 13,
+      "etag": "W/\"98950b1c03fbe417215dd7806bcf1861\"",
+      "item_count": 12,
       "last_content_change": "2026-10-02T09:53:07Z",
       "last_modified": null,
       "name": "GitHub incident history",
@@ -175,7 +175,7 @@
     },
     "qdk-releases": {
       "error": null,
-      "etag": "W/\"5745f5d8787cf722d8601356f9c94401e274a48a61547305f8c624fcc39912c7\"",
+      "etag": "W/\"93d7ff6fffa64cde461deb39ded877c8b19020c7582aa3ce916193fc9c4d641a\"",
       "item_count": 0,
       "last_content_change": "2026-09-21T09:04:42Z",
       "last_modified": null,
