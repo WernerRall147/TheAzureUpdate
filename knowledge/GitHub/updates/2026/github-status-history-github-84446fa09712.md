@@ -10,7 +10,7 @@ source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/2dpbcq5j165n
 source_tier: 1
 published_at: '2026-10-01T17:56:54Z'
-observed_at: '2026-10-02T09:53:07Z'
+observed_at: '2026-10-10T09:57:50Z'
 effective_at: null
 publisher: GitHub
 customer_impact: medium
@@ -26,14 +26,14 @@ review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/2dpbcq5j165n
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:e4f3c7ee439301b9443caa49e26479bb0b12554ab5a66102922895a6f63a6575
+content_hash: sha256:c1dfd7bf41a843f19a5d0a8f72e09ed42e56a5ad463d6ed1249d530497a9d8e8
 ---
 
 # Actions Job Delays
 
 ## What Changed
 
-Oct 1, 17:56 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 1, 17:50 UTC Update - GitHub Actions experienced degraded performance for some hosted runners due to throttling within an upstream Azure dependency. Service capacity has recovered, and we are continuing to monitor while working with Azure on the underlying condition. Oct 1, 16:48 UTC Update - We are currently applying a mitigation and anticipate recovery within thirty minutes. Oct 1, 16:10 UTC Update - We have identified an issue with our upstream provider which is causing Actions requests to 429 which is creating the delays. We have escalated to the owning team and are investigating how to mitigate the 429s. Oct 1, 15:29 UTC Update - We are seeing a reoccurrence in run-start delays, and are continuing to investigate to issue. Customers will potentially experience delays of up to ten minutes. Oct 1, 15:20 UTC Investigating - Actions is experiencing degraded performance. We are continuing to investigate. Oct 1, 15:10 UTC Monitoring - The degradation affecting Actions has...
+Oct 1, 17:56 UTC Resolved - On October 1, 2026, GitHub Actions experienced two periods of delayed and failed job starts on GitHub-hosted runners, beginning at approximately 14:15 UTC. Across the 14:15–17:56 UTC incident-response window, approximately 0.68% of workflow runs experienced start delays, and 0.196% of jobs failed to start. A routing change at our cloud provider concentrated API traffic on a single backend, causing an increase in rate-limit errors. Incorrect retry behavior in the provider’s inventory service added load to the affected APIs, compounding the rate limiting. This disrupted runner provisioning and reduced available capacity in affected regions. The resulting increase in demand in unaffected regions exposed a concurrency limit in our job-assignment system, delaying jobs even where runners were available. During the response, we increased job-assignment concurrency, scaled runner capacity, and worked with our cloud provider to reduce API load by excluding our runner subscriptions from its inventory service. By approximately 16:15 UTC, jobs were starting and executing as expected. We continued mitigation and monitoring until the incident was resolved at 17:56...
 
 ## Why It Matters to a CSA
 
@@ -53,4 +53,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-10-02T09:53:07Z`.
+State: `machine-draft`. Observed: `2026-10-10T09:57:50Z`.
