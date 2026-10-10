@@ -14,6 +14,7 @@
      3. Run npm start (or npm run posts) - done.
 */
 window.BLOG_MANIFEST = [
+  "azure-update-2026-10-10",
   "azure-update-2026-10-04",
   "azure-update-2026-10-02",
   "azure-update-2026-09-22",
@@ -30,6 +31,7 @@ window.BLOG_MANIFEST = [
 ];
 
 window.BLOG_INDEX = [
+  {"id":"azure-update-2026-10-10","url":"posts/azure-update-2026-10-10/index.md","title":"10 October 2026: Local sandboxing for GitHub Copilot now generally available, and 37 more","date":"2026-10-10","author":"Werner Rall","tags":["Azure","AI","AKS","APIM","App Service","Azure SQL","Cosmos DB","GitHub","PostgreSQL","Quantum"],"featured":true,"excerpt":"38 verified updates across 9 technologies, led by Local sandboxing for GitHub Copilot now generally available."},
   {"id":"azure-update-2026-10-04","url":"posts/azure-update-2026-10-04/index.md","title":"04 October 2026: Selected models in GitHub Copilot deprecated, and 8 more","date":"2026-10-04","author":"Werner Rall","tags":["Azure","AI","Cosmos DB","GitHub","PostgreSQL"],"featured":true,"excerpt":"9 verified updates across 4 technologies, led by Selected models in GitHub Copilot deprecated."},
   {"id":"azure-update-2026-10-02","url":"posts/azure-update-2026-10-02/index.md","title":"02 October 2026: Actions retention now covers checks, runs, and statuses, and 58 more","date":"2026-10-02","author":"Werner Rall","tags":["Azure","AI","AKS","App Service","Azure SQL","Cosmos DB","GitHub","PostgreSQL","Quantum"],"featured":true,"excerpt":"59 verified updates across 8 technologies, led by Actions retention now covers checks, runs, and statuses."},
   {"id":"azure-update-2026-09-22","url":"posts/azure-update-2026-09-22/index.md","title":"22 September 2026: GitHub Enterprise adds credential inventory exports, and 5 more","date":"2026-09-22","author":"Werner Rall","tags":["Azure","App Service","Azure SQL","GitHub"],"featured":true,"excerpt":"6 verified updates across 3 technologies, led by GitHub Enterprise adds credential inventory exports."},

@@ -4,48 +4,46 @@ id: github-status-history-github-dad55623e2d4
 title: Elevated request latency
 technology: github
 content_type: status
-change_type: incident
+change_type: new
 lifecycle: unknown
 source_name: GitHub incident history
 source_url: https://www.githubstatus.com/incidents/c8466lzvnmsv
 source_tier: 1
 published_at: '2026-10-01T13:57:59Z'
-observed_at: '2026-10-02T09:53:07Z'
+observed_at: '2026-10-10T09:57:50Z'
 effective_at: null
 publisher: GitHub
-customer_impact: medium
+customer_impact: low
 csa_outcomes:
-- blocker-mitigation
 - skilling
 waf_pillars:
 - operational-excellence
-- reliability
 regions: []
 sensitivity: public
 review_state: machine-draft
 external_id: https://www.githubstatus.com/incidents/c8466lzvnmsv
 raw_categories: []
 supporting_urls: []
-content_hash: sha256:1d2af9bdf13fa59a3d99532dd570fee8d63d11d26380b4e1ca885ffa22c466e3
+content_hash: sha256:185fd9dca04b64ddbaf6483faa4f5dd03934e7a29e6879185a4246c09e76d708
 ---
 
 # Elevated request latency
 
 ## What Changed
 
-Oct 1, 13:57 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 1, 13:51 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Oct 1, 13:39 UTC Update - We are investigating recurrent periods of elevated latency affecting web requests. We’ll share updates as more information becomes available. Oct 1, 13:37 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
+Oct 1, 13:57 UTC Resolved - On October 1, 2026, between 13:04 UTC and 13:34 UTC, users experienced two periods of slow page loads and intermittent request failures on GitHub.com. On average, the error rate was 0.52% and peaked at 6.13%. An unusually high volume of incoming traffic placed additional load on our traffic-handling infrastructure, delaying requests before they reached our application servers. Performance returned to normal as the traffic subsided, and we have since applied additional traffic filtering to protect against similar traffic. We are improving alerting for delays in our traffic-handling infrastructure and strengthening our automated traffic protections to reduce our time to detection and mitigation. Oct 1, 13:51 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Oct 1, 13:39 UTC Update - We are investigating recurrent periods of elevated latency affecting web requests. We’ll share updates as more information becomes available. Oct 1, 13:37 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.
 
 ## Why It Matters to a CSA
 
-Service degradation can affect delivery confidence and operational readiness.
+The change may affect current guidance, readiness material, or customer conversations.
 
 ## Customer Impact
 
-**Medium**. Lifecycle: `unknown`. Change type: `incident`.
+**Low**. Lifecycle: `unknown`. Change type: `new`.
 
 ## Recommended Action
 
-Check live status and personalized Service Health before advising a customer.
+Review the canonical source and update reusable guidance when the change is relevant.
 
 ## Evidence
 
@@ -53,4 +51,4 @@ Check live status and personalized Service Health before advising a customer.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-10-02T09:53:07Z`.
+State: `machine-draft`. Observed: `2026-10-10T09:57:50Z`.
