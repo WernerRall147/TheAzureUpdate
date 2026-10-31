@@ -2,9 +2,9 @@
   "sources": {
     "agent-framework-releases": {
       "error": null,
-      "etag": "W/\"5ecd8313abf78cb15edc273a9709bcd62502fbe96e0c2597d0823fd3ac3b764a\"",
-      "item_count": 4,
-      "last_content_change": "2026-10-04T09:54:21Z",
+      "etag": "W/\"7db148dca50cf3a1c85cf351f95095bdee63d21947493941890f11d0d262e9c6\"",
+      "item_count": 6,
+      "last_content_change": "2026-10-31T09:46:24Z",
       "last_modified": null,
       "name": "Microsoft Agent Framework releases",
       "status": "healthy"
@@ -19,18 +19,18 @@
     },
     "aks-releases": {
       "error": null,
-      "etag": "W/\"08ac6aa31eebe61e99512661a140c2c7f0ec868ecb3d8e9e3c7323ec1cb5a1ac\"",
+      "etag": "W/\"5f2a9a18769d1b4052b3da413718ebfb53e3d7c78ee9217141dcac4cd0e12985\"",
       "item_count": 1,
-      "last_content_change": "2026-10-02T09:53:07Z",
+      "last_content_change": "2026-10-31T09:46:24Z",
       "last_modified": null,
       "name": "Azure Kubernetes Service releases",
       "status": "healthy"
     },
     "apim-releases": {
       "error": null,
-      "etag": "W/\"35061331555a9f5a9bd4ec4827ab4fe8caabc11453205a508c5a6ac562f359d1\"",
-      "item_count": 0,
-      "last_content_change": "none",
+      "etag": "W/\"c93bf3a9a87fb887cd8c7297656af6b15ab0ae6ea568496764705ccf4806ddd4\"",
+      "item_count": 1,
+      "last_content_change": "2026-10-31T09:46:24Z",
       "last_modified": null,
       "name": "Azure API Management releases",
       "status": "healthy"
@@ -45,7 +45,7 @@
     },
     "app-service-announcements": {
       "error": null,
-      "etag": "\"e2e25a06390c4a219a81ebe0502f68b79a8f32b65901bb440a9424ed0543b87a\"",
+      "etag": "\"742fd289c054a8c43250f4acb377dad4217efbbe06661d3e2cf012e66f8166d2\"",
       "item_count": 0,
       "last_content_change": "none",
       "last_modified": null,
@@ -54,10 +54,10 @@
     },
     "app-service-blog": {
       "error": null,
-      "etag": "W/\"6ac2e9b4-15f76\"",
-      "item_count": 3,
-      "last_content_change": "2026-10-02T09:53:07Z",
-      "last_modified": "Mon, 05 Oct 2026 00:05:08 GMT",
+      "etag": "W/\"6ae530b3-16fa8\"",
+      "item_count": 10,
+      "last_content_change": "2026-10-31T09:46:24Z",
+      "last_modified": "Sat, 31 Oct 2026 00:05:07 GMT",
       "name": "Azure App Service product team blog",
       "status": "healthy"
     },
@@ -71,8 +71,8 @@
     },
     "azure-quantum-python-releases": {
       "error": null,
-      "etag": "W/\"768b62d2bda6c46554972db3c066cfcb61ef2bb10ba184d29bab390a00403bcc\"",
-      "item_count": 1,
+      "etag": "W/\"c0cb8a17748c5c8cafe65ff960d8cb612f2d1560c5a761f1351621e8fea79a6f\"",
+      "item_count": 0,
       "last_content_change": "2026-10-02T09:53:07Z",
       "last_modified": null,
       "name": "Azure Quantum Python SDK releases",
@@ -80,17 +80,17 @@
     },
     "azure-sql-blog": {
       "error": null,
-      "etag": "W/\"a60eca50dbd002f690d061155b9ed15f\"",
-      "item_count": 9,
-      "last_content_change": "2026-10-02T09:53:07Z",
-      "last_modified": "Fri, 02 Oct 2026 01:10:55 GMT",
+      "etag": "W/\"23859f8a5cbcfed001b95000a235043a\"",
+      "item_count": 3,
+      "last_content_change": "2026-10-31T09:46:24Z",
+      "last_modified": "Fri, 30 Oct 2026 19:22:03 GMT",
       "name": "Azure SQL engineering blog",
       "status": "healthy"
     },
     "azure-sql-whats-new": {
       "error": null,
       "item_count": 1,
-      "last_content_change": "2026-10-02T09:53:07Z",
+      "last_content_change": "2026-10-31T09:46:24Z",
       "last_error_at": "2026-07-21T10:45:00Z",
       "name": "Azure SQL Database what's new",
       "status": "healthy"
@@ -98,18 +98,18 @@
     "azure-updates": {
       "error": null,
       "etag": null,
-      "item_count": 25,
-      "last_content_change": "2026-10-04T09:54:21Z",
+      "item_count": 3,
+      "last_content_change": "2026-10-31T09:46:24Z",
       "last_modified": null,
       "name": "Microsoft Azure Updates",
       "status": "healthy"
     },
     "cosmos-db-blog": {
       "error": null,
-      "etag": "W/\"512e92861f8c34c3f2712233f1705d61\"",
-      "item_count": 9,
-      "last_content_change": "2026-10-04T09:54:21Z",
-      "last_modified": "Fri, 02 Oct 2026 16:31:25 GMT",
+      "etag": "W/\"0b23efbf93858e3e8f9b507e51e64d33\"",
+      "item_count": 6,
+      "last_content_change": "2026-10-31T09:46:24Z",
+      "last_modified": "Fri, 30 Oct 2026 23:32:47 GMT",
       "name": "Azure Cosmos DB engineering blog",
       "status": "healthy"
     },
@@ -123,9 +123,9 @@
     },
     "cosmos-dotnet-releases": {
       "error": null,
-      "etag": "W/\"f2a1eccb996e6d687654f22264d96952057aec1f934fba4e46fdf65efdb94eb8\"",
-      "item_count": 4,
-      "last_content_change": "2026-10-02T09:53:07Z",
+      "etag": "W/\"b4a05b12be329190c1d5f6348fbb1041c28e33d7bf98d70a0505d3f84cdf7c14\"",
+      "item_count": 2,
+      "last_content_change": "2026-10-31T09:46:24Z",
       "last_modified": null,
       "name": "Azure Cosmos DB .NET SDK releases",
       "status": "healthy"
@@ -140,16 +140,16 @@
     },
     "github-changelog": {
       "error": null,
-      "etag": "W/\"6b8e6a177b704b06b2fff2a652d96637\"",
+      "etag": "W/\"669a08bcef252d75f755446b35e91180\"",
       "item_count": 10,
-      "last_content_change": "2026-10-04T09:54:21Z",
-      "last_modified": "Fri, 02 Oct 2026 22:18:59 GMT",
+      "last_content_change": "2026-10-31T09:46:24Z",
+      "last_modified": "Fri, 30 Oct 2026 17:52:27 GMT",
       "name": "GitHub Changelog",
       "status": "healthy"
     },
     "github-status-current": {
       "error": null,
-      "etag": "W/\"f2d2c37ebb93da0dcdefbaad3d671cff\"",
+      "etag": "W/\"a3ab947f4a64de96f643190ac6cc07ff\"",
       "item_count": 0,
       "last_content_change": "none",
       "last_modified": null,
@@ -158,9 +158,9 @@
     },
     "github-status-history": {
       "error": null,
-      "etag": "W/\"98950b1c03fbe417215dd7806bcf1861\"",
-      "item_count": 12,
-      "last_content_change": "2026-10-02T09:53:07Z",
+      "etag": "W/\"0657613e844bcf729db4501b9eee2356\"",
+      "item_count": 17,
+      "last_content_change": "2026-10-31T09:46:24Z",
       "last_modified": null,
       "name": "GitHub incident history",
       "status": "healthy"
@@ -175,7 +175,7 @@
     },
     "qdk-releases": {
       "error": null,
-      "etag": "W/\"93d7ff6fffa64cde461deb39ded877c8b19020c7582aa3ce916193fc9c4d641a\"",
+      "etag": "W/\"3a5b5c5784fcade764e813abbb98f4d657684ee20aa7b73042e95d8fc80fe595\"",
       "item_count": 0,
       "last_content_change": "2026-09-21T09:04:42Z",
       "last_modified": null,
