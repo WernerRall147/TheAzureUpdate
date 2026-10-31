@@ -893,6 +893,210 @@
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
+      "change_type": "new",
+      "content_hash": "sha256:4415a718e307b7209d202175d14c1df78cadeb13e53f3435d280cda654690cf4",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "413085985",
+      "id": "agent-framework-releases-ai-foundry-413085985",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-14T19:10:54Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Agent Framework releases",
+      "source_tier": 2,
+      "source_url": "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.25.0",
+      "summary": "Changes: 1ab3430a4b6c8add9f08854c77544b0211a3f13c .NET: Dotnet: Add approval reuse considerations ( 9389) 563eb3a9965f7c144ad697223320411c02fa349a .NET: terminate chat completions SSE stream with data: [DONE] ( 8532) [ 8526 ] 4964bdd1b2d55b8137cbc1bc85840181af05bda0 .NET: Update version for 1.25.0 release ( 9388) 5abdadf262141b56f84111b89b607b2d6bd6ebaa .NET: Also include citations and error details in purview checks. ( 9375) 74db3c11201f32b919781ebbb3de4f643150510b .NET: Fix reasoning remnants and handoff bounce back ( 9174) 6b57b5f4cb15ddb87a2ca4f9d958a80dd0fc8455 .NET: Upgrade A2A packages to 1.0.0 preview3 ( 9386) 95feea605dbbe879f678602585c76fdb5a963b63 .NET: Automatically reject tool approval requests that never receive a response ( 9152)",
+      "supporting_urls": [],
+      "technology": "ai-foundry",
+      "title": "dotnet-1.25.0",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:99886cdda41e392d24113a9ee04cfd8c0edd76ccfee448d751d0e4115d7f0fe8",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "413650050",
+      "id": "agent-framework-releases-ai-foundry-413650050",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-15T09:53:40Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Agent Framework releases",
+      "source_tier": 2,
+      "source_url": "https://github.com/microsoft/agent-framework/releases/tag/python-1.22.0",
+      "summary": "[1.22.0] 2026 10 15 [!IMPORTANT] Python 3.15 support: The core framework and root agent framework package now support Python 3.15, but not every package, optional extra, or feature supports it yet because of upstream dependency constraints. Before upgrading, check the README for each package and extra you use. The Python README summarizes the currently known limitations. [!WARNING] Persisted state compatibility: This applies to persisted artifacts that contain serialized Agent Framework Content or streamed response update records. That includes chat and message histories; session stores and protocol snapshots when they embed those records; and workflow checkpoints only when their checkpoint state contains them. Plain session metadata and checkpoints without serialized messages, content, or response updates are unaffected. The 1.22 runtime can read records written by earlier releases, but pre 1.22 runtimes cannot read new records containing hosted or merge mode . Do not run old and new workers against the same affected store during a rolling deployment, and do not downgrade after 1.22 has written these records unless the new state is isolated or migrated. Added agent framework az...",
+      "supporting_urls": [],
+      "technology": "ai-foundry",
+      "title": "python-1.22.0",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:fc94f67f0ab81c8cfc0e055e6ed960efc6a5fbd79f6d48d083e3d26609c8ed1f",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "420939478",
+      "id": "agent-framework-releases-ai-foundry-420939478",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-22T17:05:37Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Agent Framework releases",
+      "source_tier": 2,
+      "source_url": "https://github.com/microsoft/agent-framework/releases/tag/python-1.23.0",
+      "summary": "[1.23.0] 2026 10 22 Added agent framework a2a : Add allowlisted forwarding of function invocation and client arguments from A2A request metadata ( 9193) agent framework core , agent framework orchestrations : Add an opt in synthetic trailing user turn for providers that return empty text after assistant ending prompts ( 8779) Changed agent framework , agent framework ag ui , agent framework core , agent framework declarative , agent framework foundry hosting , agent framework hosting mcp , agent framework lab : [BREAKING] Add the MCP 2.x compatibility foundation and migrate MCP transports, errors, schemas, and lifecycle handling ( 9236) agent framework ag ui , agent framework core : [BREAKING] Require an explicit AG UI authorization scope or single user declaration for endpoint registration ( 9413) agent framework tools : [BREAKING] Rename Docker shell extra run args to unsafe extra run args and make its trust requirements explicit ( 9453) agent framework tools : Raise the psutil floor to the first release with Windows ABI3 wheels for the supported Python range. agent framework , agent framework core : Advance the exact Core pin and standard install dependency cohort to the pack...",
+      "supporting_urls": [],
+      "technology": "ai-foundry",
+      "title": "python-1.23.0",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:55dbe4d848baf1e9d1c7d7fd20c38b58fe8d6cb007e7b053cb9ddcf673d1d8b7",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "421945020",
+      "id": "agent-framework-releases-ai-foundry-421945020",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-23T14:32:13Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Agent Framework releases",
+      "source_tier": 2,
+      "source_url": "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.26.0",
+      "summary": "Changes: 9c8a3514a15a702f81bfda456d80c7ccaa4d2712 Update package versions for release ( 9650) c3b9f22d64fd86e8133395555a1fa4aa22f745e0 Add ACGS to the Python community projects ( 9618) 71cf48cb4019bc503c7ceb61420cc3d836250790 Python: Honor allow multiple tool calls in AnthropicClient when tool choice is unset ( 8980) ea32b6db9e9b4b434a86496bacd9cc6dd0422a69 Python: compose Copilot session hooks correctly ( 9649) 678c6616aa4c73ecfc28cc6fc119a3928ba04024 .NET: Fix AG UI sample prerequisites and troubleshooting paths ( 9620) 8730cb1974857e2264f874a258623db1303cc2ac .NET: Log a warning when an unsupported declarative action is skipped ( 8056) [ 8040 ] 9581926deec6a0473a68797153e98d44da74d09a .NET: Correct endpoint override instructions in Responses samples ( 9639) 9c53b5f44658cc7839d0f1aefe580152edaba970 Python: Refresh coding standards and Copilot review guidance ( 9637) 3b725b3b0ffe09ff00d57b31cc179d20d12a1e49 Python: fix(core): define EdgeGroup's builtins.type alias at module scope ( 9614) a8e284ca8ce7c2a6b4a4641ef35e131d75a5cda3 Python: Add 9472 to 1.23.0 changelog ( 9610)",
+      "supporting_urls": [],
+      "technology": "ai-foundry",
+      "title": "dotnet-1.26.0",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:708076d68cc8020e777c27bace6601fffa855c93f78776b0029ce4ceffead908",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "428956413",
+      "id": "agent-framework-releases-ai-foundry-428956413",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-30T21:52:13Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Agent Framework releases",
+      "source_tier": 2,
+      "source_url": "https://github.com/microsoft/agent-framework/releases/tag/python-1.24.0",
+      "summary": "[1.24.0] 2026 10 30 [!WARNING] Redis context index migration: The beta RedisContextProvider now preserves exact scope identity and rejects the legacy raw scope index schema. Delete the old context index and its context hashes, let the provider create a new index, and re ingest the context data. overwrite index=True does not migrate incompatible indexes. [!IMPORTANT] Python support: Python 3.11 or later is now the supported baseline, subject to package specific upper limits. Python 3.10 installation remains permitted by Requires Python in this release, but compatibility is not guaranteed. The next release will also remove Python 3.10 installation eligibility from Requires Python . Upgrade to Python 3.11 or later as soon as possible. Added agent framework core : Add an explicit default approval mode for local MCP tools and prompts outside the per tool approval lists, and warn when never require approval leaves the default implicit while preserving the existing fallback ( 9828) agent framework core : Add the shared microsoft.agent framework telemetry resource attribute across logs, traces, and metrics while preserving explicit resource overrides ( 9589) agent framework core : Add e...",
+      "supporting_urls": [],
+      "technology": "ai-foundry",
+      "title": "python-1.24.0",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:49d30ed07ff901ed1f634b05f90da9acaac977ce8d7fafd2e768b72d3a338d99",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "429383862",
+      "id": "agent-framework-releases-ai-foundry-429383862",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-30T18:55:48Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Agent Framework releases",
+      "source_tier": 2,
+      "source_url": "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.27.0",
+      "summary": "[1.27.0] 2026 10 30 Added skills: Add a .NET consumer skill for building with Agent Framework ( 9651 by @westey m). .NET, CI: Add a script to bump the .NET release version ( 9894 by @baywet). Changed .NET, AgentServer: [BREAKING] Update AgentServer dependencies ( 9721 by @rogerbarreto). Migration: In Foundry hosted applications, replace builder.Services.AddFoundryResponses(...) with builder.AddFoundryResponses(...) so response and task storage use the same configuration bound identity and endpoint. The IServiceCollection overload remains supported for local or non hosted use. If you pin SDK dependencies directly, align Azure.AI.Projects and Azure.AI.Extensions.OpenAI to 3.0.0 beta.5 , and Azure.AI.AgentServer.Core , Azure.AI.AgentServer.Invocations , and Azure.AI.AgentServer.Responses to 1.0.0 beta.30 , 1.0.0 beta.7 , and 1.0.0 beta.9 , respectively. Align Azure.Core to 1.63.0 , System.ClientModel to 1.16.0 , and Microsoft.Identity.Client.Extensions.Msal to 4.90.0 . For code using the affected SDK APIs directly, replace string storage ETags with Azure.ETag ( ETag ifMatch = default in state store overrides), stream.InternalMetadata with stream.PersistedMetadata , stream.Checkpoin...",
+      "supporting_urls": [],
+      "technology": "ai-foundry",
+      "title": "dotnet-1.27.0",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "updated",
       "content_hash": "sha256:46e6fa7b62e331e6a9ae6727be9b383955036b71374f92e7cf741b2b46b263d3",
       "content_type": "update",
@@ -1579,6 +1783,47 @@
       "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
     },
     {
+      "change_type": "pricing",
+      "content_hash": "sha256:9c6d469da4219be6607ecbc9d167c86262732e9944ad6246b722452ab20bf2de",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "consumption",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "577260",
+      "id": "azure-updates-ai-foundry-577260",
+      "lifecycle": "ga",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-27T17:19:43Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Launched",
+        "AI + machine learning",
+        "Microsoft Foundry",
+        "Feature"
+      ],
+      "recommended_action": "Confirm regional availability and evaluate it against active customer architectures.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Azure Updates",
+      "source_tier": 1,
+      "source_url": "https://azure.microsoft.com/updates?id=577260",
+      "summary": "Microsoft Foundry now brings Claude models into Azure Cost Management alongside the rest of your Foundry spend, generally available. Until now, Claude charges appeared under SaaS rather than under the Foundry resource used to deploy them, and Claude deplo",
+      "supporting_urls": [],
+      "technology": "ai-foundry",
+      "title": "[Launched] Generally Available: Cost management and tagging for Claude models in Microsoft Foundry",
+      "waf_pillars": [
+        "cost-optimization",
+        "operational-excellence"
+      ],
+      "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
+    },
+    {
       "change_type": "updated",
       "content_hash": "sha256:dce53e3a006ef857f26610099c2d0e93cd17795fa712456bd3421cd3e6095a40",
       "content_type": "docs",
@@ -1824,6 +2069,43 @@
       "supporting_urls": [],
       "technology": "aks",
       "title": "Release Notes 2026-09-25",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency",
+        "reliability"
+      ],
+      "why_it_matters": "This can create a customer delivery blocker or migration requirement."
+    },
+    {
+      "change_type": "deprecated",
+      "content_hash": "sha256:ebfdf33f15576f2f9b82aa6a88f7670f58aa43581b08bce8cf9f4c58288e909c",
+      "content_type": "retirement",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "426108146",
+      "id": "aks-releases-aks-426108146",
+      "lifecycle": "deprecated",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-27T23:42:35Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Identify affected workloads, verify the effective date, and create a tested migration action.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure Kubernetes Service releases",
+      "source_tier": 1,
+      "source_url": "https://github.com/Azure/AKS/releases/tag/2026-10-25",
+      "summary": "Release Notes 2026 10 25 Monitor the release status by regions at AKS Release Tracker. This release is titled v20261025 . Announcements of upcoming changes and retirements Starting on June 1, 2027, AKS automatically upgrades any cluster that stays on an unsupported Kubernetes version after its 60 day platform support grace period ends. What\u2019s changing: AKS will be able to automatically initiate upgrades to help keep clusters supported, secure, and aligned with platform lifecycle requirements. How to prepare now: Review upgrade channels, maintenance windows, and workload readiness so your clusters can absorb automated upgrade events with minimal disruption. See: Platform initiated upgrades. Starting with Kubernetes 1.38, node pools that use the Ubuntu OS SKU will default to Ubuntu 26.04. To continue using Ubuntu 24.04 on Kubernetes 1.38, specify the Ubuntu2404 OS SKU. For more information, see Upgrade the OS version for your AKS node pools. Release notes Kubernetes versions Kubernetes version 1.37 is now generally available and designated as a Long Term Support (LTS) version. Kubernetes 1.36 is now the default version for new clusters. Kubernetes patch versions 1.37.1, 1.36.5, 1....",
+      "supporting_urls": [],
+      "technology": "aks",
+      "title": "Release 2026-10-25",
       "waf_pillars": [
         "operational-excellence",
         "performance-efficiency",
@@ -2349,6 +2631,41 @@
       "why_it_matters": "This may change the workload security posture or required controls."
     },
     {
+      "change_type": "new",
+      "content_hash": "sha256:89233a20cce3224db3fd556a5edb9ef075d527ca022b90e401a9801ad7abdf5b",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "428472408",
+      "id": "apim-releases-apim-428472408",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-29T22:50:22Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure API Management releases",
+      "source_tier": 1,
+      "source_url": "https://github.com/Azure/API-Management/releases/tag/release-service-2026-10",
+      "summary": "Announcements / highlights Improved gateway reliability. Fixed stale backend connection reuse, TLS certificate initialization issues during gateway restarts, and false capacity related HTTP 429 responses. Internal health probes are no longer disrupted by capacity throttling or connection rebalancing. More flexible WebSocket routing and load balancing. Added wildcard and URL template matching for routing multiple paths through a single WebSocket API, plus support for distributing connections across backend pools. Enhanced backend certificate validation. Added SHA 256 and SHA 512 certificate thumbprints, issuer only pinning without a common name requirement, and matching against intermediate certificates in the available chain. Expanded messaging controls. Added configurable Event Hubs logging message size limits and Service Bus correlation ID, reply to, and scheduled enqueue time properties. More reliable caching and API updates. Fixed truncated cached responses and addressed API import/update failures involving operation ID changes and HTTP method/path conflicts. Stronger credential protection and request validation. Improved secret redaction in API exports and import errors, ti...",
+      "supporting_urls": [],
+      "technology": "apim",
+      "title": "Release - API Management service: October, 2026",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "updated",
       "content_hash": "sha256:ef7ffedc517862f655d55a6e39d39695dda49173d2f28d8d87bc206a8dd66845",
       "content_type": "docs",
@@ -2424,6 +2741,39 @@
         "performance-efficiency"
       ],
       "why_it_matters": "A preview can inform roadmap and technical validation, but is not a production commitment."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:5bbc598d6e2389db8aec8ba3cb158fa7d396e34de755b3f28d60fc5404e366ba",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/22/time-zone-updates-app-service-linux",
+      "id": "app-service-blog-app-service-07a3fd2b754a",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-22T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/22/time-zone-updates-app-service-linux.html",
+      "summary": "Update (25 October 2026): The Java rollout is now complete on Standard. Rollout of updated built-in Linux images for the time-zone rule changes in IANA time zone database 2026e is complete on Latest and Standard for all supported runtimes covered below, including Java. No channel change is needed. The PHP 8.2, PHP 8.3, and EOL exclusions described below remain unchanged.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": "Time Zone Updates on Azure App Service for Linux",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
       "change_type": "updated",
@@ -2533,6 +2883,212 @@
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
+      "change_type": "security",
+      "content_hash": "sha256:5e6af04dbd14e9d18f8ac005b8fb6bd4b575d28252835815aa2fe013d45722c6",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/26/dotnet-brotli-security-update-app-service-linux",
+      "id": "app-service-blog-app-service-424325cdbcd6",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-26T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/26/dotnet-brotli-security-update-app-service-linux.html",
+      "summary": "Update (27 October 2026): Rollout of the updated built-in .NET images is complete on both the Latest and Standard Platform Release Channels for Azure App Service on Linux. Completion across all deployment stages and clouds was confirmed on 27 October 2026.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": ".NET Brotli Security Updates on Azure App Service for Linux",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:d5e782a11b58b6fe21c10bf132a886ef41ab8c631eb4a0ab393416696188a668",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/23/time-zone-runtime-certificate-updates-azure-functions",
+      "id": "app-service-blog-app-service-47d8939d5066",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-23T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/23/time-zone-runtime-certificate-updates-azure-functions.html",
+      "summary": "Update (26 October 2026): The applicable time-zone, Node.js, and eMudhra / emSign certificate update rollouts are now complete for Windows Azure Functions on Consumption, App Service plans, and Elastic Premium through the App Service Windows patching process. The applicable time-zone, Node.js, Python, and certificate updates remain complete for Linux Azure Functions on Consumption, App Service plans, Elastic Premium, and Flex Consumption, and for Azure Static Web Apps managed functions.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": "Azure Functions: Time Zone, Node.js, Python, and Certificate Updates",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:dcde7549ed01a498ba05b7f53853bbd96d136bac601093a51a2c0f5aa9dcfc35",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/22/emudhra-certificate-issue-app-service-linux",
+      "id": "app-service-blog-app-service-53282f491f2e",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-22T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/22/emudhra-certificate-issue-app-service-linux.html",
+      "summary": "Update (25 October 2026): The Java rollout is now complete on Standard. Rollout of patched built-in Linux images for the eMudhra / emSign CA certificate security incident is complete on Latest and Standard for all runtimes listed below, including Java. No channel change is needed. The PHP 8.2 and EOL exclusions described below remain unchanged.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": "eMudhra / emSign Certificate Security Updates on Azure App Service for Linux",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:dc8eb23cdbc08620d7c5421155cca334ae1f8d35399186ecf6fdd14d26b4c6e7",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/22/emudhra-certificate-issue-app-service-windows",
+      "id": "app-service-blog-app-service-57e4dd079a06",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-22T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/22/emudhra-certificate-issue-app-service-windows.html",
+      "summary": "Update (25 October 2026): The rollout of Windows operating-system certificate updates for the eMudhra / emSign CA certificate security incident is complete on Azure App Service for Windows. Application-managed certificate bundles and trust stores still require separate review as described below.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": "eMudhra / emSign Certificate Security Updates on Azure App Service for Windows",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:559b8c0044100d3b97ab1e5f285cf1a4270b97666cbe50302f534b3212c6ca6e",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/26/dotnet-brotli-security-update-app-service-windows",
+      "id": "app-service-blog-app-service-60848db97e20",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-26T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/26/dotnet-brotli-security-update-app-service-windows.html",
+      "summary": "Update (27 October 2026): Rollout of the updated built-in .NET runtimes on Azure App Service for Windows is complete through Safe Deployment Practices (SDP).",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": ".NET Brotli Security Updates on Azure App Service for Windows",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:1557f4a62c8feeb38c756acda030a1a32942b12c9fc162da39361e318c8c0be9",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/23/time-zone-updates-app-service-windows",
+      "id": "app-service-blog-app-service-68a72b60e8d9",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-23T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/23/time-zone-updates-app-service-windows.html",
+      "summary": "Update (26 October 2026): The rollout of Windows operating-system time-zone updates on Azure App Service for Windows is complete, following accelerated Safe Deployment Practices (SDP). Application-managed time-zone data still requires separate review as described below.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": "Time Zone Updates on Azure App Service for Windows",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "updated",
       "content_hash": "sha256:94313159b57890e7d056021953ff357b9c38a8eee0f92af30a799a3369cd0186",
       "content_type": "update",
@@ -2564,6 +3120,74 @@
         "performance-efficiency"
       ],
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:a92f8c82dda4865c30a6bc6ee405bab50edb5c62100904ec4a13eb5928431779",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/22/node-emergency-release-app-service-windows",
+      "id": "app-service-blog-app-service-80cbdc0137cd",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-22T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/22/node-emergency-release-app-service-windows.html",
+      "summary": "Update (26 October 2026): The rollout of updated built-in Node.js runtimes on Azure App Service for Windows is complete, following accelerated Safe Deployment Practices (SDP). Verify your app\u2019s running version and review pinned runtime settings as described below.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": "Emergency Node.js Runtime Updates on Azure App Service for Windows",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:4d2f61c125682654fde08f2cac0ae88fb8d7041e6f6ab2f9ee9d01920f054b36",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/26/dotnet-brotli-security-update-azure-functions",
+      "id": "app-service-blog-app-service-a2b53c2aa61c",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-26T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/26/dotnet-brotli-security-update-azure-functions.html",
+      "summary": "Update (27 October 2026): The platform-managed .NET security update rollout is complete for Linux Azure Functions, Azure Static Web Apps managed functions, and Windows function apps on Consumption, App Service plans, and Elastic Premium.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": "Azure Functions: .NET Brotli Security Updates",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
     },
     {
       "change_type": "new",
@@ -2726,6 +3350,39 @@
       "supporting_urls": [],
       "technology": "app-service",
       "title": "Azure App Service on Azure Stack Hub 26R1 Released",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:b114a7a6c9d944f5218870b91b9ff0dbd9227131a1f4da19ff0e900f329d42eb",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://azure.github.io/AppService/2026/10/22/node-python-emergency-release-app-service-linux",
+      "id": "app-service-blog-app-service-fa5c517c2c11",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-22T00:00:00Z",
+      "publisher": "Microsoft",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure App Service product team blog",
+      "source_tier": 2,
+      "source_url": "https://azure.github.io/AppService/2026/10/22/node-python-emergency-release-app-service-linux.html",
+      "summary": "Update (22 October 2026): Rollout of the updated built-in Node.js and Python images is complete on both the Latest and Standard Platform Release Channels for Azure App Service on Linux.",
+      "supporting_urls": [],
+      "technology": "app-service",
+      "title": "Emergency Node.js and Python Runtime Updates on Azure App Service for Linux",
       "waf_pillars": [
         "operational-excellence",
         "performance-efficiency"
@@ -3167,6 +3824,43 @@
       "supporting_urls": [],
       "technology": "azure-sql",
       "title": "Refactor your database with SQL projects in VS Code",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:6067f76a6beea26c702f7639ffc77753edff81bbfe8a6d6b54b3b9c09cc40ad3",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/azure-sql/?p=7881",
+      "id": "azure-sql-blog-azure-sql-6c2aa16595b7",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-30T16:52:56Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Azure SQL",
+        "T-SQL",
+        "hyperscale"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure SQL engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/azure-sql/is-azure-sql-database-hyperscale-distributed-sql/",
+      "summary": "In my last post, I broke down the Socrates paper, the research that became Azure SQL Database Hyperscale. Writing it made me want to tackle a question I think trips a lot of people up when they\u2019re choosing a database: is Azure SQL Database Hyperscale \u201cdistributed SQL\u201d? It\u2019s a fair question. \u201cDistributed SQL\u201d has become [\u2026]",
+      "supporting_urls": [],
+      "technology": "azure-sql",
+      "title": "Is Azure SQL Database Hyperscale \u201cdistributed SQL\u201d?",
       "waf_pillars": [
         "operational-excellence",
         "performance-efficiency"
@@ -3771,6 +4465,44 @@
     },
     {
       "change_type": "updated",
+      "content_hash": "sha256:a07b360b6bf8514b7095fe7f427f4b224d7b5918c0737d7624c751201dae3b5e",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/azure-sql/?p=7861",
+      "id": "azure-sql-blog-azure-sql-d30d0b0fdb35",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-25T11:23:29Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Azure SQL",
+        "Hyperscale",
+        "Azure SQL database",
+        "paper"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure SQL engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/azure-sql/the-paper-that-split-the-database-in-four-inside-azure-sql-database-hyperscale-aka-socrates/",
+      "summary": "Under the Hood: The Research Behind Microsoft SQL, part 1 The Microsoft SQL team is always innovating. They do this in day-to-day efforts, but there are also brand new efforts that are constantly being explored, investigated, tested, and researched. Our engineering team partners closely with MSR (Microsoft Research) on some of these efforts. The team [\u2026]",
+      "supporting_urls": [],
+      "technology": "azure-sql",
+      "title": "The paper that split the database in four: inside Azure SQL Database Hyperscale, aka Socrates",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
       "content_hash": "sha256:90d45235119361b30316c36143803dac654a58f70fea6bad9f725adb91115879",
       "content_type": "update",
       "csa_outcomes": [
@@ -4093,7 +4825,49 @@
     },
     {
       "change_type": "updated",
-      "content_hash": "sha256:615ca33a7d81789fb20edc0b90470faf412c249a0f39efd1922caea3fb7e26d2",
+      "content_hash": "sha256:f6a718e58a7683749ed3bcf9a90b72300891c854ad1c9c2cf8b97681d5f0fde2",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/azure-sql/?p=7808",
+      "id": "azure-sql-blog-azure-sql-faeb1f051c91",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-15T05:21:10Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Azure SQL",
+        "Fabric SQL Database",
+        "Managed Instance",
+        "T-SQL",
+        "Azure SQL database",
+        "Azure SQL Managed Instance",
+        "Fabric SQL",
+        "SQL Server"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure SQL engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/azure-sql/canadas-2026-time-zone-updates-guidance-for-microsoft-sql/",
+      "summary": "Affected locations in British Columbia, Alberta, and Manitoba will not turn their clocks back at 02:00 local time on November 1, 2026. They will remain at UTC\u221207:00, UTC\u221206:00, and UTC\u221205:00, respectively. Microsoft\u2019s interim guidance for British Columbia, Alberta, and Manitoba describes the new Windows time zones and temporary workarounds. SQL Server on Windows requires the [\u2026]",
+      "supporting_urls": [],
+      "technology": "azure-sql",
+      "title": "Canada\u2019s 2026 time zone updates: guidance for Microsoft SQL",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:566190c95912279111ead31791d7d88bcd1c15885477caa42e08983f2aebcf84",
       "content_type": "docs",
       "csa_outcomes": [
         "skilling"
@@ -4103,7 +4877,7 @@
       "external_id": "https://learn.microsoft.com/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new?view=azuresql",
       "id": "azure-sql-whats-new-azure-sql-8999052287d7",
       "lifecycle": "unknown",
-      "observed_at": "2026-10-02T09:53:07Z",
+      "observed_at": "2026-10-31T09:46:24Z",
       "published_at": null,
       "publisher": "Microsoft",
       "raw_categories": [
@@ -4116,7 +4890,7 @@
       "source_name": "Azure SQL Database what's new",
       "source_tier": 1,
       "source_url": "https://learn.microsoft.com/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new?view=azuresql",
-      "summary": "Applies to: Azure SQL Database Azure SQL Database Azure SQL Managed Instance SQL Server on Azure VMs This article summarizes the documentation changes associated with new features and improvements in the recent releases of Azure SQL Database. For more information about Azure SQL Database, see What is Azure SQL Database? Tip Deploy Azure SQL Database for free, for the life of your Azure subscription. This free offer provides up to ten free General Purpose databases, each with 100,000 vCore seconds of compute, every month. For more announcements, discussion, and community content, see the Azure SQL Database blog. Preview The following table lists the features of Azure SQL Database that are currently in preview. Note Features currently in preview are available under supplemental terms of use, review for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. Azure SQL Database provides previews to give you a chance to evaluate and share feedback with the product group on features before they become generally available (GA). | Feature | Details | | | | | AES keys for transparent data encryption | The TDE protector...",
+      "summary": "Applies to: Azure SQL Database Azure SQL Database Azure SQL Managed Instance SQL Server on Azure VMs This article summarizes the documentation changes associated with new features and improvements in the recent releases of Azure SQL Database. For more information about Azure SQL Database, see What is Azure SQL Database? Tip Deploy Azure SQL Database for free, for the life of your Azure subscription. This free tier provides up to ten free General Purpose databases, each with 100,000 vCore seconds of compute, every month. For more announcements, discussion, and community content, see the Azure SQL Database blog. Preview The following table lists the features of Azure SQL Database that are currently in preview. Note To review the legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability, see supplemental terms of use. Azure SQL Database provides previews to give you a chance to evaluate and share feedback with the product group on features before they become generally available (GA). | Feature | Details | | | | | AES keys for transparent data encryption | The TDE protector for Azure SQL Database can now be backed by...",
       "supporting_urls": [],
       "technology": "azure-sql",
       "title": "What's new in Azure SQL Database?",
@@ -4827,6 +5601,123 @@
       "why_it_matters": "A preview can inform roadmap and technical validation, but is not a production commitment."
     },
     {
+      "change_type": "updated",
+      "content_hash": "sha256:37a264f14512877bdee5bccfca9a7c29962c446144deb683e3867cf2e1bd7e90",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "577491",
+      "id": "azure-updates-azure-sql-577491",
+      "lifecycle": "public-preview",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-30T17:16:27Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "In preview",
+        "Databases",
+        "Hybrid + multicloud",
+        "Azure SQL Database",
+        "Feature"
+      ],
+      "recommended_action": "Review preview terms, regions, limitations, and support before proposing a customer pilot.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Azure Updates",
+      "source_tier": 1,
+      "source_url": "https://azure.microsoft.com/updates?id=577491",
+      "summary": "With database-level managed identity in Azure SQL Database, you can use a user-assigned managed identity for each database to query files in Azure Blob Storage and Azure Data Lake Storage Gen2 through external tables and OPENROWSET. You can authenticate t",
+      "supporting_urls": [],
+      "technology": "azure-sql",
+      "title": "[In preview] Public Preview: Support database-level managed identity (including FIC) in Create Database Scoped Credential T-SQL",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "A preview can inform roadmap and technical validation, but is not a production commitment."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:f14793a61cbf881fd19e7b8c87ed3d000782f0752bcae36a75ddd01979bfb121",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "576716",
+      "id": "azure-updates-cosmos-db-576716",
+      "lifecycle": "ga",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-21T17:13:16Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Launched",
+        "Databases",
+        "Internet of Things",
+        "Azure Cosmos DB",
+        "Feature"
+      ],
+      "recommended_action": "Confirm regional availability and evaluate it against active customer architectures.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Microsoft Azure Updates",
+      "source_tier": 1,
+      "source_url": "https://azure.microsoft.com/updates?id=576716",
+      "summary": "Safe Key Rotation for Azure Cosmos DB is now generally available. You can view timestamp metadata showing when each account key was last used, helping you identify active keys before rotating or retiring credentials.This visibility helps reduce the risk o",
+      "supporting_urls": [],
+      "technology": "cosmos-db",
+      "title": "[Launched] Generally Available: Azure Cosmos DB Safe Key Rotation",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:ca04f73dbddbe9cc7aa9d100f0810ff16289e866a84edeb6564a2b8b74dc55cb",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/cosmosdb/?p=13086",
+      "id": "cosmos-db-blog-cosmos-db-00b9667202ce",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-23T12:33:30Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Azure Cosmos DB for NoSQL"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure Cosmos DB engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/cosmosdb/from-local-development-to-ci-workflows-with-the-azure-cosmos-db-emulator/",
+      "summary": "When you change a database-backed feature, a successful HTTP response isn\u2019t enough. You need to know that the write reached storage, the application retrieved the updated record, and the next answer reflects it. The Azure Cosmos DB Emulator runs locally in Docker and lets us use the SDK we\u2019ll use in production. We\u2019ll develop against [\u2026]",
+      "supporting_urls": [],
+      "technology": "cosmos-db",
+      "title": "From Local Development to CI Workflows with the Azure Cosmos DB Emulator",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "security",
       "content_hash": "sha256:0893b195d5bff80c6fabf0384ab3da2c7ae1fd8c40bbd7d84f0f103142982168",
       "content_type": "security",
@@ -4930,6 +5821,41 @@
       "supporting_urls": [],
       "technology": "cosmos-db",
       "title": "Migrating Elasticsearch Mappings to Azure Cosmos DB",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:c051aa653b0832260ba8f29441fe2b3cd2eef3e058a4ffbb803008294b923030",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/cosmosdb/?p=13148",
+      "id": "cosmos-db-blog-cosmos-db-317e0d214000",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T11:00:02Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Azure Cosmos DB for NoSQL"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure Cosmos DB engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/cosmosdb/agentic-ci-cd-with-azure-cosmos-db-isolated-environments-for-a-swarm-of-ai-agents/",
+      "summary": "Give each coding task its own disposable database environment, then merge the reviewed changes \u2013 not the test database. When parallel coding agents share a database In From Local Development to CI Workflows with the Azure Cosmos DB Emulator, we used FleetCharge to make local development and CI repeatable. Start the emulator, seed known data, [\u2026]",
+      "supporting_urls": [],
+      "technology": "cosmos-db",
+      "title": "Agentic CI/CD with Azure Cosmos DB: Isolated Environments for a Swarm of AI Agents",
       "waf_pillars": [
         "operational-excellence",
         "performance-efficiency"
@@ -5166,6 +6092,41 @@
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
+      "change_type": "updated",
+      "content_hash": "sha256:ae7f430ec1ea620b34aa81a50eabcb7f6952d513bf9264ffd0317f3e0850b202",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/cosmosdb/?p=13122",
+      "id": "cosmos-db-blog-cosmos-db-4f1beeaf5871",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-23T17:18:03Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Azure Cosmos DB"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure Cosmos DB engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/cosmosdb/code-with-cosmos/",
+      "summary": "Follow an AI application from a blank folder to a system built for production AI application development often starts with a promising prototype. A real application has to do more than produce an answer: it needs current operational data, the ability to take actions and complete transactions, memory that carries across sessions, coordination between specialized [\u2026]",
+      "supporting_urls": [],
+      "technology": "cosmos-db",
+      "title": "Code with Cosmos: Build a Production-Ready AI App in Four Episodes",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "new",
       "content_hash": "sha256:9b1a504fd1e46ab0444ea7bfb910bfd7bc3b169231566458f80c171f142caa07",
       "content_type": "update",
@@ -5200,6 +6161,78 @@
       "supporting_urls": [],
       "technology": "cosmos-db",
       "title": "Azure Cosmos DB Shell is now available in the Azure portal",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:e10f22983923113380b3ac6335ec5a7204b120aa81cf6f917daf6f1c01178cbe",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/cosmosdb/?p=13058",
+      "id": "cosmos-db-blog-cosmos-db-57aa979758e4",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-15T13:38:16Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "AI",
+        "Azure Cosmos DB Tools",
+        "Azure Cosmos DB"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure Cosmos DB engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/cosmosdb/ai-agents-meet-the-azure-cosmos-db-vnext-emulator/",
+      "summary": "Over a typical 2 day window, we record 10 times as many emulator sessions lasting more than 30 minutes for vNext as for the legacy emulator. Our bet is that agentic development is helping drive the difference! The appeal is straightforward: coding agents need a database they can run anywhere. They also need a database [\u2026]",
+      "supporting_urls": [],
+      "technology": "cosmos-db",
+      "title": "AI Agents: Meet the Azure Cosmos DB vNext Emulator",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:9cefb8191b40ea9ca2f4f299ff3f6138d6229971b1ec8945f646b46442d9bce9",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/cosmosdb/?p=13130",
+      "id": "cosmos-db-blog-cosmos-db-6324fb40cd0b",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-27T13:31:06Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Azure Cosmos DB for NoSQL"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure Cosmos DB engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/cosmosdb/inspecting-local-data-with-azure-cosmos-db-shell/",
+      "summary": "Explore local data from the terminal with Azure Cosmos DB Shell. Connect to the emulator, inspect FleetCharge documents, run queries, and point-read depot partitions.",
+      "supporting_urls": [],
+      "technology": "cosmos-db",
+      "title": "Inspecting Local Data with Azure Cosmos DB Shell",
       "waf_pillars": [
         "operational-excellence",
         "performance-efficiency"
@@ -5436,6 +6469,50 @@
         "performance-efficiency"
       ],
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:4a2050e3115b889b8a96be6e01c197f4589c0e790cb4b6723101f6fa923cdd3b",
+      "content_type": "security",
+      "csa_outcomes": [
+        "architecture",
+        "blocker-mitigation",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://devblogs.microsoft.com/cosmosdb/?p=12355",
+      "id": "cosmos-db-blog-cosmos-db-bee128e8bdbc",
+      "lifecycle": "private-preview",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-21T14:00:23Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "Azure Cosmos DB for NoSQL",
+        "Compliance",
+        "Security",
+        "azurecosmosdb",
+        "Entra ID",
+        "Safe Key Rotation"
+      ],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure Cosmos DB engineering blog",
+      "source_tier": 2,
+      "source_url": "https://devblogs.microsoft.com/cosmosdb/announcing-public-preview-of-safe-key-rotation-in-azure-cosmos-db/",
+      "summary": "In our previous post, we introduced the private preview of Safe Key Rotation, a feature that helps Azure Cosmos DB customers avoid service disruptions during key rotations. By showing when each account key was last used, it helps teams make informed decisions before rotating keys or moving to Entra ID. This capability addresses a common challenge: keys that appear unused may still support critical applications, which can lead to unexpected outages if they are rotated too [\u2026]",
+      "supporting_urls": [],
+      "technology": "cosmos-db",
+      "title": "Announcing GA of Safe Key Rotation in Azure Cosmos DB",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
     },
     {
       "change_type": "updated",
@@ -5904,6 +6981,78 @@
     },
     {
       "change_type": "new",
+      "content_hash": "sha256:c73f3c9dfa6adeae48dfe4c1a68f80b8b2db97e7c5e33b451ea82995a9c9f8f6",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "425712223",
+      "id": "cosmos-dotnet-releases-cosmos-db-425712223",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-27T16:26:28Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "release"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure Cosmos DB .NET SDK releases",
+      "source_tier": 2,
+      "source_url": "https://github.com/Azure/azure-cosmos-dotnet-v3/releases/tag/3.63.3",
+      "summary": "See changelog for details. NuGet: https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.63.3",
+      "supporting_urls": [],
+      "technology": "cosmos-db",
+      "title": "3.63.3",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:cfe072e3c9423745b143443cbd87ee05797960f2e0ebfb1febf52c29c40e21b0",
+      "content_type": "release-note",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "425717944",
+      "id": "cosmos-dotnet-releases-cosmos-db-425717944",
+      "lifecycle": "public-preview",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-27T16:31:57Z",
+      "publisher": "Microsoft",
+      "raw_categories": [
+        "pre-release"
+      ],
+      "recommended_action": "Review preview terms, regions, limitations, and support before proposing a customer pilot.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "Azure Cosmos DB .NET SDK releases",
+      "source_tier": 2,
+      "source_url": "https://github.com/Azure/azure-cosmos-dotnet-v3/releases/tag/3.64.0-preview.3",
+      "summary": "See changelog for details. NuGet: https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.64.0 preview.3",
+      "supporting_urls": [],
+      "technology": "cosmos-db",
+      "title": "3.64.0-preview.3",
+      "waf_pillars": [
+        "operational-excellence",
+        "performance-efficiency"
+      ],
+      "why_it_matters": "A preview can inform roadmap and technical validation, but is not a production commitment."
+    },
+    {
+      "change_type": "new",
       "content_hash": "sha256:f9f23577879e0c56cb5b913606424f5fed817fba5e83b3f8584985204d62d412",
       "content_type": "update",
       "csa_outcomes": [
@@ -6261,6 +7410,42 @@
     },
     {
       "change_type": "updated",
+      "content_hash": "sha256:0cf6f37ad0d42f03b31b425b0dcf19adb8569c970c1aac6bf4b23139c2e239c1",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-11-26-build-shared-workflows-for-your-team-with-copilot-automations",
+      "id": "github-changelog-github-0f9e3af0b07d",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T15:35:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "copilot",
+        "universe26"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations",
+      "summary": "Shared Copilot Automations are rolling out, enabling teams to build and maintain AI-powered workflows together. With Copilot Automations, you can combine prompts, triggers, and tools to design workflows around the\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Build shared workflows for your team with Copilot Automations",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "updated",
       "content_hash": "sha256:e85a07042fbeeaa96e3dffd87a05e1a2f5930503905a50556a9b88d189d41701",
       "content_type": "update",
       "csa_outcomes": [
@@ -6550,6 +7735,41 @@
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
+      "change_type": "updated",
+      "content_hash": "sha256:0ca875f0255e1203469bf8ec7fa50edfb8d1c2ecff18a48836d23ca667f1ee99",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-10-29-webhook-ip-ranges-added-to-the-meta-api",
+      "id": "github-changelog-github-2746f11e7a8e",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-29T17:14:38Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "ecosystem & accessibility"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-29-webhook-ip-ranges-added-to-the-meta-api",
+      "summary": "We\u2019re adding IP ranges for GitHub webhook deliveries on github.com. The Meta API now includes these additional ranges in the hooks field. If you maintain a static network allowlist for\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Webhook IP ranges added to the Meta API",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "new",
       "content_hash": "sha256:1fa88c8c78834df6284351d274bc1804ae46cdc8c1cebe17c03f40933bb72c44",
       "content_type": "update",
@@ -6698,6 +7918,42 @@
         "security"
       ],
       "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:2f86e8fc06688e806db3e68e01c86cb6cbca3646a925463c560a33c24e6b461c",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-11-26-github-intelligence-puts-your-code-context-and-history-to-work",
+      "id": "github-changelog-github-44e340e26d72",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T15:40:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "copilot",
+        "universe26"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work",
+      "summary": "Agents should understand more than your codebase\u2014they should understand how your team works. Your preferences, repository conventions, skills, and custom instructions guide how changes should be made, while code in\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "GitHub intelligence puts your code, context, and history to work",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
       "change_type": "deprecated",
@@ -6849,6 +8105,42 @@
       "why_it_matters": "This may change the workload security posture or required controls."
     },
     {
+      "change_type": "new",
+      "content_hash": "sha256:4e7a44d19b32264614135882e098a9b266ab02ea507bcc073ec704691e0665ce",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-11-26-github-enterprise-now-includes-access-to-github-copilot",
+      "id": "github-changelog-github-52eae160f737",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T15:50:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "copilot",
+        "universe26"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot",
+      "summary": "Enterprises working with a GitHub or Microsoft account team can now get Copilot included with GitHub Enterprise for every licensed user. Previously, you had to manage two things: how many\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "GitHub Enterprise now includes access to GitHub Copilot",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "security",
       "content_hash": "sha256:ff26934a696443599941668ed96bb1a127f5f93c5f0c31af46ab5fabe2af0ca6",
       "content_type": "security",
@@ -6996,6 +8288,42 @@
         "security"
       ],
       "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:b1c766e054e1a2986fac4e3345f05ab59010a7603c5de5cfa10016bf627626dd",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-11-26-github-copilot-app-universe-releases",
+      "id": "github-changelog-github-60148f43d4c5",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T15:55:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "copilot",
+        "universe26"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases",
+      "summary": "Work doesn\u2019t always fit in a single repository or session. A feature can span several repositories. A launch plan can pull in specs, designs, and assets without touching a repository\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "GitHub Copilot app, Universe releases",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
       "change_type": "new",
@@ -7622,6 +8950,81 @@
       "why_it_matters": "This may change the workload security posture or required controls."
     },
     {
+      "change_type": "new",
+      "content_hash": "sha256:68faff3b017d7d7d18382f6cae4c5471cdf990efed45e04a36987539ba09c3bb",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-11-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available",
+      "id": "github-changelog-github-7ea5e5653a71",
+      "lifecycle": "ga",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T15:33:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Improvement",
+        "copilot",
+        "universe26"
+      ],
+      "recommended_action": "Confirm regional availability and evaluate it against active customer architectures.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available",
+      "summary": "Repository plugin defaults and enterprise-managed plugin controls are now generally available in VS Code, Copilot CLI, and the GitHub Copilot app. Trusted repositories can install and enable default plugins for\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Repository plugin defaults and enterprise plugin controls generally available",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
+    },
+    {
+      "change_type": "new",
+      "content_hash": "sha256:a0f443be88b6c2ca950e3d1d00d8cc978493600e402b457522cd4cff2feecb84",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-10-27-github-copilot-in-vs-code-universe-releases",
+      "id": "github-changelog-github-82ed05d102dc",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T15:33:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "copilot",
+        "universe26",
+        "vs code"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases",
+      "summary": "This year, we focused on giving you more choice in how you work with GitHub Copilot in Visual Studio Code: which models you use, where your agents run, and how\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "GitHub Copilot in VS Code, Universe releases",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "security",
       "content_hash": "sha256:40e532d15706f4ebd96e9f458988041bc9bb216a7e1eb8db037e2f97afa4e539",
       "content_type": "security",
@@ -8204,6 +9607,42 @@
       "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
     },
     {
+      "change_type": "new",
+      "content_hash": "sha256:e6a71069f97472d5a1610bc33af2b4889455a8e1f81b9d7a4bb52b4a5e534eeb",
+      "content_type": "update",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-10-26-generate-and-edit-images-directly-in-copilot",
+      "id": "github-changelog-github-a8d5896b41e2",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T15:30:55Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "copilot",
+        "universe26"
+      ],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot",
+      "summary": "You can now generate and edit images using natural language in GitHub Copilot. When you ask for an image, your selected reasoning model calls a dedicated image-generation tool powered by\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Generate and edit images directly in Copilot",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "updated",
       "content_hash": "sha256:d879c7cc807228da8b8acaf8d6e3737a12f8c0d3ca10c3c539e892c96b33131e",
       "content_type": "update",
@@ -8749,6 +10188,45 @@
     },
     {
       "change_type": "new",
+      "content_hash": "sha256:d0342974a0bb5e672db34fae3b0e740682375d2b93fe057c09290b19b07dd976",
+      "content_type": "update",
+      "csa_outcomes": [
+        "architecture",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-11-26-route-and-orchestrate-models-with-github-copilot-fusion",
+      "id": "github-changelog-github-cf876ffc1c86",
+      "lifecycle": "ga",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T16:00:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "copilot",
+        "enterprise management tools",
+        "universe26"
+      ],
+      "recommended_action": "Confirm regional availability and evaluate it against active customer architectures.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
+      "summary": "GitHub Copilot Fusion is generally available. Instead of picking a model for each task, choose Copilot Fusion and let Copilot intelligently route and orchestrate which models it uses for you.\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Route and orchestrate models with GitHub Copilot Fusion",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "A generally available capability may remove a blocker or create an expansion opportunity."
+    },
+    {
+      "change_type": "new",
       "content_hash": "sha256:cc8997e157e7370135c1db643e886579d09f63f1bbb49aadaaa667cc8d0c9ca2",
       "content_type": "update",
       "csa_outcomes": [
@@ -8818,6 +10296,47 @@
         "operational-excellence"
       ],
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "security",
+      "content_hash": "sha256:e37d5daf3a9b9159870274904618e5754dd9cb1ef612455b7c20d839bad1bfdf",
+      "content_type": "security",
+      "csa_outcomes": [
+        "architecture",
+        "blocker-mitigation",
+        "opportunity",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://github.blog/changelog/2026-11-26-security-extension-for-the-github-copilot-app",
+      "id": "github-changelog-github-dd4b9a8fd034",
+      "lifecycle": "public-preview",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T15:45:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [
+        "Release",
+        "application security",
+        "copilot",
+        "universe26"
+      ],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub Changelog",
+      "source_tier": 1,
+      "source_url": "https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app",
+      "summary": "You can now work through your repository\u2019s GitHub code scanning alerts without leaving the GitHub Copilot app. The new GitHub security extension, now in public preview, lets you find the\u2026",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Security extension for the GitHub Copilot app",
+      "waf_pillars": [
+        "operational-excellence",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
     },
     {
       "change_type": "new",
@@ -9218,6 +10737,38 @@
       "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
     },
     {
+      "change_type": "updated",
+      "content_hash": "sha256:e7aa15f201f4a9a818d4053740f80cca59c9ea6923a81a66d2065f7cd8c1efaa",
+      "content_type": "status",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/ntrfd2jqldn6",
+      "id": "github-status-history-github-117a00ab8225",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-23T08:05:27Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/ntrfd2jqldn6",
+      "summary": "Oct 23, 08:05 UTC Resolved - On October 23, 2026, between 07:06 UTC and 07:27 UTC, GitHub Actions workflow run results were delayed. Job status, check run updates, and logs in the GitHub UI and API updated with an average delay of about 2 minutes, and some updates were delayed by up to about 7 minutes. During this window, a storage dependency that Actions uses to process workflow logs and artifacts throttled our requests. This slowed result processing, causing updates to queue up. The queue was fully processed by 07:27 UTC, shortly after the throttling stopped. To reduce the risk of recurrence, we have added several storage accounts to increase capacity, and we are working on additional steps to continue to scale. We are also working with our storage provider to understand why the throttling occurred, and improving how result processing handles storage throttling and how quickly we detect it. Oct 23, 07:56 UTC Update - As of 07:27 UTC, Actions results are delivering within normal SLOs again. Thank you for this patience during this period of delayed Actions results delivery. Our team continues to monitor system health and explore refinements to reduce impact to customers in the f...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Delayed Actions status check results",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
       "change_type": "incident",
       "content_hash": "sha256:c0752541fc04ba1d7e031d01c4059ff6b6ef61f2e1efa08a84961c20e5ce128c",
       "content_type": "status",
@@ -9279,6 +10830,74 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Incident with Webhooks",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
+      "content_hash": "sha256:03d838da092884359be5d8ba49d3ac0d12cd5fad590e7e42889ee94eec37b9ed",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/nxy2l0ssxm10",
+      "id": "github-status-history-github-1b4cf02dcff7",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-30T15:02:51Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/nxy2l0ssxm10",
+      "summary": "Oct 30, 15:02 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 30, 14:49 UTC Monitoring - The degradation affecting Pages has been mitigated. We are monitoring to ensure stability. Oct 30, 14:48 UTC Update - A temporarily overloaded component triggered a burst of errors between 14:21 and 14:30 UTC across numerous services. Component health has returned to normal and we continue to monitor while investigating the root cause. Oct 30, 14:45 UTC Update - Issues is operating normally. Oct 30, 14:39 UTC Update - Pages is experiencing degraded performance. We are continuing to investigate. Oct 30, 14:36 UTC Update - Issues is experiencing degraded performance. We are continuing to investigate. Oct 30, 14:35 UTC Update - We are investigating degraded performance across multiple services. We will continue to keep users updated on progress towards mitigation. Oct 30, 14:31 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Disruption with GitHub services",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
+      "content_hash": "sha256:5dac1128f316b1f1509e791d08420a91c92fbbbad9bf2a3ce5c07af111271f2e",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/93njd414rpbx",
+      "id": "github-status-history-github-20e2c3e7f188",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-12T20:16:07Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/93njd414rpbx",
+      "summary": "Oct 12, 20:16 UTC Resolved - On October 12th 2026 11:51 UTC GitHub experienced elevated 500 responses across several application pages. This caused failures on Issues and Pull Requests as well as Projects and Actions. Customers also experienced delayed notifications in their web inbox and via email. The immediate impact to Issues, Pull Requests, Projects, and Actions was mitigated by 12:41 UTC on October 12th. Notifications deliveries to the web inbox and via email were recovering at 15:27 UTC and fully mitigated by 20:16 UTC. The incident was triggered through a latent condition in our notifications delivery pipeline that put a high volume of an expensive query on our sharded database replicas. This reduced available database capacity to serve requests for Issues, Pull Requests, Projects, and Actions. We have fixed the notifications pipeline\u2019s code path that issued the expensive query. We are also improving resilience of the database layer to reduce the likelihood and impact of similar incidents. Oct 12, 19:28 UTC Update - Web and email notifications will be delayed for 1 more hour as we are close to completing the backlog of notifications. Oct 12, 17:34 UTC Update - Web and em...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Incident with Actions, Pull Requests and Issues",
       "waf_pillars": [
         "operational-excellence",
         "reliability"
@@ -9389,6 +11008,40 @@
     },
     {
       "change_type": "incident",
+      "content_hash": "sha256:5da229444630b4f5af9ef8fc02b25752f84b28da90ab399632d5ab0ee372fea3",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/wq8305lppdc2",
+      "id": "github-status-history-github-28c65305e47d",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-23T02:30:25Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/wq8305lppdc2",
+      "summary": "Oct 23, 02:30 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 23, 00:55 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Oct 22, 23:48 UTC Update - GitHub Projects update processing has improved, but newly added items may still take longer than expected to appear. We're continuing to work on the remaining delays and monitor recovery. Oct 22, 22:07 UTC Update - Some GitHub Projects updates, including newly added items and changes to issues and pull requests, are still delayed. We have seen some recovery, and are working to add more capacity to accelerate the recovery. Oct 22, 20:46 UTC Update - Some GitHub Projects updates, including newly added items and changes to issues and pull requests, remain delayed. We've identified interruptions in update processing and are evaluating mitigations to restore normal operation. Oct 22, 19:56 UTC Update - Some GitHub Projects updates related to issue changes and merged pull requests are still delayed. We're investigating the remaining delays and work...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Project updates delayed",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
       "content_hash": "sha256:95a269fe8955314737fa89d22c37711beb4b71167b059291b5943cfc1ff7d494",
       "content_type": "status",
       "csa_outcomes": [
@@ -9420,6 +11073,38 @@
         "reliability"
       ],
       "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:6abfcb2bb8f11e562c2da995db2374fb3dd13aef53d9f90b48a88aab9685f5d6",
+      "content_type": "status",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/vlxrztp88101",
+      "id": "github-status-history-github-2a4a51c8cbc7",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-15T18:56:04Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/vlxrztp88101",
+      "summary": "Oct 15, 18:56 UTC Resolved - We suspected that CCA Automations were experiencing delays when users start an Automation, but further investigation found that there was no delay or impact to CCA Automations. Oct 15, 18:53 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Oct 15, 18:34 UTC Update - CCA Automations are experiencing delays when users start an Automation Oct 15, 18:31 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "CCA Automations are delayed when starting an Automation",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
       "change_type": "incident",
@@ -9490,6 +11175,40 @@
       "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
     },
     {
+      "change_type": "security",
+      "content_hash": "sha256:a5d52e8e2e56ba586577a06517643790b0622bf0a1c0299fc121a7d8baa17102",
+      "content_type": "security",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "high",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/71y513kjvbzh",
+      "id": "github-status-history-github-3197cf898504",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-23T18:51:24Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Validate exposure, supported mitigations, and the customer's remediation owner.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/71y513kjvbzh",
+      "summary": "Oct 23, 18:51 UTC Resolved - We identified that an advisory-publication driven fan-out was overwhelming Dependabot alert processing on repositories by saturating the queue with its own events, delaying processing of events related to repository pushes. We have now isolated this fan-out and applied a throttle so it runs at a fixed rate and cannot delay other events. This remediation has successfully prevented a new fan-out process impacting users. Oct 23, 18:36 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Oct 23, 17:27 UTC Update - Some Dependabot alerts continue to be delayed in closing after repository updates address a vulnerability. We're continuing to investigate and work to restore normal processing. Oct 23, 16:43 UTC Update - We\u2019re continuing to investigate delays in some Dependabot alerts closing after affected repositories are updated. Alert processing remains backed up, and additional processing capacity is rolling out to help reduce the backlog. We\u2019re monitoring progress and will share another update as we learn more. Oct 23, 16:11 UTC Update - We\u2019re continuing to investigate delays in some Dependabot alerts closing after...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Disruption with Dependabot Alerts",
+      "waf_pillars": [
+        "operational-excellence",
+        "security"
+      ],
+      "why_it_matters": "This may change the workload security posture or required controls."
+    },
+    {
       "change_type": "incident",
       "content_hash": "sha256:8527ebee3daa0343546cf67913c7669d98837a7ab256b12221cd7a4e2de57861",
       "content_type": "status",
@@ -9522,6 +11241,40 @@
         "reliability"
       ],
       "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "maintenance",
+      "content_hash": "sha256:0025ad335c0b6067a03e6a39fb0b5944f89470563a2898343bdc05a097beaea1",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/dnslv7xdl4fj",
+      "id": "github-status-history-github-358e5cb3af8a",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-27T08:00:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/dnslv7xdl4fj",
+      "summary": "Oct 27, 08:00 UTC Resolved - Between 0655 and 0801 UTC on 10/27, customers experienced increased failure rates for API and git requests authenticated with server-to-server tokens for GitHub Apps (excluding Actions tokens). During this window, authenticated git operations mistakenly returned 404 for 1.24% (2.6x) of requests on average and 2.49% (5.3x) at peak. These failures were caused by a scheduled maintenance event where GitHub migrated 7 tables between two MySQL clusters in our IAD and Azure Central US datacenters. One of the affected tables stores installation records for GitHub App server-to-server tokens (excluding Actions). We've successfully completed several of these migrations in recent months without notable customer impact. However, in this case, the migration coincided with a scheduled cleanup job on the installation records table, which deleted approximately 59 million records from 0444-0617 UTC. As a result, the gh-ost tooling used in the migration experienced inter-cluster replication delays (up to 1 hour at peak). At 0655 UTC, we begin transitioning reads of the target tables to the new MySQL cluster, with 100% of reads cutover at 0721 UTC. Customer impact bega...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Elevated 404s for GitHub App s2s tokens in git/API",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
     },
     {
       "change_type": "incident",
@@ -9653,6 +11406,40 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Several GPT models degraded",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
+      "content_hash": "sha256:677cdaf8bae7ed92e4ce5647e6668b92fbc6044761967bd6478f3cba59033de1",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/khv5nj9qy2kk",
+      "id": "github-status-history-github-42e5c7944dc3",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-24T00:23:32Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/khv5nj9qy2kk",
+      "summary": "Oct 24, 00:23 UTC Resolved - Between 23:28 and 00:23 UTC on October 27, 2026, GitHub Copilot experienced degradation affecting Grok 4.6 and Grok 4.7 models. Users encountered elevated error rates when using these models. The degradation was caused by an issue with an upstream model provider. GitHub engineers detected the issue through automated monitoring and coordinated with the provider. Our automated model-warning system activated in-product warnings for affected models during the incident. Service returned to normal after the provider implemented a mitigation. Oct 24, 00:23 UTC Monitoring - The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability. Oct 23, 23:42 UTC Update - We are experiencing degraded availability for the Grok 4.6 and Grok 4.7 models in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot. Oct 23, 23:41 UTC Investigating - We are investigating reports of degraded performance for Copilot AI Model Providers",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Grok 4.6 and Grok 4.7 Service Issues",
       "waf_pillars": [
         "operational-excellence",
         "reliability"
@@ -9865,6 +11652,40 @@
     },
     {
       "change_type": "incident",
+      "content_hash": "sha256:85ea3247db4e45380b6fb0ef6131f7fea7e20e80e852f9f7eddf7c61e9b7513a",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/nms1dpzmh9d9",
+      "id": "github-status-history-github-5cce33a02f0a",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-21T19:22:52Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/nms1dpzmh9d9",
+      "summary": "Oct 21, 19:22 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 21, 19:22 UTC Update - Pull request updates, Actions, and webhook deliveries have recovered. Audit log delays are now below 40 minutes, within the healthy threshold, and continue to decrease as the remaining backlog is processed. Oct 21, 18:52 UTC Update - Audit log events continue to recover, with delays now below 70 minutes. We\u2019ve applied mitigations to speed recovery and expect audit logs to fully recover in about 40 minutes. Pull request updates, Actions, and webhook deliveries remain recovered. We are monitoring progress and will share further updates. Oct 21, 18:18 UTC Update - Audit log events are recovering, with delays now below 90 minutes as the remaining backlog is processed. We\u2019ve reduced load on the event-streaming platform and are monitoring recovery. Further updates will follow. Oct 21, 17:09 UTC Update - Pull request updates, Actions, and webhook deliveries have recovered. Audit log events are recovering and delays are decreasing, but we expect the rema...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Delays for Pull Requests and Webhook deliveries",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
       "content_hash": "sha256:908e19c2813ce6d57ce28c56ee7743738313e3b2ece6e017cc594f2970d91412",
       "content_type": "status",
       "csa_outcomes": [
@@ -9959,6 +11780,40 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Incident with GitHub.com",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
+      "content_hash": "sha256:0192e8edd804e5f2bac53c892110cd4da2ac83cbc39761696e8e22fee7b95e57",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/rn76zdy367m2",
+      "id": "github-status-history-github-68bcf3aa5898",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-29T12:49:52Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/rn76zdy367m2",
+      "summary": "Oct 29, 12:49 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 29, 12:33 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Oct 29, 11:37 UTC Update - We continue to experience failure rates of 1-2% and increased latency on our agent sessions service, including creating and listing sessions. This can impact cloud based agent sessions on web, mobile, VS Code, CLI and the GitHub Copilot app. We are actively applying mitigations and monitoring for recovery. Oct 29, 11:01 UTC Update - We continue to experience failure rates of 1-2% and increased latency on our agent sessions service, including creating and listing sessions. This can impact cloud based agent sessions on web, mobile, VS Code, CLI and the GitHub Copilot app. Oct 29, 10:22 UTC Update - We are experiencing increased failures and latency on our agent sessions service, including creating and listing sessions. This can impact cloud based agent sessions on web, mobile, VS Code, CLI and the GitHub Copilot app. Oct 29, 10:19 UTC Investiga...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Disruption with Copilot Cloud services",
       "waf_pillars": [
         "operational-excellence",
         "reliability"
@@ -10409,6 +12264,40 @@
     },
     {
       "change_type": "incident",
+      "content_hash": "sha256:517e264107a92b510dde621f0581321e644865d7125d0631720dfe918c9e5554",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/lyyfm7j4pkgl",
+      "id": "github-status-history-github-89f8fc0aed51",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-30T23:29:06Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/lyyfm7j4pkgl",
+      "summary": "Oct 30, 23:29 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 30, 22:32 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Oct 30, 22:32 UTC Update - We have mitigated impact and are seeing recovery. We are monitoring for full recovery. Oct 30, 21:44 UTC Update - We are continuing to investigate elevated errors when viewing some Dependabot alerts. We\u2019ll provide more updates as we learn more. Oct 30, 21:00 UTC Update - We are investigating elevated errors when viewing some Dependabot alerts. Oct 30, 20:59 UTC Investigating - We are investigating reports of impacted performance for some GitHub services.",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Incident with Dependabot",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
       "content_hash": "sha256:9a87ce2da276b1575827351fe742d2f523b71e91168ba0562a990cd0e30c895e",
       "content_type": "status",
       "csa_outcomes": [
@@ -10817,6 +12706,40 @@
     },
     {
       "change_type": "incident",
+      "content_hash": "sha256:b1ac43330780d06717c0503d1ebbfb1eb1fc452f8d2c9881ceb300d9472dd178",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/8tzbpcnl75jp",
+      "id": "github-status-history-github-a6ac0a482468",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-19T16:56:58Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/8tzbpcnl75jp",
+      "summary": "Oct 19, 16:56 UTC Resolved - On October 19, 2026, between 15:24 and 16:52 UTC, GitHub Actions, GitHub Pages, and webhooks generated by Actions were degraded. Live updates on GitHub.com and code search were also degraded for part of this time. No data was lost. Impact - Workflow status updates, logs, and checks were delayed. - 5.13% of jobs on GitHub-hosted runners were delayed in starting, and 0.02% of workflow runs failed. - During the first 30 minutes, 8.47% of requests to the Actions jobs REST API returned errors. Pages deployments and webhooks generated by Actions runs were delayed. An internal Actions service that stores logs and run status lost connections to some of its cache servers in one cloud region and immediately retried them from every server at once. The resulting surge of new connections overloaded a shared network link between our data center and that region, which also disrupted other services that use the same link. We mitigated the incident by moving the Actions service off the affected cache servers and reducing connections from other services on the link. We then processed the delayed Actions work. We are continuing to investigate the cause of the initial c...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Degraded availability for GitHub Actions, GitHub Pages and Webhooks",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
       "content_hash": "sha256:009e3a113708d4eadcde9a7e14aa19769ce9025243d697bfed4b79b87ad9465b",
       "content_type": "status",
       "csa_outcomes": [
@@ -10945,6 +12868,72 @@
       "supporting_urls": [],
       "technology": "github",
       "title": "Incident with Actions",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "updated",
+      "content_hash": "sha256:0490812d43aeb5457c94d1c83ace8d5630c50f0e30b5ac16e67c993e7cc9d370",
+      "content_type": "status",
+      "csa_outcomes": [
+        "skilling"
+      ],
+      "customer_impact": "low",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/6yk962mhlr3h",
+      "id": "github-status-history-github-af25eb15579a",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-13T20:30:00Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Review the canonical source and update reusable guidance when the change is relevant.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/6yk962mhlr3h",
+      "summary": "Oct 13, 20:30 UTC Resolved - On October 13, around 20:42 UTC, an infrastructure failure caused GitHub Actions to have delays showing logs for workflow runs. No logs were lost and the issue has now been resolved and log processing has caught up. The actual workflows producing the logs were not impacted and ran normally and no run delays or check delays occurred.",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "[Retroactive] Actions workflow run logs delayed",
+      "waf_pillars": [
+        "operational-excellence"
+      ],
+      "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "incident",
+      "content_hash": "sha256:9be4022fb75d05b8054585497d10a8e1ecefc7935a97abe3f0874f185807c1f1",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/f1vvv30224wd",
+      "id": "github-status-history-github-bd956a9d3012",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-26T18:57:22Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/f1vvv30224wd",
+      "summary": "Oct 26, 18:57 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 26, 18:54 UTC Update - We saw elevated latency affecting REST API requests, including Checks, and some Actions, Issues, Pull Requests, and GraphQL functionality. Some requests may have been slow or timed out, and notifications were delayed from 17:59 UTC - 18:40 UTC. We mitigated the issue and all services have recovered. Oct 26, 18:50 UTC Monitoring - The degradation has been mitigated. We are monitoring to ensure stability. Oct 26, 18:48 UTC Investigating - We are investigating reports of degraded performance for API Requests, Actions, Issues and Pull Requests",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Incident with Actions, Issues, API Requests and Pull Requests",
       "waf_pillars": [
         "operational-excellence",
         "reliability"
@@ -11291,6 +13280,74 @@
     },
     {
       "change_type": "incident",
+      "content_hash": "sha256:bec07d3e52ab97585495cc6215cc8340c50e1abe5413c3be5069fa8322e15132",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/pwxsjgnvrk6b",
+      "id": "github-status-history-github-f0f5eb0ba9f7",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-30T19:23:40Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/pwxsjgnvrk6b",
+      "summary": "Oct 30, 19:23 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 30, 18:32 UTC Monitoring - The degradation affecting Actions, Pages and Webhooks has been mitigated. We are monitoring to ensure stability. Oct 30, 18:32 UTC Update - All affected services have recovered following mitigation. We continue to investigate root cause. Oct 30, 18:06 UTC Update - We continue to investigate delays affecting Actions workflows, Pages deployments, and webhook events, along with errors affecting code search and live updates. We have taken mitigation steps. Actions processing and Pages deployments are showing signs of recovery, but impact has not fully resolved. We are monitoring recovery and investigating the underlying cause. Oct 30, 18:00 UTC Update - Pages is experiencing degraded performance. We are continuing to investigate. Oct 30, 17:50 UTC Investigating - We are investigating reports of degraded performance for Actions and Webhooks",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Incident with Actions, Pages, and Webhooks",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
+      "content_hash": "sha256:960866002f71004aef0f28c4ce5e2a5415fc80fef3e119e64f01040404876ccb",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/l7ycmglmykgg",
+      "id": "github-status-history-github-f1176dab49e2",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-28T15:28:19Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/l7ycmglmykgg",
+      "summary": "Oct 28, 15:28 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 28, 15:26 UTC Monitoring - The degradation affecting Copilot has been mitigated. We are monitoring to ensure stability. Oct 28, 15:24 UTC Update - Copilot is experiencing degraded performance. We are continuing to investigate. Oct 28, 15:15 UTC Update - We have applied the mitigation and are seeing signs of recovery. We will continue to monitor and expect full resolution soon. Oct 28, 14:55 UTC Update - We are experiencing degraded availability for the GPT-5.3-Codex, GPT-5.6 Luna, GPT-6.1 Sol, GPT-5.6 Terra, GPT-6 Luna, and MAI Code 1.1 Flash models in Copilot products and IDE surfaces. We have identified the root cause and working to apply a mitigation. While we work to resolve the issue we recommend choosing another model to continue using Copilot. Oct 28, 14:33 UTC Update - We are experiencing degraded availability for the GPT-5.3-Codex, GPT-5.6 Luna, GPT-6.1 Sol, GPT-5.6 Terra, GPT-6 Luna, and MAI Code 1.1 Flash models in Copilot products and IDE surfaces. This is...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Disruption with some Copilot services",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
+    },
+    {
+      "change_type": "incident",
       "content_hash": "sha256:9fa7d4c21c67e8006f98cc54b3a2428b193d8c2350b6f05f3b7c9a76cc4644f4",
       "content_type": "status",
       "csa_outcomes": [
@@ -11388,6 +13445,40 @@
         "operational-excellence"
       ],
       "why_it_matters": "The change may affect current guidance, readiness material, or customer conversations."
+    },
+    {
+      "change_type": "incident",
+      "content_hash": "sha256:5f44e9a79a73e35d10f0e7f43b12eb01cccfc71823fc202064308848a1483164",
+      "content_type": "status",
+      "csa_outcomes": [
+        "blocker-mitigation",
+        "skilling"
+      ],
+      "customer_impact": "medium",
+      "effective_at": null,
+      "external_id": "https://www.githubstatus.com/incidents/q29p76qtnkyk",
+      "id": "github-status-history-github-f6ed4535c6d7",
+      "lifecycle": "unknown",
+      "observed_at": "2026-10-31T09:46:24Z",
+      "published_at": "2026-10-22T15:18:46Z",
+      "publisher": "GitHub",
+      "raw_categories": [],
+      "recommended_action": "Check live status and personalized Service Health before advising a customer.",
+      "regions": [],
+      "review_state": "machine-draft",
+      "sensitivity": "public",
+      "source_name": "GitHub incident history",
+      "source_tier": 1,
+      "source_url": "https://www.githubstatus.com/incidents/q29p76qtnkyk",
+      "summary": "Oct 22, 15:18 UTC Resolved - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available. Oct 22, 15:18 UTC Update - GitHub Actions workflow and step result processing has recovered. Repository update processing has also returned to normal. Oct 22, 15:17 UTC Monitoring - The degradation affecting Actions has been mitigated. We are monitoring to ensure stability. Oct 22, 15:06 UTC Update - We\u2019re seeing recovery, and repository update processing has returned to normal. Delays affecting GitHub Actions workflow and step results are continuing to clear as we scale processing capacity; the remaining backlog is expected to take about 20 minutes to drain. Oct 22, 14:35 UTC Update - Repository update processing has recovered. We\u2019re continuing to work on delays affecting GitHub Actions workflow and step results. We\u2019ll share another update as we make progress. Oct 22, 14:19 UTC Update - We\u2019re investigating delays in processing GitHub Actions workflow and step results, along with some repository updates. Oct 22, 14:18 UTC Investigating - We are investigating reports of deg...",
+      "supporting_urls": [],
+      "technology": "github",
+      "title": "Incident with Actions",
+      "waf_pillars": [
+        "operational-excellence",
+        "reliability"
+      ],
+      "why_it_matters": "Service degradation can affect delivery confidence and operational readiness."
     },
     {
       "change_type": "incident",
