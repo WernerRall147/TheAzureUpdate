@@ -10,7 +10,7 @@ source_name: Azure Database for PostgreSQL release notes
 source_url: https://learn.microsoft.com/azure/postgresql/release-notes/release-notes
 source_tier: 1
 published_at: null
-observed_at: '2026-10-02T09:53:07Z'
+observed_at: '2026-11-07T10:24:10Z'
 effective_at: null
 publisher: Microsoft
 customer_impact: low
@@ -25,14 +25,14 @@ external_id: https://learn.microsoft.com/azure/postgresql/release-notes/release-
 raw_categories:
 - documentation
 supporting_urls: []
-content_hash: sha256:8cb48525cd0419ffa002cf89999f5e09e317cada995ca0ce145f4ec4c03c79c2
+content_hash: sha256:8fc5aa41952a540d0f98c6e0b956276106ccae3f41a0aeda1b4c5c9ebfef946b
 ---
 
 # Release notes - Azure Database for PostgreSQL flexible server
 
 ## What Changed
 
-This article highlights the latest updates and enhancements for Azure Database for PostgreSQL service, including new feature releases, supported engine versions, available extensions, and other important announcements. Release: September 2026 Preview PgBouncer client connections monitoring metric ( client connections total ) is now available. Discovery and monitoring for Azure Database for PostgreSQL flexible server in the Database Hub in Microsoft Fabric is now available. For more information, see Monitor an Azure Database for PostgreSQL flexible server in the Database Hub. Release: August 2026 General availability Support for latest minor versions 18.6, 17.11, 16.15, 15.19, and 14.24. ^$^ Pre upgrade validation checks to identify upgrade blocking problems before starting a major version upgrade. Release: July 2026 General availability Support for new PgBouncer in Azure Database for PostgreSQL 1.25.2. ^$^ Release: June 2026 General availability Support for latest minor versions 18.4, 17.10, 16.14, 15.18, and 14.23. ^$^ Microsoft Defender Cloud Security Posture Management (CSPM) assessments in Azure Database for PostgreSQL Support for view upcoming maintenance Support for view m...
+This article highlights the latest updates and enhancements for Azure Database for PostgreSQL service, including new feature releases, supported engine versions, available extensions, and other important announcements. Release: October 2026 Preview System metrics, starting with the CPU limit monitoring metric ( cpu limit ), are now available. Release: September 2026 Preview PgBouncer client connections monitoring metric ( client connections total ) is now available. Discovery and monitoring for Azure Database for PostgreSQL flexible server in the Database Hub in Microsoft Fabric is now available. For more information, see Monitor an Azure Database for PostgreSQL flexible server in the Database Hub. Release: August 2026 General availability Support for latest minor versions 18.6, 17.11, 16.15, 15.19, and 14.24. ^$^ Pre upgrade validation checks to identify upgrade blocking problems before starting a major version upgrade. Release: July 2026 General availability Support for new PgBouncer in Azure Database for PostgreSQL 1.25.2. ^$^ Release: June 2026 General availability Support for latest minor versions 18.4, 17.10, 16.14, 15.18, and 14.23. ^$^ Microsoft Defender Cloud Security P...
 
 ## Why It Matters to a CSA
 
@@ -52,4 +52,4 @@ Review substantive page changes and update human-authored guidance when needed.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-10-02T09:53:07Z`.
+State: `machine-draft`. Observed: `2026-11-07T10:24:10Z`.
