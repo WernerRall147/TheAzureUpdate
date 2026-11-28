@@ -10,7 +10,7 @@ source_name: Azure Cosmos DB documentation
 source_url: https://learn.microsoft.com/azure/cosmos-db/
 source_tier: 1
 published_at: null
-observed_at: '2026-07-21T11:30:00Z'
+observed_at: '2026-11-28T11:57:39Z'
 effective_at: null
 publisher: Microsoft
 customer_impact: low
@@ -25,14 +25,14 @@ external_id: https://learn.microsoft.com/azure/cosmos-db/
 raw_categories:
 - documentation
 supporting_urls: []
-content_hash: sha256:2a8fca5d5c303421d6449763c8211a5243a9c1649c52d0358f6ba085203d0fd0
+content_hash: sha256:360844af8ab16b97d7e90e6f7a37486fe27692189550bc451346c93589543b08
 ---
 
 # Azure Cosmos DB documentation
 
 ## What Changed
 
-Fully managed, distributed NoSQL, relational, and vector database for modern app development. High performance, high availability, and support for open source PostgreSQL, MongoDB, and Apache Cassandra. Build cloud native apps effortlessly. Overview Introduction to Azure Cosmos DB Architecture Vector Database in Azure Cosmos DB Reference Pricing Training Certification Azure Cosmos DB Developer Specialty Training Certification Azure Developer Associate Tutorial AI agents with Azure Cosmos DB Get started Azure Cosmos DB Emulator Get started Azure Cosmos DB Agent Kit APIs Choose from multiple APIs that provide compatibility with popular NoSQL and relational database models for modern applications. NoSQL Build applications using native SQL queries with automatic indexing and schema flexibility for document based workloads. SQL queries Model document data MongoDB Migrate existing MongoDB applications seamlessly with full wire protocol compatibility and familiar MongoDB tools. Supported features and syntax Mapping consistency levels Extension commands See more Apache Cassandra Build highly scalable applications using the Cassandra Query Language (CQL) with automatic global distribution...
+Fully managed, distributed NoSQL, relational, and vector database for modern app development. High performance, high availability, and support for open source PostgreSQL, MongoDB, and Apache Cassandra. Build cloud native apps effortlessly. Overview Explore Azure DocumentDB (separate service) Overview Introduction to Azure Cosmos DB Architecture Vector Database in Azure Cosmos DB Reference Pricing Tutorial AI agents with Azure Cosmos DB Get started Azure Cosmos DB Emulator Get started Azure Cosmos DB Agent Kit MongoDB compatible applications Start with Azure DocumentDB for MongoDB compatible applications, or explore Azure Cosmos DB for MongoDB (RU) for request unit based workloads. Azure DocumentDB (separate service) Explore Azure DocumentDB first for MongoDB compatible applications. It is a separate managed Azure service. Explore Azure DocumentDB Migrate MongoDB to Azure DocumentDB Azure Cosmos DB for MongoDB (RU) For request unit based workloads, explore Azure Cosmos DB for MongoDB (RU) as a separate alternative. Supported features and syntax Mapping consistency levels Extension commands See more Other Azure Cosmos DB APIs Choose from multiple APIs that provide compatibility wi...
 
 ## Why It Matters to a CSA
 
@@ -52,4 +52,4 @@ Review substantive page changes and update human-authored guidance when needed.
 
 ## Review
 
-State: `machine-draft`. Observed: `2026-07-21T11:30:00Z`.
+State: `machine-draft`. Observed: `2026-11-28T11:57:39Z`.
